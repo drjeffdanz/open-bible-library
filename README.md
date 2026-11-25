@@ -8,8 +8,8 @@ A free, open archive of historical Bible study resources: original-language text
 
 The library has three layers.
 
-1. **In this repository (`library/`, about 510 MB):** 12 core datasets that anyone may use for any purpose, including commercial use.
-2. **In the monthly archive (GitHub Releases):** everything too large for git or hosted outside GitHub, fetched by `tools/fetch.py` and filtered by license. That includes about 440 open Bible translations from eBible.org, the Berean Bibles, Sefaria's openly licensed texts, Project Gutenberg's public-domain theology and church history books, the MACULA syntax datasets and the Perseus and First1KGreek corpora.
+1. **In this repository (`library/`, about 530 MB):** 14 core datasets that anyone may use for any purpose, including commercial use.
+2. **In the monthly archive (GitHub Releases):** everything too large for git or hosted outside GitHub, fetched by `tools/fetch.py` and filtered by license. That includes up to about 20,000 public-domain books from the Internet Archive (commentaries, lexicons, theology, sermons, church fathers, published before 1931), about 440 open Bible translations from eBible.org, the Berean Bibles, Sefaria's openly licensed texts, Project Gutenberg's public-domain religious books, the MACULA syntax datasets and the Perseus and First1KGreek corpora.
 3. **In a separate non-commercial archive:** material that may be shared only for non-commercial use (ETCBC databases, CC BY-NC Sefaria texts, CC BY-NC-ND translations). It never enters `library/`.
 
 ### In the repository
@@ -26,6 +26,8 @@ The library has three layers.
 | `library/lexicons/openscriptures-hebrew-lexicon` | Brown-Driver-Briggs and Strong's Hebrew lexicons | Texts public domain; markup CC BY 4.0 |
 | `library/lexicons/strongs` | Strong's Greek and Hebrew dictionaries | Public domain |
 | `library/lexicons/abbott-smith` | Abbott-Smith, Manual Greek Lexicon of the NT (1922) | Public domain |
+| `library/septuagint/swete-lxx` | Swete's Septuagint (1909-1930), Greek | Text public domain; edition CC BY-SA 4.0 |
+| `library/cross-references/tsk-crossreferences-org` | Treasury of Scripture Knowledge, phrase-level, anchored to KJV and BSB | CC BY 4.0 |
 | `library/church-fathers/apostolic-fathers` | Greek Apostolic Fathers (corrected Lake text) | CC BY-SA 4.0 |
 | `library/geography/openbible-geocoding` | Every identifiable place in the Bible, with coordinates and sources | CC BY 4.0; OSM geometry ODbL |
 
@@ -61,6 +63,15 @@ The **Build archive** workflow does this for every source on the 1st of each mon
 "Public domain" here means public domain in the United States. Some works (for example the King James Version in the UK) are still protected elsewhere.
 
 `tools/validate.py` runs on every pull request and blocks non-open material, uncatalogued folders, files over 50 MB and known problem material.
+
+## Using the library in paid products
+
+Everything in `library/` and the main `archive-YYYY-MM` release may be used in commercial work, including a paid study archive, if you follow each license:
+
+- **Public domain and CC0:** no conditions.
+- **CC BY (and ODbL):** credit the source as shown in `library/NOTICE.md`.
+- **CC BY-SA:** credit the source, and if you publish a modified version or a derivative of that dataset (for example an edited lexicon or a reworked text), that derivative must also be released under CC BY-SA. Quoting it in your own teaching material with credit is fine; selling an edited copy of the dataset under exclusive terms is not.
+- **CC BY-ND:** use only verbatim copies, with credit.
 
 ## Contributing
 

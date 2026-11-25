@@ -40,6 +40,15 @@ jobs:
           - { source: sefaria-open, shard: "1/4", tier: open }
           - { source: sefaria-open, shard: "2/4", tier: open }
           - { source: sefaria-open, shard: "3/4", tier: open }
+          - { source: archive-org-pd, shard: "0/8", tier: open }
+          - { source: archive-org-pd, shard: "1/8", tier: open }
+          - { source: archive-org-pd, shard: "2/8", tier: open }
+          - { source: archive-org-pd, shard: "3/8", tier: open }
+          - { source: archive-org-pd, shard: "4/8", tier: open }
+          - { source: archive-org-pd, shard: "5/8", tier: open }
+          - { source: archive-org-pd, shard: "6/8", tier: open }
+          - { source: archive-org-pd, shard: "7/8", tier: open }
+          - { source: perseus-latin, shard: "0/1", tier: open }
           - { source: ebible-nc, shard: "0/2", tier: noncommercial }
           - { source: ebible-nc, shard: "1/2", tier: noncommercial }
           - { source: sefaria-nc, shard: "0/2", tier: noncommercial }
