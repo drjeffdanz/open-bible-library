@@ -31,3 +31,6 @@ These sources were reviewed on 2026-11-25 (two passes) and are **not** collected
 | eliranwong/unabridged-BDB-Hebrew-lexicon and unfoldingWord/Brown-Driver-Briggs-Enhanced | BDB itself is public domain, but the base formatting came from a third party (Bible Analyzer) without a stated license. The Open Scriptures BDB is used instead. |
 | CrossReferences.org Segond 21 file and JSON export | Segond 21 is "used with permission", not openly licensed. Only the KJV and BSB files are collected. |
 | Google-digitized archive.org scans | Google's scans carry usage restrictions. The archive.org fetcher skips them. |
+| ETCBC BHSA, Dead Sea Scrolls and Peshitta databases | CC BY-NC 4.0. Non-commercial material is excluded because the library also feeds paid study material. |
+| 748 eBible.org translations licensed CC BY-NC-ND | Non-commercial; excluded for the same reason. Listed in `catalog/ebible-licenses.csv`. |
+| Sefaria text versions licensed CC BY-NC | Non-commercial; the Sefaria fetcher skips them. |

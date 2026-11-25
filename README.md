@@ -6,11 +6,12 @@ A free, open archive of historical Bible study resources: original-language text
 
 ## What is in it
 
-The library has three layers.
+The library has two layers.
 
 1. **In this repository (`library/`, about 530 MB):** 14 core datasets that anyone may use for any purpose, including commercial use.
 2. **In the monthly archive (GitHub Releases):** everything too large for git or hosted outside GitHub, fetched by `tools/fetch.py` and filtered by license. That includes up to about 20,000 public-domain books from the Internet Archive (commentaries, lexicons, theology, sermons, church fathers, published before 1931), about 440 open Bible translations from eBible.org, the Berean Bibles, Sefaria's openly licensed texts, Project Gutenberg's public-domain religious books, the MACULA syntax datasets and the Perseus and First1KGreek corpora.
-3. **In a separate non-commercial archive:** material that may be shared only for non-commercial use (ETCBC databases, CC BY-NC Sefaria texts, CC BY-NC-ND translations). It never enters `library/`.
+
+Non-commercial (NC) material is not collected at all, because the library also feeds paid study material. Everything here can be used commercially under its license.
 
 ### In the repository
 
@@ -57,7 +58,7 @@ The **Build archive** workflow does this for every source on the 1st of each mon
 
 - Public domain, CC0, CC BY, CC BY-SA, ODbL: allowed in `library/` and in the main archive.
 - CC BY-ND: allowed in the main archive only, stored verbatim; never edit, merge or re-translate these files.
-- CC BY-NC and CC BY-NC-ND: non-commercial archive only. Do not use them in anything sold, including a paid study archive.
+- CC BY-NC and CC BY-NC-ND: excluded. The library feeds paid study material, so non-commercial licenses never apply here.
 - Anything else, or anything without a clear license: excluded.
 
 "Public domain" here means public domain in the United States. Some works (for example the King James Version in the UK) are still protected elsewhere.

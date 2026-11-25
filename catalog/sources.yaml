@@ -7,7 +7,7 @@
 # tier:
 #   open           -> redistributable for any purpose, including commercial use
 #   open-nd        -> redistributable unchanged, including commercially; do NOT edit or merge (CC BY-ND)
-#   noncommercial  -> redistributable for non-commercial use only; kept out of library/
+#   noncommercial  -> (not used) non-commercial material is excluded, because the library feeds paid products
 #   excluded       -> NOT redistributable or license unclear; never added (see EXCLUDED.md)
 # method:
 #   vendored  -> copied into library/ in this repo
@@ -149,8 +149,9 @@ sources:
     upstream: https://ebible.org/Scriptures/
     license: CC-BY-NC-ND-3.0 / CC-BY-NC-ND-4.0
     evidence: catalog/ebible-licenses.csv
-    tier: noncommercial
-    method: fetch
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   # ---------------- Lexicons and reference ----------------
   - id: openscriptures-hebrew-lexicon
@@ -260,8 +261,9 @@ sources:
     upstream: https://github.com/Sefaria/Sefaria-Export
     license: CC-BY-NC
     evidence: license field in each JSON version
-    tier: noncommercial
-    method: fetch
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   # ---------------- Geography ----------------
   - id: openbible-geocoding
@@ -282,24 +284,27 @@ sources:
     upstream: https://github.com/ETCBC/bhsa
     license: CC-BY-NC-4.0
     evidence: https://github.com/ETCBC/bhsa/blob/master/README.md
-    tier: noncommercial
-    method: mirror
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   - id: etcbc-dss
     name: ETCBC Dead Sea Scrolls (biblical and non-biblical)
     upstream: https://github.com/ETCBC/dss
     license: CC-BY-NC-4.0
     evidence: https://github.com/ETCBC/dss/blob/master/LICENSE
-    tier: noncommercial
-    method: mirror
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   - id: etcbc-peshitta
     name: ETCBC Syriac Peshitta Old Testament
     upstream: https://github.com/ETCBC/peshitta
     license: CC-BY-NC-4.0
     evidence: https://github.com/ETCBC/peshitta/blob/master/docs/about.md
-    tier: noncommercial
-    method: mirror
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   - id: openbible-geocoding-full
     name: OpenBible.info Bible geocoding data, full repository including OpenStreetMap geometry

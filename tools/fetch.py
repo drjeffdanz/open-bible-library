@@ -13,7 +13,7 @@ confirmed is skipped and listed under "skipped" with the reason.
 Output is routed by tier:
     <out>/<source-id>/...                 open (any use, attribution as required)
     <out>/ebible-nd/...                   CC BY-ND: keep verbatim
-    <out>/<noncommercial id>/...          non-commercial only; never ship in paid products
+Non-commercial (NC) material is never fetched: the library also feeds paid products.
 """
 
 import argparse
@@ -39,10 +39,8 @@ USER_AGENT = "open-bible-library-fetch/1.0 (+https://github.com/drjeffdanz/open-
 
 EBIBLE_OPEN = {"public-domain", "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-SA-3.0"}
 EBIBLE_ND = {"CC-BY-ND-4.0"}
-EBIBLE_NC = {"CC-BY-NC-ND-3.0", "CC-BY-NC-ND-4.0"}
 
 SEFARIA_OPEN = "open"
-SEFARIA_NC = "noncommercial"
 
 
 def sefaria_class(value):
@@ -409,16 +407,12 @@ def main():
         fetch_ebible(src, out, EBIBLE_OPEN, a.limit)
     elif src["id"] == "ebible-nd":
         fetch_ebible(src, out, EBIBLE_ND, a.limit)
-    elif src["id"] == "ebible-nc":
-        fetch_ebible(src, out, EBIBLE_NC, a.limit)
     elif src["id"] == "bsb":
         fetch_files(src, out, BSB_FILES)
     elif src["id"] == "openbible-cross-references":
         fetch_files(src, out, [src["upstream"]])
     elif src["id"] == "sefaria-open":
         fetch_sefaria(src, out, SEFARIA_OPEN, a.limit)
-    elif src["id"] == "sefaria-nc":
-        fetch_sefaria(src, out, SEFARIA_NC, a.limit)
     elif src["id"] == "gutenberg-christian":
         fetch_gutenberg(src, out, a.limit)
     elif src["id"] == "archive-org-pd":
