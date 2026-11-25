@@ -5,9 +5,15 @@ name: Build archive
 #   archive-YYYY-MM   public-domain and openly licensed material (any use, including commercial;
 #                     follow each license's attribution and share-alike terms)
 # Run it from the Actions tab, or let it run on the 1st of each month.
+# To redo one source after a failure, run it with "only" set to that source id.
 
 on:
   workflow_dispatch:
+    inputs:
+      only:
+        description: "Build just this source id (e.g. gutenberg-christian). Leave empty for everything."
+        required: false
+        default: ""
   schedule:
     - cron: "17 6 1 * *"
 
@@ -49,21 +55,30 @@ jobs:
           - { source: archive-org-pd, shard: "6/8", tier: open }
           - { source: archive-org-pd, shard: "7/8", tier: open }
           - { source: perseus-latin, shard: "0/1", tier: open }
+    # Skips every step when "only" names a different source (matrix values can't be used in a job-level if).
+    env:
+      SELECTED: ${{ github.event.inputs.only == '' || github.event.inputs.only == null || github.event.inputs.only == matrix.source }}
     steps:
       - uses: actions/checkout@v4
+        if: env.SELECTED == 'true'
       - uses: actions/setup-python@v5
+        if: env.SELECTED == 'true'
         with:
           python-version: "3.12"
       - run: pip install pyyaml==6.0.2
+        if: env.SELECTED == 'true'
       - name: Fetch
+        if: env.SELECTED == 'true'
         run: python tools/fetch.py "${{ matrix.source }}" --shard "${{ matrix.shard }}" --out dist
       - name: Pack (split under GitHub's 2 GB asset limit)
+        if: env.SELECTED == 'true'
         run: |
           mkdir -p pkg
           name="${{ matrix.source }}-shard$(echo '${{ matrix.shard }}' | sed 's#/#of#')"
           tar -C dist -czf - . | split -b 1900m -d -a 2 - "pkg/${name}.tar.gz.part"
           ls -la pkg
       - name: Upload to release
+        if: env.SELECTED == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
