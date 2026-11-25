@@ -1,0 +1,312 @@
+# Open Bible Library: master source catalog
+#
+# Every source the library collects, mirrors, keeps apart, or refuses is listed here.
+# Licenses were checked on 2026-11-25 against each source's own LICENSE file,
+# README or copyright page (the `evidence` URL). Re-check on every update.
+#
+# tier:
+#   open           -> redistributable for any purpose, including commercial use
+#   open-nd        -> redistributable unchanged, including commercially; do NOT edit or merge (CC BY-ND)
+#   noncommercial  -> redistributable for non-commercial use only; kept out of library/
+#   excluded       -> NOT redistributable or license unclear; never added (see EXCLUDED.md)
+# method:
+#   vendored  -> copied into library/ in this repo
+#   mirror    -> too large for git; tools/fetch.py clones it and the archive workflow publishes it as a release asset
+#   fetch     -> downloaded from a non-GitHub host by tools/fetch.py, filtered by license
+#   none      -> not collected
+
+verified_on: 2026-11-25
+
+sources:
+
+  # ---------------- Original-language texts ----------------
+  - id: oshb
+    name: Open Scriptures Hebrew Bible (Westminster Leningrad Codex + morphology)
+    upstream: https://github.com/openscriptures/morphhb
+    commit: db6c5c9b46b8f39346f10915ddb1a70dcd429901
+    license: CC-BY-4.0 (morphology); WLC text public domain
+    evidence: https://github.com/openscriptures/morphhb/blob/master/LICENSE.md
+    attribution: Open Scriptures Hebrew Bible Project
+    tier: open
+    method: vendored
+    path: library/hebrew-bible/oshb
+
+  - id: sblgnt
+    name: SBL Greek New Testament
+    upstream: https://github.com/LogosBible/SBLGNT
+    commit: d7f35adca9ec410e1d1499c63b4dd989d76c8d4d
+    license: CC-BY-4.0
+    evidence: https://github.com/LogosBible/SBLGNT/blob/master/LICENSE
+    attribution: Society of Biblical Literature and Logos Bible Software
+    tier: open
+    method: vendored
+    path: library/greek-new-testament/sblgnt
+
+  - id: morphgnt-sblgnt
+    name: MorphGNT morphological tagging of the SBLGNT
+    upstream: https://github.com/morphgnt/sblgnt
+    commit: aaed91e57c8e4a8dc9a2383e129ca5e75fe6393d
+    license: CC-BY-SA-3.0 (tagging); SBLGNT text CC-BY-4.0
+    evidence: https://github.com/morphgnt/sblgnt/blob/master/README.md
+    attribution: MorphGNT (James Tauber et al.)
+    tier: open
+    method: vendored
+    path: library/greek-new-testament/morphgnt-sblgnt
+
+  - id: byzantine-rp
+    name: Robinson-Pierpont Byzantine Textform (2005/2018) with parsing and apparatus
+    upstream: https://github.com/byztxt/byzantine-majority-text
+    commit: 788ffe7c909e4d9c564ebed7083e93dd13d10b7c
+    license: CC0-1.0 (public domain dedication)
+    evidence: https://github.com/byztxt/byzantine-majority-text/blob/master/LICENSE
+    tier: open
+    method: vendored
+    path: library/greek-new-testament/byzantine-robinson-pierpont
+
+  - id: nestle1904
+    name: Nestle 1904 Greek New Testament (text, morphology, XML, Berean glosses)
+    upstream: https://github.com/biblicalhumanities/Nestle1904
+    commit: 713f28a3b7d4d66132f5aa809fa223fe79762e5d
+    license: Public domain text and glosses; morph CC0-1.0; xml markup CC-BY-SA-4.0
+    evidence: https://github.com/biblicalhumanities/Nestle1904 (per-folder README files); https://berean.bible/terms.htm
+    tier: open
+    method: vendored
+    path: library/greek-new-testament/nestle1904
+
+  - id: cntr
+    name: Center for New Testament Restoration manuscript transcriptions
+    upstream: https://github.com/Center-for-New-Testament-Restoration/transcriptions
+    commit: 4e743a41a4b2ca010ece53229cd272aa59b1efe6
+    license: CC-BY-SA-4.0
+    evidence: https://github.com/Center-for-New-Testament-Restoration/transcriptions/blob/main/LICENSE.md
+    attribution: Alan Bunning and the Center for New Testament Restoration
+    tier: open
+    method: vendored
+    path: library/greek-new-testament/cntr-transcriptions
+
+  - id: stepbible
+    name: STEPBible Data (tagged Hebrew/Greek Bibles, lexicons, proper names, versification)
+    upstream: https://github.com/STEPBible/STEPBible-Data
+    commit: 5de0a47f35f0fc13dfe1430d104e5db8a4285f9c
+    license: CC-BY-4.0
+    evidence: https://github.com/STEPBible/STEPBible-Data/blob/master/README.md
+    attribution: STEP Bible (www.STEPBible.org), Tyndale House, Cambridge
+    tier: open
+    method: vendored
+    path: library/tagged-bibles/stepbible
+    notes: The "Older Formats" folder is not copied (superseded files); the mirror job keeps the full repo.
+
+  - id: macula-hebrew
+    name: MACULA Hebrew linguistic datasets (syntax trees, glosses, LXX equivalents)
+    upstream: https://github.com/Clear-Bible/macula-hebrew
+    license: CC-BY-4.0
+    evidence: https://github.com/Clear-Bible/macula-hebrew/blob/main/LICENSE.md
+    attribution: MACULA Hebrew Linguistic Datasets, Biblica Inc.
+    tier: open
+    method: mirror
+    size: ~1.9 GB
+
+  - id: macula-greek
+    name: MACULA Greek linguistic datasets (syntax trees, word senses, Nestle1904 + SBLGNT)
+    upstream: https://github.com/Clear-Bible/macula-greek
+    license: CC-BY-4.0
+    evidence: https://github.com/Clear-Bible/macula-greek/blob/main/LICENSE.md
+    attribution: MACULA Greek Linguistic Datasets, Biblica Inc.
+    tier: open
+    method: mirror
+    size: ~580 MB
+
+  # ---------------- Translations ----------------
+  - id: bsb
+    name: Berean Standard Bible, Berean Literal Bible, Berean Reader's Bible, Majority Standard Bible
+    upstream: https://berean.bible/downloads.htm
+    license: Public domain (dedicated April 30, 2023)
+    evidence: https://berean.bible/terms.htm
+    tier: open
+    method: fetch
+    notes: Derivatives that change the text should not use the "Berean" name (publisher's request).
+
+  - id: ebible-open
+    name: eBible.org translations that are public domain, CC BY or CC BY-SA (440 translations)
+    upstream: https://ebible.org/Scriptures/
+    license: per translation, see catalog/ebible-licenses.csv
+    evidence: https://ebible.org/Scriptures/copyright.php and each translation's /<id>/copyright.htm
+    tier: open
+    method: fetch
+    notes: Includes KJV, ASV, WEB, YLT, Darby, Douay-Rheims, Geneva 1599, Tyndale, Webster, JPS 1917, Brenton LXX, Clementine Vulgate, Luther 1912, Reina-Valera 1909, Louis Segond 1910 and hundreds more. KJV remains under Crown copyright in the UK.
+
+  - id: ebible-nd
+    name: eBible.org translations licensed CC BY-ND 4.0 (87 translations)
+    upstream: https://ebible.org/Scriptures/
+    license: CC-BY-ND-4.0
+    evidence: catalog/ebible-licenses.csv
+    tier: open-nd
+    method: fetch
+    notes: Stored verbatim in their own folder. Never edit, merge or re-translate these files.
+
+  - id: ebible-nc
+    name: eBible.org translations licensed CC BY-NC-ND (748 translations)
+    upstream: https://ebible.org/Scriptures/
+    license: CC-BY-NC-ND-3.0 / CC-BY-NC-ND-4.0
+    evidence: catalog/ebible-licenses.csv
+    tier: noncommercial
+    method: fetch
+
+  # ---------------- Lexicons and reference ----------------
+  - id: openscriptures-hebrew-lexicon
+    name: Brown-Driver-Briggs and Strong's Hebrew lexicons (Open Scriptures)
+    upstream: https://github.com/openscriptures/HebrewLexicon
+    commit: 21c9add13bc727d3a951361778e97e3ff7afd1ce
+    license: CC-BY-4.0 (markup); BDB and Strong's text public domain
+    evidence: https://github.com/openscriptures/HebrewLexicon/blob/master/readme.md
+    attribution: Open Scriptures Hebrew Bible Project
+    tier: open
+    method: vendored
+    path: library/lexicons/openscriptures-hebrew-lexicon
+    notes: Contains TWOT reference numbers only, not TWOT text (per upstream readme).
+
+  - id: strongs
+    name: Strong's Greek and Hebrew dictionaries (XML)
+    upstream: https://github.com/openscriptures/strongs
+    commit: 0acd2f251c2d35ff8db2dece4e0593979d3ac223
+    license: Public domain
+    evidence: rights elements inside the XML files ("Public Domain -- Copy Freely"; <rights>Public Domain</rights>)
+    tier: open
+    method: vendored
+    path: library/lexicons/strongs
+    notes: Hebrew XML carries TWOT index numbers only, not TWOT text.
+
+  - id: abbott-smith
+    name: Abbott-Smith, A Manual Greek Lexicon of the New Testament (1922), TEI
+    upstream: https://github.com/translatable-exegetical-tools/Abbott-Smith
+    commit: 8c00cb244761aa23659421a8cbbbf7a3b27b7d59
+    license: Public domain
+    evidence: https://github.com/translatable-exegetical-tools/Abbott-Smith/blob/master/README.md
+    tier: open
+    method: vendored
+    path: library/lexicons/abbott-smith
+    notes: The upstream archive.org PDF carries its own restrictions and is NOT copied.
+
+  - id: perseus-lexica
+    name: Perseus lexica (Liddell-Scott-Jones, Middle Liddell, Lewis & Short, and others)
+    upstream: https://github.com/PerseusDL/lexica
+    license: CC-BY-SA-4.0
+    evidence: https://github.com/PerseusDL/lexica/blob/master/license.md
+    attribution: Perseus Digital Library, Tufts University (http://www.perseus.tufts.edu/)
+    tier: open
+    method: mirror
+    size: ~430 MB
+
+  - id: openbible-cross-references
+    name: OpenBible.info cross-references (~340,000, mostly from the Treasury of Scripture Knowledge)
+    upstream: https://a.openbible.info/data/cross-references.zip
+    license: CC-BY-4.0
+    evidence: https://www.openbible.info/labs/cross-references/
+    attribution: OpenBible.info
+    tier: open
+    method: fetch
+
+  # ---------------- Church fathers and classics ----------------
+  - id: apostolic-fathers
+    name: Open Apostolic Fathers (Greek, corrected Lake text)
+    upstream: https://github.com/jtauber/apostolic-fathers
+    commit: a07f9207902d2a7a88aa3e7c8fb3671d7ef6f0ff
+    license: CC-BY-SA-4.0
+    evidence: https://github.com/jtauber/apostolic-fathers/blob/master/README.md
+    attribution: James Tauber and Seumas Macdonald, Open Apostolic Fathers
+    tier: open
+    method: vendored
+    path: library/church-fathers/apostolic-fathers
+    notes: Only texts/ and structured/ are copied. The raw-ccel-lake folder is NOT copied (CCEL terms).
+
+  - id: first1kgreek
+    name: First Thousand Years of Greek (patristic and classical Greek texts, TEI)
+    upstream: https://github.com/OpenGreekAndLatin/First1KGreek
+    license: CC-BY-SA-4.0
+    evidence: https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/license.md
+    attribution: Open Greek and Latin Project
+    tier: open
+    method: mirror
+
+  - id: perseus-greek
+    name: Perseus canonical Greek literature (includes Josephus, Philo and other background texts)
+    upstream: https://github.com/PerseusDL/canonical-greekLit
+    license: CC-BY-SA-4.0 unless otherwise indicated
+    evidence: https://github.com/PerseusDL/canonical-greekLit/blob/master/README.md
+    attribution: Perseus Digital Library, Tufts University
+    tier: open
+    method: mirror
+
+  - id: gutenberg-christian
+    name: Project Gutenberg books in Bible, theology and church history (LoC classes BR-BX)
+    upstream: https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv
+    license: Public domain in the USA (checked per book in its RDF record)
+    evidence: https://www.gutenberg.org/policy/license.html
+    tier: open
+    method: fetch
+    notes: Each book's RDF rights field must read "Public domain in the USA." or it is skipped. The Project Gutenberg header/footer is stripped so copies carry no PG trademark.
+
+  - id: sefaria-open
+    name: Sefaria texts (Tanakh, Mishnah, Talmud, midrash, commentary) licensed PD, CC0, CC BY or CC BY-SA
+    upstream: https://github.com/Sefaria/Sefaria-Export
+    license: per text version (license field in each JSON)
+    evidence: https://github.com/Sefaria/Sefaria-Export/blob/master/LICENSE.md
+    tier: open
+    method: fetch
+    notes: merged.json files are never used, because they mix licenses. Versions with license "unknown" are skipped.
+
+  - id: sefaria-nc
+    name: Sefaria texts licensed CC BY-NC
+    upstream: https://github.com/Sefaria/Sefaria-Export
+    license: CC-BY-NC
+    evidence: license field in each JSON version
+    tier: noncommercial
+    method: fetch
+
+  # ---------------- Geography ----------------
+  - id: openbible-geocoding
+    name: OpenBible.info Bible geocoding data (every identifiable place in the Bible)
+    upstream: https://github.com/openbibleinfo/Bible-Geocoding-Data
+    commit: 7eb18a5ee62f27b9b93bd6689ea272d76dd23b8f
+    license: CC-BY-4.0; OpenStreetMap-derived geometry ODbL-1.0
+    evidence: https://github.com/openbibleinfo/Bible-Geocoding-Data/blob/main/license.txt
+    attribution: OpenBible.info; OpenStreetMap contributors
+    tier: open
+    method: vendored
+    path: library/geography/openbible-geocoding
+    notes: data/, schemas/ and all.kml are vendored. The large geometry/ folder is mirrored. Thumbnail images are NOT collected (mixed licenses).
+
+  # ---------------- Non-commercial ----------------
+  - id: etcbc-bhsa
+    name: ETCBC Biblia Hebraica Stuttgartensia (Amstelodamensis) database
+    upstream: https://github.com/ETCBC/bhsa
+    license: CC-BY-NC-4.0
+    evidence: https://github.com/ETCBC/bhsa/blob/master/README.md
+    tier: noncommercial
+    method: mirror
+
+  - id: etcbc-dss
+    name: ETCBC Dead Sea Scrolls (biblical and non-biblical)
+    upstream: https://github.com/ETCBC/dss
+    license: CC-BY-NC-4.0
+    evidence: https://github.com/ETCBC/dss/blob/master/LICENSE
+    tier: noncommercial
+    method: mirror
+
+  - id: etcbc-peshitta
+    name: ETCBC Syriac Peshitta Old Testament
+    upstream: https://github.com/ETCBC/peshitta
+    license: CC-BY-NC-4.0
+    evidence: https://github.com/ETCBC/peshitta/blob/master/docs/about.md
+    tier: noncommercial
+    method: mirror
+
+  - id: openbible-geocoding-full
+    name: OpenBible.info Bible geocoding data, full repository including OpenStreetMap geometry
+    upstream: https://github.com/openbibleinfo/Bible-Geocoding-Data
+    license: CC-BY-4.0; OpenStreetMap-derived geometry ODbL-1.0
+    evidence: https://github.com/openbibleinfo/Bible-Geocoding-Data/blob/main/license.txt
+    attribution: OpenBible.info; OpenStreetMap contributors
+    tier: open
+    method: mirror
+    size: ~140 MB
