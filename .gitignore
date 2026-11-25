@@ -1,0 +1,4 @@
+dist/
+pkg/
+__pycache__/
+*.pyc

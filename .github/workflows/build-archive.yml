@@ -1,0 +1,77 @@
+name: Build archive
+
+# Downloads every mirrored and fetched source (see catalog/sources.yaml),
+# packs each one, and publishes them as release assets:
+#   archive-YYYY-MM                 open material (any use, follow each license's attribution terms)
+#   noncommercial-archive-YYYY-MM   non-commercial material only, kept apart on purpose
+# Run it from the Actions tab, or let it run on the 1st of each month.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 1 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        include:
+          - { source: macula-hebrew, shard: "0/1", tier: open }
+          - { source: macula-greek, shard: "0/1", tier: open }
+          - { source: perseus-lexica, shard: "0/1", tier: open }
+          - { source: first1kgreek, shard: "0/1", tier: open }
+          - { source: perseus-greek, shard: "0/1", tier: open }
+          - { source: openbible-geocoding-full, shard: "0/1", tier: open }
+          - { source: bsb, shard: "0/1", tier: open }
+          - { source: openbible-cross-references, shard: "0/1", tier: open }
+          - { source: ebible-open, shard: "0/2", tier: open }
+          - { source: ebible-open, shard: "1/2", tier: open }
+          - { source: ebible-nd, shard: "0/1", tier: open }
+          - { source: gutenberg-christian, shard: "0/2", tier: open }
+          - { source: gutenberg-christian, shard: "1/2", tier: open }
+          - { source: sefaria-open, shard: "0/4", tier: open }
+          - { source: sefaria-open, shard: "1/4", tier: open }
+          - { source: sefaria-open, shard: "2/4", tier: open }
+          - { source: sefaria-open, shard: "3/4", tier: open }
+          - { source: ebible-nc, shard: "0/2", tier: noncommercial }
+          - { source: ebible-nc, shard: "1/2", tier: noncommercial }
+          - { source: sefaria-nc, shard: "0/2", tier: noncommercial }
+          - { source: sefaria-nc, shard: "1/2", tier: noncommercial }
+          - { source: etcbc-bhsa, shard: "0/1", tier: noncommercial }
+          - { source: etcbc-dss, shard: "0/1", tier: noncommercial }
+          - { source: etcbc-peshitta, shard: "0/1", tier: noncommercial }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml==6.0.2
+      - name: Fetch
+        run: python tools/fetch.py "${{ matrix.source }}" --shard "${{ matrix.shard }}" --out dist
+      - name: Pack (split under GitHub's 2 GB asset limit)
+        run: |
+          mkdir -p pkg
+          name="${{ matrix.source }}-shard$(echo '${{ matrix.shard }}' | sed 's#/#of#')"
+          tar -C dist -czf - . | split -b 1900m -d -a 2 - "pkg/${name}.tar.gz.part"
+          ls -la pkg
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          month=$(date -u +%Y-%m)
+          if [ "${{ matrix.tier }}" = "noncommercial" ]; then
+            tag="noncommercial-archive-${month}"
+            notes="NON-COMMERCIAL USE ONLY. CC BY-NC / CC BY-NC-ND material. Do not include in paid products. See catalog/sources.yaml."
+          else
+            tag="archive-${month}"
+            notes="Public-domain and openly licensed material. Follow each dataset's attribution terms (see MANIFEST*.json and SOURCE.json in each archive). CC BY-ND translations must stay unmodified."
+          fi
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --title "$tag" --notes "$notes" || true
+          gh release upload "$tag" pkg/* --clobber

@@ -1,0 +1,1277 @@
+translation_id,license,language,title
+arb-vd,public-domain,Arabic,Arabic Van Dyck Bible
+arp,public-domain,Arapaho,Arapaho Luke
+awk,public-domain,Awabakal,Awabakal Luke
+bea,public-domain,Beaver,Beaver Mark
+bla,public-domain,Blackfoot,Blackfoot Matthew
+breBRG,public-domain,Breton,Breton Gospels
+mya,public-domain,Burmese,Burmese Common Language Bible
+myajvb,public-domain,Burmese,Judson Burmese Bible
+cha,public-domain,Chamorro,"Chamorro Gospels, Acts, and Psalms"
+cekak,public-domain,"Chin, Eastern Khumi",Asang Khongca Bible
+hltmcsb,public-domain,"Chin, Matu",Matupi Chin Standard Bible 2019
+hlt,public-domain,"Chin, Matu",Matupi Chin Standard Bible w/ Strongs
+cmn-cu89s,public-domain,Chinese,Chinese Union Version (simplified)
+cmn-cu89t,public-domain,Chinese,Chinese Union Version (traditional)
+cmnswcb,public-domain,"Chinese, Mandarin",World Chinese Bible
+copbhc,public-domain,Coptic,Coptic Boharic NT
+copcnt,public-domain,Coptic,Coptic NT
+hrv,public-domain,Croatian,Croatian Bible
+ces1613,public-domain,Czech,Czech Kralická Bible 1613
+dif,public-domain,Dieri,Dieri NT
+nld,public-domain,Dutch,Dutch Bible 1917
+nld1939,public-domain,Dutch,"Dutch Bible, Petrus Canisius"
+eng-asv,public-domain,English,American Standard Version (1901)
+engasvbt,public-domain,English,ASV Byzantine Text
+engBBE,public-domain,English,Bible in Basic English
+eng-Brenton,public-domain,English,Brenton English Septuagint
+eng-uk-lxx2012,public-domain,English,British English Septuagint 2012
+engDBY,public-domain,English,Darby Translation
+engDRA,public-domain,English,Douay-Rheims 1899
+engbsb,public-domain,English,English Berean Standard Bible
+enggnv,public-domain,English,Geneva Bible 1599
+engjps,public-domain,English,JPS TaNaKH 1917
+eng-kjv2006,public-domain,English,King James Version
+eng-kjv,public-domain,English,King James Version + Apocrypha
+engkjvcpb,public-domain,English,KJV Cambridge Paragraph
+englee,public-domain,English,Leeser Tanakh
+eng-lxx2012,public-domain,English,LXX2012 U. S. English
+engmsb,public-domain,English,Majority Standard BIble
+engmet,public-domain,English,Masoretic English Tanakh
+engnoy,public-domain,English,Noyes Bible
+engoebcw,public-domain,English,Open English Bible (Commonwealth)
+engoebus,public-domain,English,Open English Bible (US)
+eng-rv,public-domain,English,Revised Version
+engoke,public-domain,English,Targum Onkelos Etheridge
+engtnt,public-domain,English,Tyndale NT
+englxxup,public-domain,English,Updated Brenton English Septuagint
+engwebster,public-domain,English,Webster Bible
+engwebp,public-domain,English,World English Bible
+eng-web-c,public-domain,English,World English Bible (Catholic)
+engwebpb,public-domain,English,World English Bible British Edition
+eng-webbe,public-domain,English,World English Bible British Edition with Deuterocanon
+eng-web,public-domain,English,World English Bible Classic
+engwebu,public-domain,English,World English Bible Updated
+engwmb,public-domain,English,World Messianic Bible
+engwmbb,public-domain,English,World Messianic Bible British Edition
+engWycliffe,public-domain,English,Wycliffe Bible portions
+engylt,public-domain,English,Young's Literal Translation
+epo,public-domain,Esperanto,Esperanto Bible
+frasbl,public-domain,French,French Free Holy Bible for the World
+fraLSG,public-domain,French,French Louis Segond 1910 Bible
+fra_fob,public-domain,French,French Ostervald Bible
+frajnd,public-domain,French,French: Bible J.N. Darby
+kld,public-domain,Gamilaraay,KAMILAROI SAYINGS
+deu1912,public-domain,"German, Standard",German Luther Bible 1912
+deutkw,public-domain,"German, Standard",German Textbibel
+deuelo,public-domain,"German, Standard",German Unrevised Elberfelder Bible
+grcbrent,public-domain,"Greek, Ancient",Brenton Septuagint
+grcbyz,public-domain,"Greek, Ancient",Byzantine Greek  NT
+grcmt,public-domain,"Greek, Ancient",Greek Majority Text NT
+grclxx,public-domain,"Greek, Ancient",SEPTUAGINTA
+grcsr,public-domain,"Greek, Ancient",Solid Rock Greek New Testament
+grctcgnt,public-domain,"Greek, Ancient",Text-Critical Greek NT
+grctr,public-domain,"Greek, Ancient",Textus Receptus
+grc-tisch,public-domain,"Greek, Ancient",Tischendorf Greek NT
+kky,public-domain,Guugu Yimidhirr,Gugu Yimidhirr Matthew Sample
+hat,public-domain,Haitian,Haitian Creole Bible 1985
+haw1868,public-domain,Hawaiian,Hawaiian Bible 1868
+hbo,public-domain,Hebrew,Hebrew Masoretic OT
+heb,public-domain,Hebrew,Modern Hebrew Bible
+hebsg,public-domain,Hebrew,Salkinson Hebrew NT
+hboWLC,public-domain,Hebrew,Westminster Leningrad Codex Hebrew OT
+ita1885,public-domain,Italian,Italian Diodati Bible
+ita1927,public-domain,Italian,Italian Riveduta Bible
+jpnm,public-domain,Japanese,Japanese Freedom Bible
+jpn1965,public-domain,Japanese,New Japanese NT
+kor,public-domain,Korean,Korean Bible 1910
+kos,public-domain,Kosraean,Kosraean Bible
+latVUC,public-domain,Latin,Clementine Vulgate 1598
+ulk1902,public-domain,Meriam,Meriam Mir Bible
+nay,public-domain,Narrinyeri,Ngarrindjeri Scriptures
+pesOPV,public-domain,Persian,Old Persion Version Bible
+pon-pdn,public-domain,Pohnpeian,"Pohnpeian NT & Psalms, new alphabet"
+pon,public-domain,Pohnpeian,"Pohnpeian NT & Psalms, old alphabet"
+porbrbsl,public-domain,Portuguese,World Portuguese Bible
+ron1924,public-domain,Romanian,Romanian Bible (Cyrillic)
+ronbl,public-domain,Romanian,Romanian Free Holy Bible
+rusfb,public-domain,Russian,Russian Freedom Bible
+russyn,public-domain,Russian,Russian Synodal Bible
+srp1868,public-domain,Serbian,Serbian DK Bible (Cyrillic)
+srp1865,public-domain,Serbian,Serbian DK Bible (Latin)
+spabes,public-domain,Spanish,La Biblia en Español Sencillo
+spaRV1909,public-domain,Spanish,Reina Valera 1909
+spabll,public-domain,Spanish,Spanish BLL
+spablm,public-domain,Spanish,Spanish Free Bible for the World
+swh1850,public-domain,Swahili,Swahili Bible
+thafb,public-domain,Thai,Thai Freedom Bible
+ton,public-domain,Tongan,Revised West Version
+tsnsa,public-domain,Tswana,South African Tswana Bible
+tsnfb,public-domain,Tswana,Tswana Freedom Bible
+ukr1871,public-domain,Ukrainian,Ukrainian Bible by P. Kulish
+ukrfb,public-domain,Ukrainian,Ukrainian Freedom Bible
+vie1934,public-domain,Vietnamese,Vietnamese Bible 1923
+wro,public-domain,Worrorra,Worrorra Mark and Luke
+hebwlc,public-domain,עברית,Hebrew OT (WLC)
+kud,CC-BY-NC-ND-4.0,'Auhelawa,'Auhelawa NT
+aau,CC-BY-NC-ND-4.0,Abau,Abau NT
+mgj,CC-BY-SA-4.0,Abureni,Abureni NT
+acrNNT,CC-BY-NC-ND-3.0,Achi,Achi Rabinal NT (new orthography)
+acrTNT,CC-BY-NC-ND-3.0,Achi,Achi Rabinal NT (traditional orthography)
+acr-acc,CC-BY-NC-ND-3.0,Achi,New Testament in Achi
+acuNT,CC-BY-NC-ND-3.0,Achuar-shiwiar,Achuar-shiwiar Bible
+adt,CC-BY-NC-ND-4.0,Adnyamathanha,Adnyamathanha Christmas Story
+adz,CC-BY-NC-ND-4.0,Adzera,Adzera Bible
+agd,CC-BY-NC-ND-4.0,Agarabi,Agarabi NT
+dgc,CC-BY-NC-ND-3.0,"Agta, Casiguran Dumagat",Casiguran Dumagat Agta NT
+agt,CC-BY-NC-ND-3.0,"Agta, Central Cagayan",Central Cagayan Agta
+aguBl,CC-BY-NC-ND-3.0,Aguacateco,Aguacateco Bible
+agr,CC-BY-NC-ND-3.0,Aguaruna,Aguaruna Bible
+agn,CC-BY-NC-ND-3.0,Agutaynen,Agutaynen NT
+ahr,CC-BY-SA-4.0,Ahirani,Ahirani Matthew and Mark
+idc,CC-BY-SA-4.0,Ajiya,Ajiya: Ajigha NT Portion (New Testament)
+cpcNT,CC-BY-NC-ND-3.0,Ajyíninka Apurucayali,Ajyíninka Apurucayali NT
+knjNT,CC-BY-NC-ND-3.0,Akateko,Akateko NT
+akeNT,CC-BY-NC-ND-3.0,Akawaio,Akawaio NT
+bssNT,CC-BY-NC-ND-3.0,Akoose,Akoose NT
+spm,CC-BY-ND-4.0,Akukem,Published Mark & Acts
+alw,CC-BY-SA-4.0,Alaba-K'abeena,Alaba-K’abeena NT
+amp,CC-BY-NC-ND-4.0,Alamblak,Alamblak NT
+alh,CC-BY-NC-ND-4.0,Alawa,Alawa Song Book
+gah,CC-BY-NC-ND-4.0,Alekano or Gahuku,Alekano Bible
+alqALGNT,CC-BY-NC-ND-4.0,Algonquin,Algonquin NT
+alpNT,CC-BY-NC-ND-3.0,Alune,Alune NT
+aly,CC-BY-NC-ND-4.0,Alyawarr,Alyawarr Bible
+amm,CC-BY-NC-ND-4.0,Ama,Ama NT
+amn-n,CC-BY-NC-ND-4.0,Amanab,Amanab Naineri NT
+amn-amanab,CC-BY-NC-ND-4.0,Amanab,Amanab NT
+amrNT,CC-BY-NC-ND-3.0,Amarakaeri,New Testament in Amarakaeri (PE:amr:Amarakaeri)
+aaz,CC-BY-ND-4.0,Amarasi,Amarasi Bible
+omb,CC-BY-SA-4.0,"Ambae, East","Ambae, East: Waratau Siaga Tatuei mo Vilegi (Old Testament)"
+amk,CC-BY-NC-ND-3.0,Ambai,Ambai NT
+tvk,CC-BY-ND-4.0,"Ambrym, Southeast",Southeast Ambrym Bible portions
+abt-maprik,CC-BY-NC-ND-4.0,Ambulas,Ambulas Maprik NT
+aey,CC-BY-NC-ND-4.0,Amele,Amele Genesis
+amo,CC-BY-SA-4.0,Amo,Amo NT
+amuNT,CC-BY-NC-ND-3.0,"Amuzgo, Guerrero","New Testament in Amuzgo, Guerrero (MX:amu:Amuzgo, Guerrero)"
+azgNT,CC-BY-NC-ND-3.0,"Amuzgo, San Pedro Amuzgos",San Pedro Amuzgos NT
+aby,CC-BY-NC-ND-4.0,Aneme Wake,Aneme Wake NT
+agm,CC-BY-NC-ND-4.0,Angaataha,Angaataha NT
+agg,CC-BY-NC-ND-4.0,Angor,Angor NT
+aoi,CC-BY-NC-ND-4.0,Anindilyakwa,Anindilyakwa Bible
+aqk,CC-BY-SA-4.0,Aninka,Aninka Bible
+boj,CC-BY-NC-ND-4.0,Anjam,Anjam NT 2000
+boj2014,CC-BY-NC-ND-4.0,Anjam,Anjam NT 2014 + Psalms
+aak,CC-BY-NC-ND-4.0,Ankave,Minaifia NT
+amx,CC-BY-NC-ND-4.0,Anmatyerre,Anmatyerr Bible
+aui,CC-BY-NC-ND-4.0,Anuki,Anuki Bible Portions
+apwNT,CC-BY-NC-ND-3.0,"Apache, Western",Western Apache NT
+ena,CC-BY-SA-4.0,Apal,Apali NT
+apnNT,CC-BY-NC-ND-3.0,Apinayé,Apinayé NT
+app,CC-BY-NC-ND-4.0,Apma,Apma Jona
+apuNT,CC-BY-NC-ND-3.0,Apurinã,Apurinã NT
+arlNT,CC-BY-NC-ND-3.0,Arabela,Arabela NT
+arbnav,CC-BY-SA-4.0,"Arabic, Standard",New Arabic Version (Book of Life)
+pga,CC-BY-SA-4.0,"Arabic, Sudanese Creole",Sudanese Creole Arabic Bible
+aeu,CC-BY-NC-ND-4.0,"Arabic, Tunisian Spoken",Akeu NT
+aon,CC-BY-NC-ND-4.0,Arapesh,Arapesh NT
+mwc,CC-BY-NC-ND-4.0,Are,Are Bible
+rup,CC-BY-SA-4.0,Armãneashti/Arumanisht,Aromanian Bible
+apr,CC-BY-NC-ND-4.0,Arop-Lokep,Arop-Lokep
+aia,CC-BY-ND-4.0,Arosi,Arosi New Testament
+are,CC-BY-NC-ND-4.0,"Arrarnta, Western",Western Arrarnta NT
+aer,CC-BY-NC-ND-4.0,"Arrernte, Eastern",Eastern Arrente Bible
+msy2020,CC-BY-SA-4.0,Aruamu,Aruamu Bible
+msy,CC-BY-NC-ND-4.0,Aruamu,Aruamu NT
+cniNT,CC-BY-NC-ND-3.0,Asháninka,Asháninka NT
+cjoNT,CC-BY-NC-ND-3.0,Ashéninka Pajonal,Ashéninka Pajonal NT
+cpuNT,CC-BY-NC-ND-3.0,"Ashéninka, Pichis",Pichis Ashéninka NT
+cpy,CC-BY-NC-ND-4.0,"Ashéninka, South Ucayali",South Ucayali Ashéninka Bible
+cpbNT,CC-BY-NC-ND-3.0,"Ashéninka, Ucayali-yurúa",Ucayali-yurúa Ashéninka NT
+asmfb,CC-BY-SA-4.0,Assamese,Assamese Indian Revised Version Bible
+aii,CC-BY-NC-ND-3.0,Assyrian Neo-Aramaic,Assyrian Neo-Aramaic NT+Psalms
+att,CC-BY-NC-ND-3.0,"Atta, Pamplona",Pamplona Atta NT
+avt,CC-BY-NC-ND-4.0,Au,Au NT
+awb,CC-BY-NC-ND-4.0,Awa,Awa NT
+kwi,CC-BY-NC-ND-3.0,Awa-Cuaiquer,Awa-Cuaiquer NT
+awx,CC-BY-NC-ND-4.0,Awara,Awara Bible portions
+auy,CC-BY-NC-ND-4.0,Awiyaana,Awiyaana NT
+abc,CC-BY-SA-4.0,"Ayta, Ambala",Ayta Ambala NT Portions
+sgb,CC-BY-NC-ND-3.0,"Ayta, Mag-antsi",Mag-antsi Ayta NT
+azb,CC-BY-NC-ND-3.0,"Azerbaijani, South",Azerbaijani Bible
+bba,CC-BY-NC-ND-3.0,Baatonum,Bariba Bible
+bvd,CC-BY-ND-4.0,Baeggu,Baegu New Testament
+bsp,CC-BY-SA-4.0,Baga Sitemu,Baga Sitemu Bible Portions
+bkx,CC-BY-ND-4.0,Baikeno,Baikeno Mark
+bswl,CC-BY-SA-4.0,Baiso,Baiso NT (Latin)
+bswe,CC-BY-SA-4.0,Baiso,Baiso: አማቶ ኦኡሱብ (New Testament)
+bkqNT,CC-BY-NC-ND-3.0,Bakairí,Bakairí NT
+bki,CC-BY-NC-ND-4.0,Baki,Baki NT
+blw,CC-BY-NC-ND-3.0,Balangao,Balangao NT
+blzNT,CC-BY-NC-ND-4.0,Balantak,Balantak NT
+ptu,CC-BY-ND-4.0,Bambam,Bambam Bible
+bcf,CC-BY-NC-ND-4.0,Bamu,Bamu Bible
+bsj,CC-BY-SA-4.0,Bangwinji,Bangwinji NT
+bbb,CC-BY-NC-ND-4.0,Barai,Barai Bible
+bsnNT,CC-BY-NC-ND-3.0,Barasana-Eduria,Barasana-Eduria NT
+bpx,CC-BY-4.0,"Bareli, Palya","Bareli, Palya: भगवान ना खरला बोल (Bible)"
+mlp,CC-BY-NC-ND-4.0,Bargam,Bargam NT
+bch,CC-BY-NC-ND-4.0,Bariai,Bariai Bible
+bjk,CC-BY-NC-ND-4.0,Barok,Barok NT
+bjz,CC-BY-NC-ND-4.0,Baruga,Baruga NT
+byr,CC-BY-NC-ND-4.0,Baruya,Baruya NT+Genesis
+buj,CC-BY-SA-4.0,Basa-Gurmana,Basa-Gurmana MAT
+bbd,CC-BY-SA-3.0,Bau,Bau Bible Story
+beo,CC-BY-SA-4.0,Beami,Bedamuni Bible
+bjvNT,CC-BY-NC-ND-3.0,Bedjond,Bedjond NT
+bkw,CC-BY-SA-4.0,Bekwel,Bekwel NT
+bzj,CC-BY-NC-ND-3.0,Belize Kriol English,New Testament in Belize Kriol English (BH:bzj:Belize Kriol English)
+bef,CC-BY-NC-ND-4.0,Benabena,Benabena NT
+benirv,CC-BY-SA-4.0,Bengali,Bengali Indian Revised Version Bible: ইন্ডিয়ান রিভাইজড ভার্সন (IRV) - বেঙ্গলী
+benobcv,CC-BY-SA-4.0,Bengali,Open Bengali Contemporary Version Bible
+bhd,CC-BY-SA-4.0,Bhadrawahi,Bhadrawahi Bible
+bht,CC-BY-SA-4.0,Bhattiyali,Bhattiyali Bible
+bhi,CC-BY-SA-4.0,Bhilali,Bhilali: भगवानेन छाचला बुल (Bible)
+bhu,CC-BY-SA-4.0,Bhunjia,Bhumiya Bible
+big,CC-BY-NC-ND-4.0,Biangai,Biangai NT
+bhl,CC-BY-ND-4.0,Bimin,Bimin NT
+bhg,CC-BY-NC-ND-4.0,Binandere,Binandere NT
+bon,CC-BY-NC-ND-4.0,Bine,Bine NT
+bkd,CC-BY-NC-ND-3.0,Binukid,Binukid NT
+bjr,CC-BY-NC-ND-4.0,Binumarien,Binumarien Bible
+bpr,CC-BY-NC-ND-3.0,"Blaan, Koronadal",Koronadal Blaan NT
+bps,CC-BY-NC-ND-3.0,"Blaan, Sarangani",Sarangani Blaan NT
+beu,CC-BY-ND-4.0,Blagar,Pura Bible
+mux,CC-BY-NC-ND-4.0,Bo-Ung,Bo-Ung NT
+bdv,CC-BY-4.0,Bodo Parja,Bodo Parja: BOPO Bible
+bvw,CC-BY-SA-4.0,Boga,Boga NT
+bqcsim,CC-BY-NC-ND-3.0,Boko,Boko (Benin) Bible
+bus,CC-BY-NC-ND-3.0,Bokobaru,Bokobaru Bible
+bnp,CC-BY-NC-ND-4.0,Bola,Bola Bible
+smkNT,CC-BY-NC-ND-3.0,Bolinao,Bolinao NT
+bou,CC-BY-SA-4.0,Bondei,Bondei Bible
+lbk,CC-BY-NC-ND-3.0,"Bontok, Central",Central Bontok NT
+ebk,CC-BY-NC-ND-3.0,"Bontok, Eastern",Eastern Bontok NT
+boaNT,CC-BY-NC-ND-3.0,Bora,Bora NT
+gai,CC-BY-ND-4.0,Borei,New Testament in Mborena Kam language
+bwo,CC-BY-4.0,Borna,Borna NT Latin Version
+ksr,CC-BY-NC-ND-4.0,Borong,Borong NT + OT portions
+bzdNTpo,CC-BY-NC-ND-3.0,Bribri,Bribri Bible
+jid,CC-BY-SA-4.0,Bu,Bu NT
+zbu,CC-BY-SA-4.0,Bu (Bauchi State),Bu NT
+boxNT,CC-BY-NC-ND-3.0,Buamu,Buamu NT
+bzh,CC-BY-NC-ND-4.0,Buang,Buang NT
+mmo,CC-BY-NC-ND-4.0,"Buang, Mangga",Mangga Buang NT
+bgt,CC-BY-ND-4.0,Bughotu,Bughotu New Testament
+sabNT,CC-BY-NC-ND-3.0,Buglere,Buglere NT
+bgg,CC-BY-4.0,Bugun,Bugun Bible
+bxh,CC-BY-NC-ND-4.0,Buhutu,Buhutu Bible
+buk,CC-BY-NC-ND-4.0,Bukawa,Bukawa NT
+apeB,CC-BY-NC-ND-3.0,Bukiyip,Bukiyip NT
+apec,CC-BY-NC-ND-4.0,Bukiyip,Coastal Arapesh NT
+bdd,CC-BY-NC-ND-4.0,Bunama,Bunama NT
+bvr,CC-BY-NC-ND-4.0,Burarra,Burarra Scriptures
+bqp,CC-BY-NC-ND-3.0,Busa,Bisa Bible
+bwd,CC-BY-NC-ND-4.0,Bwaidoka,Bwaidoka NT
+tte,CC-BY-NC-ND-4.0,Bwanabwana,Bwanabwana NT
+tteo,CC-BY-NC-ND-4.0,Bwanabwana,Bwanabwana OT
+bwc,CC-BY-SA-4.0,Bwile,Bwile: Bwile Bible Translation (Bible)
+cbv,CC-BY-NC-ND-3.0,Cacua,Cacua NT
+clu,CC-BY-NC-ND-3.0,Caluyanun,Caluyanun NT
+kbh,CC-BY-NC-ND-3.0,Camsá,Camsá NT
+cbuNT,CC-BY-NC-ND-3.0,Candoshi-Shapra,Candoshi-Shapra NT
+kaqNT,CC-BY-NC-ND-3.0,Capanahua,Capanahua NT
+cotNT,CC-BY-NC-ND-3.0,Caquinte,New Testament in Caquinte (PE:cot:Caquinte)
+cbcNT,CC-BY-NC-ND-3.0,Carapana,Carapana NT
+crxNTpo,CC-BY-NC-ND-3.0,Carrier,Carrier NT
+cafNT,CC-BY-NC-ND-3.0,"Carrier, Southern",Southern Carrier NT
+cbrNT,CC-BY-NC-ND-3.0,Cashibo-Cacataibo,Cashibo-Cacataibo NT
+cavNT,CC-BY-NC-ND-3.0,Cavineña,Cavineña NT
+cebulb,CC-BY-SA-4.0,Cebuano,Cebuano Bible
+cebocb,CC-BY-SA-4.0,Cebuano,Cebuano: Biblica® Open Ang Pulong sa Dios (Bible)
+ckb,CC-BY-SA-4.0,Central Kurdish,Kurdish Sorani Bible
+cmeNT,CC-BY-NC-ND-3.0,Cerma,New Testament in Cerma (UV:cme:Cerma)
+cbiNTpo,CC-BY-NC-ND-3.0,Chachi,Chachi Bible
+caoNT,CC-BY-NC-ND-3.0,Chácobo,Chácobo NT
+cya,CC-BY-NC-ND-3.0,"Chatino, Nopala",Nopala Chatino NT
+ctaNT,CC-BY-NC-ND-3.0,"Chatino, Tataltepec",Tataltepec Chatino NT
+ctpNT,CC-BY-NC-ND-3.0,"Chatino, Western Highland",Western Highland Chatino NT
+cbk,CC-BY-NC-ND-3.0,Chavacano,Chavacano NT
+cbtNTpo,CC-BY-NC-ND-3.0,Chayahuita,Chayahuita NT
+hne,CC-BY-SA-4.0,Chhattisgarhi,Chhattisgarhi Bible
+nya,CC-BY-SA-4.0,Chichewa,Chichewa Bible
+dao,CC-BY-4.0,"Chin, Daai",Daai Chin NT
+hltthb,CC-BY-SA-4.0,"Chin, Matu",Tuivang Matu Chin Bible
+csy,CC-BY-SA-4.0,"Chin, Siyin",Siyin Chin NT
+tczchongthu,CC-BY-SA-4.0,"Chin, Thado",Chongthu Bible
+cth,CC-BY-SA-4.0,"Chin, Thaiphum",Thai Phum Bible
+zypNT,CC-BY-NC-ND-3.0,"Chin, Zyphe",Zyphe Chin NT
+ccoNT,CC-BY-NC-ND-3.0,"Chinantec, Comaltepec",Comaltepec Chinantec NT
+cnlNT,CC-BY-NC-ND-3.0,"Chinantec, Lalana",Lalana Chinantec NT
+cleNT,CC-BY-NC-ND-3.0,"Chinantec, Lealao",Lealao Chinantec NT
+chzNTps,CC-BY-NC-ND-3.0,"Chinantec, Ozumacín",Ozumacín Chinantec NT
+cpaNT,CC-BY-NC-ND-3.0,"Chinantec, Palantla",Palantla Chinantec NT
+chqNT,CC-BY-NC-ND-3.0,"Chinantec, Quiotepec",Quiotepec Chinantec NT
+csoNT,CC-BY-NC-ND-3.0,"Chinantec, Sochiapam",Sochiapam Chinantec NT
+cntNT,CC-BY-NC-ND-3.0,"Chinantec, Tepetotutla",Tepetotutla Chinantec NT
+cucNT,CC-BY-NC-ND-3.0,"Chinantec, Usila",Usila Chinantec NT
+cmnfeb,CC-BY-SA-4.0,Chinese,"Chinese, Mandarin: 免费的易读圣经 Free Easy-to-read Bible (Bible)"
+capNT,CC-BY-NC-ND-3.0,Chipaya,Chipaya NT
+caxNT,CC-BY-NC-ND-3.0,Chiquitano,Chiquitano NT
+sna,CC-BY-SA-4.0,chiShona,Shona Bible
+yao,CC-BY-4.0,Chiyawo,Yao NT
+ctucti,CC-BY-NC-ND-4.0,Chol,Chol de Tila Bible
+ctu76,CC-BY-NC-ND-3.0,Chol,Chol NT
+ctuBl,CC-BY-NC-ND-3.0,Chol,Chol Tumbala Bible
+chdNT,CC-BY-NC-ND-3.0,"Chontal, Highland Oaxaca",Highland Oaxaca Chontal NT
+chfNT,CC-BY-NC-ND-3.0,"Chontal, Tabasco",Tabasco Chontal NT
+caa,CC-BY-NC-ND-4.0,Chorti,Chorti Bible
+cjv,CC-BY-NC-ND-4.0,Chuave,Chuave NT
+cac,CC-BY-NC-ND-4.0,Chuj,Chuj San Mateo Bible
+ncuNT,CC-BY-NC-ND-3.0,Chumburung,Chumburung NT
+chk,CC-BY-ND-4.0,Chuukese,Chuukese Bible
+asg,CC-BY-SA-4.0,Cishingini,Cishingini Bible
+conNTpo,CC-BY-NC-ND-3.0,Cofán,Cofán Bible
+cofNT,CC-BY-NC-ND-3.0,Colorado,Colorado NT
+crnNT,CC-BY-NC-ND-3.0,"Cora, El Nayar",El Nayar Presidio De Los Reyes Cora NT
+cubNT,CC-BY-NC-ND-3.0,Cubeo,Cubeo NT
+cui,CC-BY-NC-ND-3.0,Cuiba,Cuiba NT
+cuxNT,CC-BY-NC-ND-3.0,"Cuicatec, Tepeuxila",Tepeuxila Cuicatec NT
+cutNT,CC-BY-NC-ND-3.0,"Cuicatec, Teutila",Teutila NT
+cug,CC-BY-SA-4.0,Cung,Chung NT+
+ceslb,CC-BY-SA-4.0,Czech,Czech Living New Testament
+cesnkb,CC-BY-ND-4.0,Czech,Czech NBK NT
+mps,CC-BY-ND-4.0,Dadibi,Dadibi Bible
+dgz,CC-BY-NC-ND-4.0,Daga,Daga Bible
+daaNT,CC-BY-NC-ND-3.0,Dangaléat,Dangaléat NT
+aso,CC-BY-ND-4.0,Dano,Dano NT
+dnv,CC-BY-SA-4.0,Danu,Danu NT
+dww,CC-BY-NC-ND-4.0,Dawawa,Dawawa NT
+dwrENT,CC-BY-NC-ND-3.0,Dawro,Dawro Bible (Ethoipic script)
+dwrNT,CC-BY-ND-4.0,Dawro,Dawro NT (Latin script)
+dwrl,CC-BY-SA-4.0,Dawro,"The Holy Bible in the Dawuro language of Ethiopia, Latin script"
+ded,CC-BY-NC-ND-4.0,Dedua,Dedua NT+Psalms
+row,CC-BY-SA-4.0,Dela-Oenale,Rote Dela Bible
+anvNT,CC-BY-NC-ND-3.0,Denya,New Testament in Denya (CM:anv:Denya)
+dso,CC-BY-4.0,Desiya,Desiya NT
+dhn,CC-BY-SA-4.0,Dhanki,"Dhanki: परमेश्वरन सत्य वचन The New Testament in the Dhanki language of India, Devanagari script"
+nfa,CC-BY-ND-4.0,Dhao,Dhao Bible
+luo,CC-BY-SA-4.0,Dholuo,Dholuo Bible
+dwu,CC-BY-NC-ND-4.0,Dhuwal,Dhuwal Selections
+dwuliv,CC-BY-NC-ND-4.0,Dhuwal,Liyagawumirr Scripture
+dwy,CC-BY-NC-ND-4.0,Dhuwaya,Dhuwaya Mark + Acts 1:8-11
+dikNT,CC-BY-NC-ND-3.0,"Dinka, Southwestern",Southwestern Dinka NT
+tbzsim,CC-BY-NC-ND-3.0,Ditammari,Ditammari Bible
+djr,CC-BY-NC-ND-4.0,Djambarrpuyngu,Djambarrpuyngu NT
+dhgduwadha,CC-BY-NC-ND-4.0,Djangu,Dhuwa-Dhaŋu'mi Mark + Selections
+dhg,CC-BY-NC-ND-4.0,Djangu,Djangu Bible Portions
+dhgdol,CC-BY-NC-ND-4.0,Djangu,Warramiri Ḏolttji Selections
+djj,CC-BY-NC-ND-4.0,Djeebbana,Ndjébbana Bible Portions
+dji,CC-BY-SA-4.0,Djinang,Djinang Bible Portions
+dob,CC-BY-NC-ND-4.0,Dobu,Dobu NT
+dgrDOGNT,CC-BY-NC-ND-4.0,Dogrib,Dogrib Bible
+dov,CC-BY-SA-4.0,Dombe,Dombe NT
+sce,CC-BY-SA-4.0,Dongxiang,Donxian NT
+kqc,CC-BY-ND-4.0,Doromu-Koki,Doromu-Koki Bible
+ldb,CC-BY-SA-4.0,Duya,Duya NT
+kjs,CC-BY-NC-ND-4.0,East Kewa,East Kewa NT
+djkNT,CC-BY-NC-ND-3.0,Eastern Maroon Creole,Eastern Maroon Creole NT
+etr,CC-BY-NC-ND-4.0,Edolo,Edolo Bible
+ekkpkp,CC-BY-SA-4.0,Eestonian,Estonian Bible: Piibel Kõigile
+eka,CC-BY-SA-4.0,Ekajuk,Ekajuk Bible
+empNTpo,CC-BY-NC-ND-3.0,"Emberá, Northern",Northern Emberá NT
+enq2,CC-BY-NC-ND-4.0,Enga,Enga NT
+engaoi,CC-BY-NC-ND-4.0,English,Anindilyakwa English Bible
+engbarkly,CC-BY-NC-ND-4.0,English,Barkly Bible Portions
+enge2t,CC-BY-SA-4.0,English,E2T Jonah
+englsv,CC-BY-SA-4.0,English,English LSV
+engemtv,CC-BY-NC-ND-4.0,English,English Majority Text Version
+engwyc2018,CC-BY-NC-ND-4.0,English,English: Wycliffe's Bible Modern Spelling (Enhanced) (with Deuterocanon)
+engwyc2017,CC-BY-NC-ND-4.0,English,English: Wycliffe's Bible Modern Spelling (with Deuterocanon)
+engf35,CC-BY-SA-4.0,English,Family 35 NT
+engfbv,CC-BY-SA-4.0,English,Free Bible Version
+eng-glw,CC-BY-ND-4.0,English,God's Living Word
+engnna,CC-BY-NC-ND-4.0,English,Nyangumarta English Bible
+engourb,CC-BY-SA-4.0,English,One Unity Resource Bible
+engPEV,CC-BY-SA-4.0,English,Plain English Version
+engtcent,CC-BY-4.0,English,Text-Critical English NT
+engojb,CC-BY-4.0,English,The Orthodox Jewish Bible -  Tanakh and Orthodox Jewish Brit Chadasha - The Holy Bible
+eng-t4t,CC-BY-SA-4.0,English,Translation for Translators
+engULB,CC-BY-SA-4.0,English,Unlocked Literal Bible
+sjaNT,CC-BY-NC-ND-3.0,Epena,Epena NT
+eseNT,CC-BY-NC-ND-3.0,Ese Ejja,Ese Ejja NT
+mcq,CC-BY-NC-ND-4.0,Ese or Managalasi,Managalasi NT
+ekk,CC-BY-SA-4.0,"Estonian, Standard",Estonian Contemporary NT
+utr,CC-BY-SA-4.0,Etulo,Etulo NT+
+ewe,CC-BY-SA-4.0,eʋegbe,Éwé Bible
+nou,CC-BY-NC-ND-4.0,Ewage-Notu,Ewage-Notu NT
+fai,CC-BY-NC-ND-4.0,Faiwol,Faiwol NT
+cfm,CC-BY-SA-4.0,Falam,Falam Chin Bible
+bjp,CC-BY-NC-ND-4.0,Fanamaket,Fanamaket NT
+faa,CC-BY-NC-ND-4.0,Fasu,Fasu NT
+far,CC-BY-ND-4.0,Fataleka,Fataleka New Testament
+aoj-filifita,CC-BY-NC-ND-4.0,Filifita dialect of Mufian,Filifita NT
+fin,CC-BY-SA-4.0,Finnish,Finnish: Biblica® Avoin Elävä uutinen: Uusi testamentti vapaasti kerrottuna (New Testament)
+ppo,CC-BY-ND-4.0,Folopa,Folopa NT
+for,CC-BY-NC-ND-4.0,Fore,Fore NT
+francl,CC-BY-SA-4.0,French,French néo-Crampon Libre
+fue,CC-BY-NC-ND-3.0,"Fulfulde, Borgu",Fulfulde Borgu NT
+ffm,CC-BY-NC-ND-3.0,"Fulfulde, Maasina",Maasina Fulfulde NT
+fuhbkf,CC-BY-NC-ND-3.0,"Fulfulde, Western Niger",Fulfulde Burkina NT
+gbl,CC-BY-SA-4.0,Gamit,Gamit Bible
+gmve,CC-BY-SA-4.0,Gamo,Gamo Bible
+gmvl,CC-BY-SA-4.0,Gamo,Gamo Bible (Latin)
+gmvRNT,CC-BY-NC-ND-3.0,Gamo,Gamo NT
+gmvggm,CC-BY-4.0,Gamotso,Gamo NT
+pwg,CC-BY-ND-4.0,Gapapaiwa,Gapapaiwa NT
+cabNT,CC-BY-NC-ND-3.0,Garifuna,Suau Bible
+wrk,CC-BY-NC-ND-4.0,Garrwa,Garrwa Shorter New Testament
+gaq,CC-BY-4.0,Gata',Gata Didayi NT
+gyl,CC-BY-SA-4.0,Gayil,Goyil NT
+gyz,CC-BY-SA-4.0,Geji,Geji NT
+nlg,CC-BY-NC-ND-4.0,Gela,Gela Bible
+deuelbbk,CC-BY-NC-ND-4.0,German,German ELBBK Bible
+deu1951,CC-BY-4.0,"German, Standard",German Schlachter Bible 1951
+ghn,CC-BY-SA-4.0,Ghanongga,Ghanongga: Kubokota Adapt New Testament (Bible)
+bmk,CC-BY-NC-ND-4.0,Ghayavi,Ghayavi Mark
+kik,CC-BY-SA-4.0,Gikuyu,Kikuyu Bible
+glk,CC-BY-ND-4.0,Gilaki,Gilaki John
+bbr,CC-BY-NC-ND-4.0,Girawa,Girawa NT
+tof,CC-BY-NC-ND-4.0,Gizrra,Gizrra Bible
+glwl,CC-BY-SA-4.0,Glavda,Glavda NT Portion
+gofl,CC-BY-SA-4.0,Gofa,Gofa Bible Latin
+gofwftw,CC-BY-4.0,Gofa,Gofa NT
+gofENT,CC-BY-NC-ND-3.0,Gofa,Gofa NT (Ethiopic script)
+gofRNT,CC-BY-NC-ND-3.0,Gofa,Gofa NT (Latin script)
+gvf,CC-BY-NC-ND-4.0,Golin,Golin NT
+gofe,CC-BY-SA-4.0,Goofa,Gofa: ጌሻ ማፃፋ Bible
+gux,CC-BY-4.0,Gourmanchéma,Gourmanchéma NT
+guxg,CC-BY-SA-4.0,Gourmanchéma,Gourmanchéma NT
+goj,CC-BY-SA-4.0,Gowlan,Gowlan NT
+gok,CC-BY-SA-4.0,Gowli,Gawli NT
+grcf35,CC-BY-NC-ND-4.0,"Greek, Ancient",Greek NT Family 35
+grcsbl,CC-BY-4.0,"Greek, Ancient",SBL Greek NT
+guh,CC-BY-NC-ND-3.0,Guahibo,Guahibo NT
+gubBl,CC-BY-NC-ND-3.0,Guajajára,Guajajára Bible
+gum,CC-BY-NC-ND-3.0,Guambiano,Guambiano NT
+gvc,CC-BY-NC-ND-3.0,Guanano,Guanano NT
+guiNT,CC-BY-NC-ND-3.0,"Guaraní, Eastern Bolivian",Eastern Bolivian Guaraní NT
+gun,CC-BY-NC-ND-3.0,"Guaraní, Mbyá",Mbyá Guaraní NT
+gnwNT,CC-BY-NC-ND-3.0,"Guaraní, Western Bolivian",Western Bolivian Guaraní NT
+gyrNT,CC-BY-NC-ND-3.0,Guarayu,Guarayu NT
+guoNT,CC-BY-NC-ND-3.0,Guayabero,Guayabero NT
+gdf,CC-BY-SA-4.0,Guduf-Gava,Guduf-Gava NT
+ghs,CC-BY-NC-ND-4.0,Guhu-Samane,Guhu-Samane NT
+guj2017,CC-BY-SA-4.0,Gujarati,Gujarati Indian Revised Version Bible
+gax,CC-BY-SA-4.0,gujii,Guji Oromo Bible
+gnn,CC-BY-NC-ND-4.0,Gumatj,Gumatj Bible
+gvs,CC-BY-NC-ND-4.0,Gumawana,Gumawana Bible
+gup,CC-BY-NC-ND-4.0,Gunwinggu,Kunwinjku Bible
+gupmay,CC-BY-NC-ND-4.0,Gunwinggu,Mayali (Jabiru) Scripture
+guf,CC-BY-NC-ND-4.0,Gupapuyngu,Gupapuyngu Bible Portions
+gge,CC-BY-NC-ND-4.0,Guragone,Gurrgoni Selections
+gue,CC-BY-NC-ND-4.0,Gurinji,Gurindji Scripture Portions
+dah,CC-BY-ND-4.0,Gwahatike,Gwahatike NT
+gwiNT,CC-BY-NC-ND-3.0,Gwich'in,Gwich'in NT
+hatbsa,CC-BY-SA-4.0,Haitian,Haitian Creole Bible 2023
+hlb,CC-BY-SA-4.0,Halbi,Halbi NT
+hla,CC-BY-NC-ND-4.0,Halia,Halia NT
+amf,CC-BY-NC-ND-3.0,Hamer-Banna,Banna NT
+wos,CC-BY-NC-ND-4.0,Hanga Hundi,Hanga Hundi Bible
+tmd,CC-BY-NC-ND-4.0,Haruai,Haruai NT
+bgc,CC-BY-SA-4.0,Haryanvi,Haryanvi Bible
+mey,CC-BY-SA-4.0,Hassaniyya,Hassaniyya Bible
+hausa,CC-BY-SA-4.0,Hausa,Hausa Contemporary Bible
+hauulb,CC-BY-SA-4.0,Hausa,Hausa NT
+hav,CC-BY-SA-4.0,Havu,Havu NT
+hvn,CC-BY-ND-4.0,Hawu,Hawu Mark
+xed,CC-BY-NC-ND-3.0,Hdi,Hdi NT
+heblb,CC-BY-SA-4.0,Hebrew,Hebrew Living NT
+hegNTpo,CC-BY-ND-4.0,Helong,Helong Bible
+hincv,CC-BY-SA-4.0,Hindi,Hindi Contemporary Version Bible
+hin2017,CC-BY-SA-4.0,Hindi,Hindi Indian Revised Version Bible
+hnsNT,CC-BY-NC-ND-3.0,"Hindustani, Caribbean",Caribbean Hindustani NT
+hixNT,CC-BY-NC-ND-3.0,Hixkaryána,Hixkaryána NT
+hoy,CC-BY-SA-4.0,Holiya,Holiya Bible
+hopNT,CC-BY-NC-ND-3.0,Hopi,Hopi NT
+hrebt,CC-BY-SA-4.0,Hre,Hre NT (Baq Thi)
+hru,CC-BY-SA-4.0,Hruso,Hruso: Aka (Hrusso) Bible (Portions)
+hrvbib,CC-BY-SA-4.0,Hrvatski,Croatian NT (Biblica)
+hubNT,CC-BY-NC-ND-3.0,Huambisa,Huambisa NT
+husNT2005,CC-BY-NC-ND-3.0,Huastec,Huastec Aquiche NT
+husNT1971,CC-BY-NC-ND-3.0,Huastec,Huastec San Luis Potosi NT
+huvNT,CC-BY-NC-ND-3.0,"Huave, San Mateo Del Mar",San Mateo Del Mar Huave NT
+hch,CC-BY-NC-ND-3.0,Huichol,Huichol Bible 2020
+hchNT,CC-BY-NC-ND-3.0,Huichol,Huichol NT 1988
+hto,CC-BY-NC-ND-3.0,"Huitoto, Minica",Minica Huitoto NT
+huuNT,CC-BY-NC-ND-3.0,"Huitoto, Murui",Murui Huitoto
+hui,CC-BY-NC-ND-4.0,Huli,Huli Bible
+hwo,CC-BY-SA-4.0,Hwana,Hwana Bible
+yml,CC-BY-NC-ND-4.0,Iamalele,Ubuvala (Iamalele) NT
+ian,CC-BY-NC-ND-4.0,Iatmul,Iatmul NT
+isl316,CC-BY-SA-4.0,Icelandic,Icelandic 3:16
+isl,CC-BY-SA-4.0,Icelandic,Icelandic: Biblica® Opna Lifandi Orð Nýja testamentið og Sálmarnir™ (New Testament+)
+viv,CC-BY-NC-ND-4.0,Iduna,Iduna NT
+ibo,CC-BY-SA-4.0,Igbo,Igbo Bible
+ignNT,CC-BY-NC-ND-3.0,Ignaciano,Ignaciano NT
+ikkNT,CC-BY-NC-ND-3.0,Ika,Ika NT
+ikz,CC-BY-SA-4.0,Ikizu,Ikizu NT
+ikwNT,CC-BY-NC-ND-3.0,Ikwere,Ikwere NT
+iloulb,CC-BY-SA-4.0,Ilocano,Ilocano Bible
+hil,CC-BY-SA-4.0,Ilonggo,Hiligaynon: Biblica® Libre Ang Pulong Sang Dios (Bible) for the Philippines
+imo,CC-BY-NC-ND-4.0,Imbo Ungu,Imbo Ungu NT
+abx,CC-BY-NC-ND-3.0,Inabaknon,Inabaknon NT
+ind,CC-BY-SA-4.0,Indonesian,Indonesian Bible (TSI)
+indags,CC-BY-SA-4.0,Indonesian,Indonesian Bible for All
+inb,CC-BY-NC-ND-3.0,Inga,Inga NT
+ino,CC-BY-NC-ND-4.0,Inoke-Yate,Inoke-Yate NT
+ipi,CC-BY-NC-ND-4.0,Ipili,Ipili Bible
+pesopcb,CC-BY-SA-4.0,Iranian Persian,Open Persian Contemporary Bible
+isn,CC-BY-SA-4.0,Isanzu,Isanzu NT
+atgNT,CC-BY-NC-ND-3.0,Ivbie North-Okpela-Arhe,Ivbie North-Okpela-Arhe NT
+ibd,CC-BY-NC-ND-4.0,Iwaidja,Iwaidja Selections
+kbm,CC-BY-NC-ND-4.0,Iwal,Iwal NT
+iws,CC-BY-NC-ND-4.0,"Iwam, Sepik",Sepik Iwam NT
+ixlCNT,CC-BY-NC-ND-3.0,Ixil,Ixil Cotzal NT
+ixlNNT,CC-BY-NC-ND-3.0,Ixil,Ixil Nebaj NT
+nca,CC-BY-NC-ND-4.0,Iyo,Iyo NT
+jacNT,CC-BY-NC-ND-3.0,Jakalteko,Eastern Jakalteko NT
+jni,CC-BY-SA-4.0,Janji,Janji NT
+jvnNT,CC-BY-NC-ND-3.0,"Javanese, Caribbean",Caribbean Javanese NT
+jum,CC-BY-SA-4.0,Jumjum,Jumjum Bible
+juy,CC-BY-4.0,Juray,Juray: ଆଜାଡ଼ି ତଙରନ୍‌ (Bible)
+qucNNT,CC-BY-NC-ND-3.0,K'iche',"K'iche' Cantel NT, new spelling"
+qucTNT,CC-BY-NC-ND-3.0,K'iche',"K'iche' Cantel NT, traditional spelling"
+quctt,CC-BY-4.0,K'iche',K’iche’ of Totonicapan NT
+urbNT,CC-BY-NC-ND-3.0,Kaapor,Kaapor NT
+kbcNT,CC-BY-NC-ND-3.0,Kadiwéu,Kadiwéu NT
+cgc,CC-BY-NC-ND-3.0,Kagayanen,Kagayanen NT
+kgpNT,CC-BY-NC-ND-3.0,Kaingang,Kaingang NT
+kgkNT,CC-BY-NC-ND-3.0,Kaiwá,Kaiwá NT
+kqf,CC-BY-NC-ND-4.0,Kakabai,Kakabai Bible portions
+mwp,CC-BY-NC-ND-4.0,Kala Lagaw Ya,Kala Lagaw Bible
+kmh,CC-BY-NC-ND-4.0,Kalam,Kalam NT
+kmk,CC-BY-NC-ND-3.0,"Kalinga, Limos",Limos Kalinga NT
+bco,CC-BY-NC-ND-4.0,Kaluli,Kaluli Bible portions
+kbq,CC-BY-SA-4.0,Kamano,Kamano-Kafe Bible
+kms,CC-BY-NC-ND-4.0,Kamasau,Kamasau NT
+xla,CC-BY-NC-ND-4.0,Kamula,Kamula Bible
+soq,CC-BY-NC-ND-4.0,Kanasi,Kanasi NT
+kqw,CC-BY-NC-ND-4.0,Kandas,Kandas NT
+gam,CC-BY-NC-ND-4.0,Kandawo,Kandawo NT
+wat,CC-BY-NC-ND-4.0,Kaninuwa,Kaninuwa Bible
+kmu,CC-BY-NC-ND-4.0,Kanite,Kanite NT
+kne,CC-BY-NC-ND-4.0,Kankanaey,Kankanaey Bible
+xnn,CC-BY-NC-ND-3.0,"Kankanay, Northern","New Testament in Kankanay, Northern"
+kanokcv,CC-BY-SA-4.0,Kannada,Kanada Open Contemporary Version Bible
+kanirv,CC-BY-SA-4.0,Kannada,Kannada Indian Revised Version Bible
+tbx,CC-BY-SA-4.0,Kapin,Kapin Bible
+kpg,CC-BY-ND-4.0,Kapingamarangi,Kapingamarangi Bible
+cakENT,CC-BY-NC-ND-3.0,Kaqchikel,Eastern Kaqchikel NT
+cak,CC-BY-NC-ND-3.0,Kaqchikel,Kaqchikel Chimaltenango NT
+cakCNT,CC-BY-NC-ND-3.0,Kaqchikel,Kaqchikel NT
+cakNT,CC-BY-NC-ND-3.0,Kaqchikel,Kaqchikel Sur de Sacatepequez NT
+cakSNT,CC-BY-NC-ND-3.0,Kaqchikel,Santa Maria de Jesus Kaqchikel NT
+cakYNT,CC-BY-NC-ND-3.0,Kaqchikel,SW Yepocapa and Acatenango Kaqchikel NT
+cakWNT,CC-BY-NC-ND-3.0,Kaqchikel,Western Solola Kaqchikel NT
+leu,CC-BY-NC-ND-4.0,Kara,Kara NT
+reg,CC-BY-SA-4.0,Kara,Kara NT
+kpjNT,CC-BY-NC-ND-3.0,Karajá,Karajá NT
+yuj,CC-BY-NC-ND-4.0,Karkar-Yuri,Karkar-Yuri NT
+cbsNT,CC-BY-NC-ND-3.0,Kashinawa,Kashinawa NT
+khs,CC-BY-NC-ND-4.0,Kasua,Kasua NT
+kmg,CC-BY-NC-ND-4.0,Kate,Kâte NT
+ksd,CC-BY-NC-ND-4.0,Kauana,Kauana Bible
+kyzNT,CC-BY-NC-ND-3.0,Kayabí,Kayabí NT
+txuNT,CC-BY-NC-ND-3.0,Kayapó,Kayapó NT
+khz,CC-BY-NC-ND-4.0,Keapara,Keapara Kalo NT
+bmh,CC-BY-NC-ND-4.0,Kein,Kein NT
+kyq,CC-BY-NC-ND-3.0,Kenga,Kenga NT
+kenNT,CC-BY-NC-ND-3.0,Kenyang,Kenyang NT
+kyg,CC-BY-NC-ND-4.0,Keyagana,Keyagana Bible
+kca,CC-BY-NC-ND-4.0,Khanty,Khanty Bible
+kij,CC-BY-NC-ND-4.0,Kilivila,Kilivila: Buki Pilabumaboma Kabutubogwa Deli Kabutuvau Bible
+zgam,CC-BY-4.0,Kinga,Mahanji NT
+geb,CC-BY-NC-ND-4.0,Kire,Kire NT
+kjeNT,CC-BY-NC-ND-3.0,Kisar,Kisar NT
+kiz,CC-BY-SA-4.0,Kisi,Kisi NT
+gia,CC-BY-NC-ND-4.0,Kitja,Kitja Jonah
+mkw,CC-BY-SA-4.0,Kituba,Kituba Bible
+kiw,CC-BY-NC-ND-4.0,"Kiwai, Northeast",Kope Luke
+yom,CC-BY-SA-4.0,Kiyombi,"Yombe: Biblica® Open Nkanda wu Moyo, Nguizani Yimona ayi Minkunga 2002 (Bible)"
+zajp,CC-BY-SA-4.0,Kizalamo,Zaramo: Bibilia ya Kizalamo (Bible)
+kpw,CC-BY-NC-ND-4.0,Kobon,Kobon NT
+cdz,CC-BY-SA-4.0,Koda,Koda Bible
+kpx,CC-BY-NC-ND-4.0,"Koiali, Mountain",Mountain Koiali NT
+nit,CC-BY-SA-4.0,"Kolami, Southeastern","Kolami, Southeastern: కొత్త కరార్ (Bible)"
+kpf,CC-BY-NC-ND-4.0,Komba,Komba NT
+xbi-w,CC-BY-NC-ND-4.0,Kombio,Kombio Wampukuamp Bible
+xbi-y,CC-BY-NC-ND-4.0,Kombio,Kombio Yanimoi Bible
+kfcp,CC-BY-SA-4.0,Konda-Dora,The New Testament in the Konda Porja Language of India. Konda-Dora: ମାପୁରୁଦି ସତ୍‌ ବାକ୍ୟ (Bible)
+xon,CC-BY-NC-ND-3.0,Konkomba,Konkomba
+kpr,CC-BY-NC-ND-4.0,Korafe,Korafe NT+Psalms
+kze,CC-BY-NC-ND-4.0,Kosena,Kosena NT
+eko,CC-BY-NC-ND-4.0,Kote,Kote Bible
+kyf,CC-BY-NC-ND-3.0,Kouya,Kouya NT
+kff,CC-BY-SA-4.0,Koya,Koya NT
+rop,CC-BY-NC-ND-4.0,Kriol,Kriol Bible
+kgf,CC-BY-NC-ND-4.0,Kube,Kube NT+Psalms
+sbs,CC-BY-4.0,Kuhane,Kuhane NT
+kux,CC-BY-NC-ND-4.0,Kukatja,Kukatja Bible portions
+gvn,CC-BY-NC-ND-4.0,Kuku-Yalanji,Kuku-Yalanji Bible
+kue,CC-BY-NC-ND-4.0,Kuman,Kuman NT
+kvnNT,CC-BY-NC-ND-3.0,"Kuna, Border",Border Kuna NT
+cuk09,CC-BY-NC-ND-3.0,"Kuna, San Blas",San Blas Kuna NT 2009
+wlg,CC-BY-NC-ND-4.0,Kunbarlang,Kunbarlang Bible Portions
+kvg,CC-BY-NC-ND-4.0,Kuni-Boazi,Kuni-Boazi Bible
+kup,CC-BY-NC-ND-4.0,Kunimaipa,Kunimaipa NT
+kjn,CC-BY-ND-4.0,Kunjen,Kunjen Mark Portions
+gupk,CC-BY-NC-ND-4.0,Kunwinjku,Kuninjku Selections
+kto,CC-BY-NC-ND-4.0,Kuot,Kuot NT
+mkn,CC-BY-ND-4.0,Kupang Malay,Kupang Malay Bible
+krh,CC-BY-SA-4.0,Kurama,Kurama: Akurumi NT Portion (New Testament)
+ktm,CC-BY-ND-4.0,Kurti,Kurti Scripture Portions
+kdc,CC-BY-ND-4.0,Kutu,Kutu NT
+kdc2014,CC-BY-SA-4.0,Kutu,Kutu NT 2014
+khj,CC-BY-SA-4.0,Kuturmi,Kuturmi NT
+kxv,CC-BY-SA-4.0,Kuvi,The New Testament in the Kuvi language of India: ପୁଃନି ମେ଼ରା (Bible)
+kwd,CC-BY-NC-ND-3.0,Kwaio,Kwaio NT
+kwj,CC-BY-NC-ND-4.0,Kwanga,Kwanga NT
+kwf,CC-BY-ND-4.0,Kwara'ae,Kwara'ae Bible
+cwe,CC-BY-NC-ND-4.0,Kwere,Kwere NT
+kmo,CC-BY-NC-ND-4.0,Kwoma,Washkuk NT
+kwo,CC-BY-NC-ND-4.0,Kwomtari,Kwomtari (Glefe) Bible
+kyc,CC-BY-NC-ND-4.0,Kyaka Enga,Kyaka Enga Bible
+kql,CC-BY-NC-ND-4.0,Kyenele,Kyenele Mark
+lbb,CC-BY-NC-ND-4.0,Label,Label NT
+lacNT,CC-BY-NC-ND-3.0,Lacandon,Lacandon NT
+nrz,CC-BY-NC-ND-4.0,Lala,Nara NT
+lrg,CC-BY-NC-ND-4.0,Larrakia,Larrakia Christmas Story
+lww,CC-BY-NC-ND-4.0,Lewo,Lewo NT
+litb,CC-BY-SA-4.0,Lietuvių,Open Lithuanian Scriptures
+lifNT2,CC-BY-NC-ND-3.0,Limbu,Limbu NT (Devangari Script)
+lifNT,CC-BY-NC-ND-3.0,Limbu,Limbu NT (Limbu Script)
+lin,CC-BY-SA-4.0,Lingála,Lingala Bible
+lit,CC-BY-SA-4.0,Lithuanian,Lithuanian Believers' Heritage Translation
+lbm,CC-BY-SA-4.0,Lodhi,Lodhi NT
+llg,CC-BY-ND-4.0,Lole,Rote Lole Bible
+uvl,CC-BY-NC-ND-4.0,Lote,Lote Bible
+lex,CC-BY-NC-ND-3.0,Luang,Luang Bible
+lug,CC-BY-SA-4.0,Luganda,Luganda Bible
+ruf,CC-BY-NC-ND-4.0,Luguru,Luguru NT
+dop,CC-BY-NC-ND-4.0,Lukpa,Lokpa Bible
+lga,CC-BY-SA-4.0,Lungga,Lungga Bible
+lyn,CC-BY-SA-4.0,Luyana,Luyana NT
+mcbNT,CC-BY-NC-ND-3.0,Machiguenga,Machiguenga NT
+myy,CC-BY-NC-ND-3.0,Macuna,New Testament in Macuna
+mbcNT,CC-BY-NC-ND-3.0,Macushi,Macushi NT
+mmx,CC-BY-NC-ND-4.0,Madak,Madak NT+Psalms
+hun,CC-BY-SA-4.0,Magyar,Hungarian Bible
+mzz,CC-BY-NC-ND-4.0,Maiadomu,Maiadomu Mark
+mti,CC-BY-NC-ND-4.0,Maiwa,Maiwa NT
+mca,CC-BY-NC-ND-3.0,Maka,Maka NT
+mcp,CC-BY-NC-ND-3.0,Makaa,Makaa NT
+mgh,CC-BY-ND-4.0,Makhuwa-Meetto,Makhuwa-Meetto NT
+mgh2016,CC-BY-SA-4.0,Makhuwa-Meetto,Makhuwa-Meetto: Makua New Testament 2015 New Testament
+kde,CC-BY-NC-ND-3.0,Makonde,Makonde Bible
+tdx,CC-BY-SA-4.0,"Malagasy, Tandroy-Mahafaly",Tandroy Bible
+zlmKSZI,CC-BY-ND-4.0,Malay,Contextualized Malay NT
+mal2015,CC-BY-SA-4.0,Malayalam,Malayalam 1910  Contemporary Orthography
+mal,CC-BY-SA-4.0,Malayalam,Malayalam Indian Revised Version Bible
+mdyeth,CC-BY-SA-4.0,Male,Maale Bible (Ethiopic script)
+mdybse,CC-BY-ND-4.0,Male,Maale NT
+hot,CC-BY-NC-ND-4.0,Malei-Hote,Malei-Hote NT
+mamC,CC-BY-NC-ND-3.0,Mam,Mam Comitancillo NT
+mamNT,CC-BY-NC-ND-3.0,Mam,Mam Todos Santos NT
+mqjNT,CC-BY-NC-ND-3.0,Mamasa,Mamasa NT
+mva,CC-BY-NC-ND-4.0,Manam,Manam NT
+mle,CC-BY-NC-ND-4.0,Manambu,Manabu NT
+tbf,CC-BY-NC-ND-4.0,Mandara,Mandara Bible
+cmncbt,CC-BY-SA-4.0,Mandarin Chinese,"Chinese, Mandarin: Biblica® 聖經，當代譯本開放資源 (Bible)"
+cmncbs,CC-BY-SA-4.0,Mandarin Chinese,Mandarin Chinese Open Contemporary Bible (Simplified)
+mbh,CC-BY-NC-ND-4.0,Mangseng,Mangseng NT
+knf,CC-BY-NC-ND-3.0,Mankanya,Mankanya NT and partial OT
+msmNT,CC-BY-NC-ND-3.0,"Manobo, Agusan",Agusan Manobo NT
+atdNT,CC-BY-NC-ND-3.0,"Manobo, Ata",Ata Manobo NT
+mbtNT,CC-BY-NC-ND-3.0,"Manobo, Matigsalug",Matigsalug Manobo NT
+oboNT,CC-BY-NC-ND-3.0,"Manobo, Obo",Obo Manobo NT
+mbs,CC-BY-NC-ND-3.0,"Manobo, Sarangani",Sarangani Manobo NT
+mbbOT,CC-BY-NC-ND-3.0,"Manobo, Western Bukidnon",Western Bukidnon Manobo OT
+msk,CC-BY-NC-ND-3.0,Mansaka,Mansaka NT
+mlh,CC-BY-NC-ND-4.0,Mape,Mape NT
+arnNT,CC-BY-NC-ND-3.0,Mapudungun,Mapudungun NT
+mar,CC-BY-SA-4.0,Marathi,Marathi Indian Revised Version Bible
+mfm,CC-BY-SA-4.0,Marghi South,Marghi South NT
+dad,CC-BY-NC-ND-3.0,Marik,Marik NT
+mpj,CC-BY-NC-ND-4.0,Martu Wangka,Martu Wangka Bible
+msb,CC-BY-NC-ND-3.0,Masbatenyo,Masbatenyo NT
+klv,CC-BY-NC-ND-4.0,Maskelynes,Maskelynes NT
+mgv,CC-BY-SA-4.0,Matengo,Matengo: Amatengu (New Testament)
+met,CC-BY-NC-ND-4.0,Mato,Mato Bible
+mcfNT,CC-BY-NC-ND-3.0,Matsés,Matsés NT
+mgw,CC-BY-ND-4.0,Matumbi,Matumbi NT
+mhl,CC-BY-NC-ND-4.0,Mauwake,Mauwake NT
+mph,CC-BY-NC-ND-4.0,Mawng,Mawng Bible Portions
+mblNT,CC-BY-NC-ND-3.0,Maxakalí,Maxakalí NT
+mopNT,CC-BY-NC-ND-3.0,"Maya, Mopán",Mopán Maya NT
+mazNT,CC-BY-NC-ND-3.0,"Mazahua, Central",Central Mazahua NT
+maqNT,CC-BY-NC-ND-3.0,"Mazatec, Chiquihuitlán",Chiquihuitlán Mazatec NT
+mauNT,CC-BY-NC-ND-3.0,"Mazatec, Huautla",Huautla Mazatec NT
+majNT,CC-BY-NC-ND-3.0,"Mazatec, Jalapa de Díaz",Jalapa de Díaz Mazatec NT
+maaNT,CC-BY-NC-ND-3.0,"Mazatec, San Jerónimo Tecóatl",San Jerónimo Tecóatl Mazatec NT
+vmyNT,CC-BY-NC-ND-3.0,"Mazateco, Ayautla",NT in Ayautla Mazateco
+mfo,CC-BY-SA-4.0,Mbe,Mbe OT
+mqbNT,CC-BY-NC-ND-3.0,Mbuko,Mbuko NT
+mna,CC-BY-NC-ND-4.0,Mbula,Mbula Bible
+mbu,CC-BY-SA-4.0,Mbula-Bwazza,Mbula-Bwazza NT+
+mni,CC-BY-4.0,Meitei,Meitei Bible
+mek,CC-BY-NC-ND-4.0,Mekeo,Mekeo NT
+tpiOTNT,CC-BY-NC-ND-4.0,Melanesian Pidgin,Tok Pisin Bible
+tpi,CC-BY-NC-ND-4.0,Melanesian Pidgin,Tok Pisin Bible with Deuterocanon
+mfxl,CC-BY-SA-4.0,Melo,Melo NT
+mfxe,CC-BY-SA-4.0,Melo,Melo NT Ethiopic
+med,CC-BY-NC-ND-4.0,Melpa,Melpa NT
+sim,CC-BY-NC-ND-4.0,Mende,Mende NT
+mee,CC-BY-NC-ND-4.0,Mengen,Mengen NT
+mcr,CC-BY-NC-ND-4.0,Menya,Menya NT
+mxm,CC-BY-NC-ND-4.0,Meramera,Meramera NT
+meq,CC-BY-NC-ND-3.0,Merey,Merey NT
+ulk,CC-BY-NC-ND-4.0,Meriam,Meriam Mir Bible
+micMIQNT,CC-BY-NC-ND-4.0,Mi'kmaq,Mi'kmaq NT
+mpt,CC-BY-NC-ND-4.0,Mian,Mian NT
+mpp,CC-BY-NC-ND-4.0,Migabac,Migabac Bible
+mvn,CC-BY-NC-ND-4.0,Minaveha,Minaveha NT
+aai,CC-BY-NC-ND-4.0,Miniafia,Minaifia NT
+kmh-m,CC-BY-NC-ND-4.0,Minimib dialect of Kalam,Minimib NT
+mpx,CC-BY-NC-ND-4.0,Misima-Paneati,Misima-Paneati Bible
+mcoNT,CC-BY-NC-ND-3.0,"Mixe, Coatlán",Coatlán Mixe NT
+mirNT,CC-BY-NC-ND-3.0,"Mixe, Isthmus",Isthmus Mixe NT
+mxqNT,CC-BY-NC-ND-3.0,"Mixe, Juquila",Juquila Mixe NT
+mxpNT,CC-BY-NC-ND-3.0,"Mixe, Tlahuitoltepec",Tlahuitoltepec Mixe NT
+mtoNT,CC-BY-NC-ND-3.0,"Mixe, Totontepec",Totontepec Mixe NT
+mibNT,CC-BY-NC-ND-3.0,"Mixtec, Atatláhuca",Atatláhuca Mixtec
+mihNT,CC-BY-NC-ND-3.0,"Mixtec, Chayuco",Chayuco Mixtec NT
+mizNT,CC-BY-NC-ND-3.0,"Mixtec, Coatzospan",Coatzospan Mixtec NT
+xtdNT,CC-BY-NC-ND-3.0,"Mixtec, Diuxi-tilantongo",Diuxi-tilantongo Mixtec NT
+mxtNT,CC-BY-NC-ND-3.0,"Mixtec, Jamiltepec",Jamiltepec Mixtec NT
+xtmNTpp,CC-BY-NC-ND-3.0,"Mixtec, Magdalena Peñasco",Magdalena Peñasco Mixtec Bible
+mieNT,CC-BY-NC-ND-3.0,"Mixtec, Ocotepec",Ocotepec Mixtec
+milNT,CC-BY-NC-ND-3.0,"Mixtec, Peñoles",Peñoles Mixtec NT
+mioNT,CC-BY-NC-ND-3.0,"Mixtec, Pinotepa Nacional",Pinotepa Nacional Mixtec NT
+mjcNT,CC-BY-NC-ND-3.0,"Mixtec, San Juan Colorado",San Juan Colorado Mixtec NT
+migNT,CC-BY-NC-ND-3.0,"Mixtec, San Miguel el Grande",San Miguel el Grande Mixtec NT
+mksNT,CC-BY-NC-ND-3.0,"Mixtec, Silacayoapan",Silacayoapan Mixtec NT
+mitNT,CC-BY-NC-ND-3.0,"Mixtec, Southern Puebla","New Testament in Mixtec, Southern Puebla (MX:mit:Mixtec, Southern Puebla)"
+mxbNT,CC-BY-NC-ND-3.0,"Mixtec, Tezoatlán",Tezoatlán Mixtec NT
+mpmNT,CC-BY-NC-ND-3.0,"Mixtec, Yosondúa",Yosondúa Mixtec NT
+soy,CC-BY-NC-ND-3.0,Miyobe,Sola NT
+mkj,CC-BY-NC-ND-4.0,Mokilese,Mokilese Bible
+mkl,CC-BY-NC-ND-3.0,Mokole,Monkole NT
+mox,CC-BY-NC-ND-4.0,Molima,Molima NT
+mzq,CC-BY-SA-4.0,Mori Atas,Mori Atas NT+
+mgc,CC-BY-ND-4.0,Morokodo,Morokodo Bible Portions
+meu,CC-BY-NC-ND-4.0,Motu,Motu Bible
+hmo,CC-BY-NC-ND-4.0,"Motu, Hiri",Hiri Motu Bible
+mpa,CC-BY-SA-4.0,Mpoto,Mpoto NT
+aoj,CC-BY-NC-ND-4.0,Mufian,Mufian NT
+bmrNT,CC-BY-NC-ND-3.0,Muinane,Muinane NT
+kqa,CC-BY-SA-4.0,Mum,Mum NT Portions
+unx,CC-BY-4.0,Munda,Munda NT
+myu,CC-BY-NC-ND-3.0,Mundurukú,Mundurukú NT
+mwf2018,CC-BY-ND-4.0,Murrinh-Patha,Murrinhpatha Scripture
+emi,CC-BY-NC-ND-4.0,Mussau-Emira,Mussau-Emira Bible
+tuc-o,CC-BY-NC-ND-4.0,Mutu,Saveeng Oov Bible
+tuc-t,CC-BY-ND-4.0,Mutu,Saveeng Tuam Bible
+muy,CC-BY-NC-ND-3.0,Muyang,Muyang NT
+myw,CC-BY-NC-ND-4.0,Muyuw,Muyuw NT
+sur,CC-BY-SA-4.0,Mwaghavul,Mwaghavul NT
+wmw,CC-BY-NC-ND-3.0,Mwani,Mwani NT
+mwe,CC-BY-SA-4.0,Mwera,Mwera Bible
+nas,CC-BY-NC-ND-4.0,Naasioi,Naasioi NT
+naf,CC-BY-NC-ND-4.0,Nabak,Nabak NT
+mbjNT,CC-BY-NC-ND-3.0,Nadeb,Nadëb NT
+tnk,CC-BY-NC-ND-4.0,Nafe,Nafe NT
+nag,CC-BY-SA-4.0,Naga Pidgin,Nagamese NT
+kfw,CC-BY-ND-4.0,"Naga, Kharam",Kharam NT
+tvt,CC-BY-4.0,"Naga, Tutsa",Tutsa Naga NT
+nhwBl,CC-BY-NC-ND-3.0,"Nahuatl,  Huasteca Occidental",Huasteca Occidental Nahuatl Bible
+nheNT,CC-BY-NC-ND-3.0,"Nahuatl,  Huasteca Oriental",Huasteca Oriental Nahuatl NT 2009
+nguNT,CC-BY-NC-ND-3.0,"Nahuatl, Guerrero",Guerrero Nahuatl NT
+azzNT,CC-BY-NC-ND-3.0,"Nahuatl, Highland Puebla",Highland Puebla Nahuatl NT
+nchBl,CC-BY-NC-ND-3.0,"Nahuatl, Huasteca Central",Huasteca Central Nahuatl Bible
+nheBl,CC-BY-NC-ND-3.0,"Nahuatl, Huasteca Oriental",Huasteca Oriental Nahuatl Bible 2005
+nclNT,CC-BY-NC-ND-3.0,"Nahuatl, Michoacán",Michoacán Nahuatl NT
+nhyNT,CC-BY-NC-ND-3.0,"Nahuatl, Northern Oaxaca",Northern Oaxaca Nahuatl NT
+ncjNT,CC-BY-NC-ND-3.0,"Nahuatl, Northern Puebla",Northern Puebla Nahuatl NT
+nplNT,CC-BY-NC-ND-3.0,"Nahuatl, Southeastern Puebla",Southeastern Puebla Nahuatl NT
+nhgNT,CC-BY-NC-ND-3.0,"Nahuatl, Tetelcingo",Tetelcingo Nahuatl NT
+nhiNT,CC-BY-NC-ND-3.0,"Nahuatl, Zacatlán-Ahuacatlán-Tepetzintla",Zacatlán-Ahuacatlán-Tepetzintla Nahuatl NT
+nak,CC-BY-NC-ND-4.0,Nakanai,Nakanai NT
+nck,CC-BY-NC-ND-4.0,Nakara,Nakara Selections
+nss,CC-BY-ND-4.0,Nali,Nali Bible
+nal,CC-BY-NC-ND-4.0,Nalik,Nalik NT
+nmx,CC-BY-NC-ND-4.0,Nama,Nama Luke and Acts
+nabNT,CC-BY-NC-ND-3.0,"Nambikuára, Southern",Southern Nambikuára NT
+nvm,CC-BY-NC-ND-4.0,Namiae,Namiai NT
+nhr,CC-BY-NC-ND-4.0,Naro,Naro NT
+ntu,CC-BY-ND-4.0,Natügu,Natqgu NT+Ruth and Psalms
+ncr,CC-BY-SA-4.0,Ncane,Ncane NT
+ndj,CC-BY-ND-4.0,Ndamba,Ndamba New Testament
+nde,CC-BY-SA-4.0,Ndebele,Ndebele Bible
+dne,CC-BY-SA-4.0,Ndendeule,Ndendeule NT
+ndg,CC-BY-4.0,Ndengereko,Ndengereko NT
+njd,CC-BY-SA-4.0,Ndonde Hamba,Ndonde Hamba NT
+nww,CC-BY-SA-4.0,Ndwewe,Ndwewe NT
+nldgbv,CC-BY-SA-4.0,Nederlands,Dutch: Gods Boek
+nsn,CC-BY-NC-ND-4.0,Nehan,Nehan NT
+nif,CC-BY-NC-ND-4.0,Nek,Nek NT
+anh,CC-BY-SA-4.0,Nend,Mark in Nend
+npiulb,CC-BY-SA-4.0,Nepali,Nepali Bible
+ntj,CC-BY-NC-ND-4.0,Ngaanyatjarra,Ngaanyatjarra Shorter Bible
+gymNT,CC-BY-NC-ND-3.0,Ngäbere,Ngäbere NT
+gngNT,CC-BY-NC-ND-3.0,Ngangam,Ngangam NT
+nbq,CC-BY-NC-ND-4.0,Nggem,Nggem NT
+nnq,CC-BY-ND-4.0,Ngindo,Ngindo New Testament
+xnj,CC-BY-4.0,Ngoni,Ngoni NT
+ngp,CC-BY-ND-4.0,Nguu,Nguu New Testament
+nii,CC-BY-ND-4.0,Nii,Nii NT
+nmws,CC-BY-ND-4.0,Nimoa,Saisai Matthew + Ephesians
+ninNT,CC-BY-NC-ND-3.0,Ninzo,Ninzo NT
+nkn,CC-BY-SA-4.0,Nkangala,Nkangala NT
+nkoNT,CC-BY-NC-ND-3.0,Nkonya,New Testament in Nkonya (GH:nko:Nkonya)
+gaw,CC-BY-NC-ND-4.0,Nobonob,Nobnob NT
+notNT,CC-BY-NC-ND-3.0,Nomatsiguenga,Nomatsiguenga NT
+nhuNT,CC-BY-NC-ND-3.0,Noone,Noone NT
+nys,CC-BY-NC-ND-4.0,Noongar,Noongar Bible
+tbg-a,CC-BY-NC-ND-4.0,North Tairora,North Tairora Arau Bible
+tnn,CC-BY-NC-ND-4.0,North Tanna,North Tanna NT
+eskNT,CC-BY-NC-ND-4.0,Northwest Alaska Eskimo,Northwest Alaska Eskimo NT
+noblb,CC-BY-SA-4.0,Norwegian,Norwegian Living NT
+ncf,CC-BY-NC-ND-4.0,Notsi,Notsi NT
+klt,CC-BY-ND-4.0,Nukna,Nukna Bible
+nop,CC-BY-NC-ND-4.0,Numanggang,Numanggang Bible
+nuy,CC-BY-NC-ND-4.0,Nunggubuyu,Wubuy Shorter  Bible
+nna,CC-BY-NC-ND-4.0,Nyangumarta,Nyangumarta Bible
+lid,CC-BY-NC-ND-4.0,Nyindrou,Nyndrou NT + OT portions
+kkc,CC-BY-NC-ND-4.0,Odoodee,Odoodee partial NT
+eri,CC-BY-ND-4.0,Ogea,Ogea NT
+opm,CC-BY-NC-ND-4.0,Oksapmin,Oksapmin NT
+ong,CC-BY-NC-ND-4.0,Olo,Olo NT
+aom,CC-BY-NC-ND-4.0,Omie,Omie NT
+omw-v,CC-BY-NC-ND-4.0,Omwunra-Toqura or South Tairora,South Tairora Veqaura NT
+ons,CC-BY-NC-ND-4.0,Ono,Ono NT
+ory,CC-BY-SA-4.0,Oriya,Oriya Indian Revised Version Bible
+okvh,CC-BY-NC-ND-4.0,Orokaiva,Orokaiva Ehija NT
+okv,CC-BY-NC-ND-4.0,Orokaiva,Orokaiva Etija NT
+gaz,CC-BY-SA-4.0,"Oromo, West Central",New Oromo Contemporary Version
+gaze,CC-BY-SA-4.0,"Oromo, West Central",West Central Oromo Bible
+otmNT,CC-BY-NC-ND-3.0,"Otomi, Eastern Highland",Eastern Highland Otomi NT
+otsNT,CC-BY-NC-ND-3.0,"Otomi, Estado de México",Estado de México Otomi NT
+oteNT,CC-BY-NC-ND-3.0,"Otomi, Mezquital",Mezquital Otomi NT
+otqNT,CC-BY-NC-ND-3.0,"Otomi, Querétaro",Querétaro Otomi NT
+otnNT,CC-BY-NC-ND-3.0,"Otomi, Tenango",Tenango Otomi NT
+oydl,CC-BY-SA-4.0,Oyda,Oyda NT Latin
+oyde,CC-BY-SA-4.0,Oyda,Oyde NT Ethiopic
+pma,CC-BY-ND-4.0,Paama,Paama Bible
+pdo,CC-BY-SA-4.0,Padoe,Padoe NT+
+bfz,CC-BY-SA-4.0,"Pahari, Mahasu",Baghlayani Bible
+priNT,CC-BY-NC-ND-3.0,Paicî,Paicî NT
+paoNT,CC-BY-NC-ND-3.0,"Paiute, Northern",Northern Paiute NT
+pll,CC-BY-SA-4.0,"Palaung, Shwe",Shwe Palaung NT
+plu,CC-BY-NC-ND-3.0,Palikúr,Palikúr NT
+pan,CC-BY-SA-4.0,"Panjabi, Eastern",Punjabi Indian Revised Version Bible
+prfNT,CC-BY-NC-ND-3.0,Paranan,New Testament in Paranan (RP:prf:Paranan)
+pabNT,CC-BY-NC-ND-3.0,Parecís,Parecís NT
+ptp,CC-BY-ND-4.0,Patep,Patep NT
+gfkh,CC-BY-NC-ND-4.0,Patpatar,Hinsaal NT
+gfk,CC-BY-NC-ND-4.0,Patpatar,Patpatar NT and Psalms
+gfks,CC-BY-NC-ND-4.0,Patpatar,Sokarek NT
+padNT,CC-BY-NC-ND-3.0,Paumarí,Paumarí NT
+ata,CC-BY-NC-ND-4.0,Pele-Ata,Ata Bible
+peg,CC-BY-SA-4.0,Pengo,Pengo NT
+pioNT,CC-BY-NC-ND-3.0,Piapoco,Piapoco NT
+piu2006,CC-BY-NC-ND-4.0,Pintupi-Luritja,Luritja Bible
+pirNT,CC-BY-NC-ND-3.0,Piratapuyo,Piratapuyo NT
+pjt,CC-BY-NC-ND-4.0,Pitjantjatjara,Pitjantjatjara Shorter Bible
+poy,CC-BY-SA-4.0,Pogolo,The New Testament in Pogoro
+pon2006,CC-BY-NC-ND-4.0,Pohnpeian,Pohnpeian Bible 2006
+pon2006a,CC-BY-NC-ND-4.0,Pohnpeian,Pohnpeian Bible with Apocrypha 2006
+plj,CC-BY-SA-4.0,Polci,Polci NT
+polsz,CC-BY-SA-4.0,Polish,Polish OPLNT
+polubg,CC-BY-ND-4.0,Polish,Polish Updated Gdansk Bible
+poeNT,CC-BY-NC-ND-3.0,"Popoloca, San Juan Atzingo",San Juan Atzingo Popoloca NT
+plsNT,CC-BY-NC-ND-3.0,"Popoloca, San Marcos Tlalcoyalco",San Marcos Tlalcoyalco Popoloca NT
+poiNT,CC-BY-NC-ND-3.0,"Popoluca, Highland",Highland Popoluca NT
+pohNT,CC-BY-NC-ND-3.0,Poqomchi',Poqomchi' Occidental NT
+porblt,CC-BY-SA-4.0,Português,Portuguese Free Bible for All
+poronbv,CC-BY-SA-4.0,Português,Portuguese ONBV
+porbr2018,CC-BY-4.0,Portuguese,Portuguese Bíblia Livre
+portft,CC-BY-SA-4.0,Portuguese,Portuguese Translation for Translators
+pwr,CC-BY-SA-4.0,Powari,Powari NT
+fuf,CC-BY-ND-4.0,Pular,Pular Fuuta-Jallon New Testament
+pub,CC-BY-SA-4.0,Purum,First Purum Bible Translation
+kekNT,CC-BY-NC-ND-3.0,Q'eqchi',Q'eqchi' Bible
+byx,CC-BY-ND-4.0,Qaqet,Qaqet Bible
+qvcNT,CC-BY-NC-ND-3.0,"Quechua, Cajamarca",Cajamarca Quechua NT
+qveNT,CC-BY-NC-ND-3.0,"Quechua, Eastern Apurímac",Eastern Apurímac Quechua NT
+qub,CC-BY-NC-ND-3.0,"Quechua, Huallaga Huánuco",Huallaga Huánuco Quechua NT
+qvhNT,CC-BY-NC-ND-3.0,"Quechua, Huamalíes-Dos de Mayo Huánuco",Huamalíes-Dos de Mayo Huánuco Quechua NT
+qwhNT,CC-BY-NC-ND-3.0,"Quechua, Huaylas Ancash",Huaylas Ancash Quechua NT
+qvwNT,CC-BY-NC-ND-3.0,"Quechua, Huaylla Wanca",Huaylla Wanca Quechua NT
+qufNT,CC-BY-NC-ND-3.0,"Quechua, Lambayeque",Lambayeque Quechua NT
+qvmNT,CC-BY-NC-ND-3.0,"Quechua, Margos-Yarowilca-Lauricocha",Margos-Yarowilca-Lauricocha Quechua NT
+qulNT,CC-BY-NC-ND-3.0,"Quechua, North Bolivian",North Bolivian Quechua NT
+qvnNT,CC-BY-NC-ND-3.0,"Quechua, North Junín",North Junín Quechua NT
+qxnNT,CC-BY-NC-ND-3.0,"Quechua, Northern Conchucos Ancash",Northern Conchucos Ancash Quechua NT
+qxhNT,CC-BY-NC-ND-3.0,"Quechua, Panao Huánuco",Panao Huánuco Quechua NT
+qvsNT,CC-BY-NC-ND-3.0,"Quechua, San Martín",San Martín Quechua NT
+quhNT,CC-BY-NC-ND-3.0,"Quechua, South Bolivian",South Bolivian Quechua NT
+qxoNT,CC-BY-NC-ND-3.0,"Quechua, Southern Conchucos Ancash",Southern Conchucos Ancash Quechua NT
+qupNT,CC-BY-NC-ND-3.0,"Quechua, Southern Pastaza",Southern Pastaza Quechua NT
+qvzNT,CC-BY-NC-ND-3.0,"Quichua, Northern Pastaza",Northern Pastaza Quichua NT
+rki,CC-BY-SA-4.0,Rakhine,Rakhine Bible
+rai,CC-BY-ND-4.0,Ramoaaina,Ramoaaina NT+
+lag,CC-BY-SA-4.0,Rangi,Rangi NT
+rwo-karo,CC-BY-ND-4.0,Rawa,Rawa Karo NT
+rwo-rawa,CC-BY-ND-4.0,Rawa,Rawa NT
+rei,CC-BY-SA-4.0,Reli,Reli Bible
+rmb,CC-BY-NC-ND-4.0,Rembarunga,Rembarrnga Scripture
+rkbNT,CC-BY-NC-ND-3.0,Rikbaktsa,Rikbaktsa NT
+rgu,CC-BY-ND-4.0,Rikou,Rote Rikou Bible
+rhgc,CC-BY-SA-4.0,Rohingya,Rohingya: Kitabul Mukaddos or Injil Córif (Bible)
+rhg,CC-BY-SA-4.0,Rohingya,Rohingya: Rohingya Bible Translation Project (Bible)
+rmna,CC-BY-SA-4.0,Romani,Balkans Arli Bible
+rmyvlakh,CC-BY-SA-4.0,Romani,Eastern Vlakh Romani
+rmylovari,CC-BY-SA-4.0,Romani,Lovari Vlax Romani Bible
+rmn,CC-BY-NC-ND-4.0,"Romani, Balkan",Balkan Romani Bible portions
+rmczrb,CC-BY-ND-4.0,"Romani, Carpathian",Carpathian Romani Luke
+rmc,CC-BY-ND-4.0,"Romani, Carpathian",Eastern Slovak Romani Bible
+rmyArli,CC-BY-4.0,"Romani, Vlax",Arli Luke
+rmyChergash,CC-BY-SA-4.0,"Romani, Vlax",Chergash NT
+rmyGurbet,CC-BY-SA-4.0,"Romani, Vlax",Gurbet NT
+rmyservi,CC-BY-SA-4.0,"Romani, Vlax",Servi Romani Bible portions
+ronBayash,CC-BY-4.0,Romanian,Bayash Bible
+ronludari,CC-BY-SA-4.0,Romanian,Ludari Luke
+ropk,unknown,Roper Kriol,Kimberly Kriol Audio
+roo,CC-BY-ND-4.0,Rotokas,Rotokas NT
+rug,CC-BY-ND-4.0,Roviana,Roviana Bible
+apb,CC-BY-ND-4.0,Sa'a,Sa'a New Testament
+sav,CC-BY-SA-4.0,Saafi-Saafi,Saafi-Saafi Bible
+spyNT,CC-BY-NC-ND-3.0,Sabaot,Sabaot NT
+apz,CC-BY-NC-ND-4.0,Safeyoka,Ampeeli-Wojokeso NT+Genesis
+sbk,CC-BY-4.0,Safwa,Safwa NT
+acfNT,CC-BY-NC-ND-3.0,Saint Lucian Creole French,Saint Lucian Creole French NT
+sch,CC-BY-4.0,Sakachep,Sakachep NT
+sbe,CC-BY-ND-4.0,Saliba,Saliba NT
+sll,CC-BY-NC-ND-4.0,Salt-Yui,Salt-Yui NT
+snx,CC-BY-NC-ND-4.0,Sam,Sam Mark
+sankan,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Kannada Script
+sankhm,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Khmer Script
+sanmal,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Malayalam Script
+sanori,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Oriya Script
+sanpun,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Punjabi Script
+sansin,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Sinhala Script
+santam,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Tamil Script
+santel,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Telugu Script
+santha,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Thai Script
+santib,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Tibetan Script
+sanurd,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Urdu Script
+sanvel,CC-BY-SA-4.0,Saṃskṛtam,Sanskrit NT in Velthuis Script
+cuk,CC-BY-NC-ND-3.0,San Blas Kuna,San Blas Kuna Bible
+xsn,CC-BY-SA-4.0,Sanga,Sanga Bible
+sny,CC-BY-NC-ND-4.0,Saniyo-Hiyewe,Saniyo-Hiyewe NT
+msc,CC-BY-SA-4.0,Sankaran Maninka,Sankaran Maninka Bible Portions
+sancol,CC-BY-SA-4.0,Sanskrit,New Testament in Sanskrit Language; printed in Cologne Script
+sanias,CC-BY-SA-4.0,Sanskrit,New Testament in Sanskrit Language; printed in IAST Script
+sanbur,CC-BY-SA-4.0,Sanskrit,Sanskrit Language NT in Burmese Script
+sanasm,CC-BY-SA-4.0,Sanskrit,Sanskrit New Testament in Assamese Script
+sanben,CC-BY-SA-4.0,Sanskrit,Sanskrit NT in Bengali Script
+sandev,CC-BY-SA-4.0,Sanskrit,Sanskrit NT in Devanagari Script
+sanguj,CC-BY-SA-4.0,Sanskrit,Sanskrit NT in Gujarati Script
+sanhk,CC-BY-SA-4.0,Sanskrit,Sanskrit NT in Harvard-Kyoto Script
+saniso,CC-BY-SA-4.0,Sanskrit,Sanskrit NT in ISO Script
+sanitr,CC-BY-SA-4.0,Sanskrit,Sanskrit NT in ITRANS Script
+sps,CC-BY-NC-ND-4.0,Saposa,Saposa NT
+srmNT,CC-BY-NC-ND-3.0,Saramaccan,Saramaccan NT
+asj,CC-BY-SA-4.0,Sari,Sari NT+
+stw,CC-BY-SA-4.0,Satawalese,Satawalese: Pwapwior we e Santus (New Testament)
+mavNT,CC-BY-NC-ND-3.0,Sateré-Mawé,Sateré-Mawé NT
+gulNT,CC-BY-NC-ND-3.0,Sea Island Creole English,Sea Island Creole English NT
+seyNT,CC-BY-NC-ND-3.0,Secoya,Secoya NT
+ssg,CC-BY-NC-ND-4.0,Seimat,Seimat NT
+spl,CC-BY-NC-ND-4.0,Selepet,Selepet NT
+ssx,CC-BY-NC-ND-4.0,Sembeleke,Sembeleke Bible
+seh,CC-BY-ND-4.0,Sena,Sena NT
+myk,CC-BY-NC-ND-4.0,"Sénoufo, Mamara",Mamara Sénoufo NT and portions of the OT
+spp,CC-BY-NC-ND-3.0,"Sénoufo, Supyire",Supyire Sénoufo NT
+srponspc,CC-BY-SA-4.0,Serbian,Serbian ONSP Cyrillic
+srponstl,CC-BY-SA-4.0,Serbian,Serbian ONST Latin
+tsn,CC-BY-SA-4.0,Setswana,Open Tswana Living NT
+mcdNT,CC-BY-NC-ND-3.0,Sharanahua,Sharanahua NT
+shj,CC-BY-ND-4.0,Shatt,Caning Bible Translation
+shr,CC-BY-4.0,Shi,Mashi Bible
+shpNTpo,CC-BY-NC-ND-3.0,Shipibo-Conibo,Shipibo-Conibo Bible
+sle,CC-BY-SA-4.0,Sholaga,Sholaga NT
+jivNT,CC-BY-NC-ND-3.0,Shuar,New Testament in Shuar
+snp,CC-BY-NC-ND-4.0,Siane,Siane Komongu NT
+snp-lambau,CC-BY-NC-ND-4.0,Siane,Siane Lambau NT
+snc,CC-BY-NC-ND-4.0,Sinaugoro,Sinaugoro NT
+xsi,CC-BY-NC-ND-4.0,Sio,Sio NT + Psalms
+snnNT,CC-BY-NC-ND-3.0,Siona,Siona NT
+sri,CC-BY-NC-ND-3.0,Siriano,Siriano NT
+srqNT,CC-BY-NC-ND-3.0,Sirionó,Sirionó NT
+ssd,CC-BY-NC-ND-4.0,Siroi,Siroi Bible
+slk,CC-BY-SA-4.0,Slovak,Slovak NT
+sby,CC-BY-4.0,Soli,Soli NT
+som,CC-BY-NC-ND-3.0,Somali,Somali Bible
+six,CC-BY-SA-4.0,Somau Karia,Somau Karia NT
+bmu,CC-BY-NC-ND-4.0,Somba-Siawari or Burum-Mindik,Somba-Siawari Bible
+urw,CC-BY-ND-4.0,Sop,Sop Jonah and Luke
+omw-a,CC-BY-NC-ND-4.0,South Tairora,South Tairora Aatasara John & Mark
+nwi,CC-BY-NC-ND-3.0,Southwest Tanna,Southwest Tanna NT
+spapddpt,CC-BY-4.0,Spanish,Spanish Bible (God's Word for You)
+spavbl,CC-BY-SA-4.0,Spanish,Spanish Free Bible Version
+spaonbv,CC-BY-SA-4.0,Spanish,Spanish ONBV
+srnNT,CC-BY-NC-ND-3.0,Sranan,Sranan NT
+swp,CC-BY-NC-ND-4.0,Suau,Suau Bible
+sxbNT,CC-BY-NC-ND-3.0,Suba,Suba NT
+tgo,CC-BY-ND-4.0,Sudest,Sudest Bible Portions
+sue,CC-BY-NC-ND-4.0,Suena,Suena NT
+sua,CC-BY-NC-ND-4.0,Sulka,Sulka NT
+suzBl,CC-BY-NC-ND-3.0,Sunwar,Sunwar Bible
+sgz,CC-BY-NC-ND-3.0,Sursurunga,Sursurunga NT
+sus,CC-BY-NC-ND-4.0,Susu,Susu Bible
+susa,CC-BY-NC-ND-4.0,Susu,Susu Bible (Arabic script)
+swhonen,CC-BY-SA-4.0,Swahili,Kiswahili Contemporary Version
+swhonmm,CC-BY-SA-4.0,Swahili,Swahili ONMM
+swhulb,CC-BY-SA-4.0,Swahili,Swahili Unlocked Literal Bible
+swe,CC-BY-NC-ND-4.0,Swedish,Swedish NT+
+tap,CC-BY-SA-4.0,Taabwa,Kitaabua NT
+knv-aramia,CC-BY-NC-ND-4.0,Tabo,Tabo Aramia NT
+knv-fly_river,CC-BY-NC-ND-4.0,Tabo,Tabo Fly River NT
+tnaNT,CC-BY-NC-ND-3.0,Tacana,Tacana NT
+bgs,CC-BY-NC-ND-3.0,Tagabawa,Tagabawa Bible
+klg,CC-BY-SA-4.0,Tagakaulo,Tagakaulo NT
+tglulb,CC-BY-SA-4.0,Tagalog,Tagalog Bible
+tgj,CC-BY-4.0,Tagin,Tagin first Bible translation based on TEV (Good News)
+taw,CC-BY-SA-4.0,Tai,Tai NT
+tbg,CC-BY-NC-ND-4.0,Tairora,North Tairora
+omw,CC-BY-NC-ND-4.0,"Tairora, South",South Tairora NT
+tgk,CC-BY-NC-ND-4.0,Tajik,Tajik Bible
+tbc,CC-BY-NC-ND-4.0,Takia,Takia NT
+nho,CC-BY-ND-4.0,Takuu,Takuu NT
+tke,CC-BY-ND-4.0,Takwane,Takwane NT
+taj,CC-BY-NC-ND-3.0,"Tamang, Eastern",Eastern Tamang NT
+tamtcv,CC-BY-SA-4.0,Tamil,Biblica® திறந்தநிலை தமிழ் சமகால பதிப்பு
+tam2017,CC-BY-SA-4.0,Tamil,Tamil Indian Revised Version Bible
+tgp,CC-BY-NC-ND-4.0,Tangoa,Tangoa NT
+tnc,CC-BY-NC-ND-3.0,Tanimuca-Retuarã,Tanimuca-Retuarã NT portions
+tacNT,CC-BY-NC-ND-3.0,"Tarahumara, Western",Western Tarahumara NT
+rifa,CC-BY-NC-ND-4.0,Tarifit,Tarifit Bible (Arabic Script)
+rifl,CC-BY-NC-ND-4.0,Tarifit,Tarifit Bible Latin Script
+rift,CC-BY-NC-ND-4.0,Tarifit,Tarifit Bible Tifinagh Script
+yer,CC-BY-SA-4.0,Tarok,The Holy Bible in the Tarok language of Nigeria
+tav,CC-BY-NC-ND-3.0,Tatuyo,New Testament in Tatuyo
+tpa,CC-BY-ND-4.0,Taupota,Taupota Mark
+tvn,CC-BY-SA-4.0,Tavoyan,Tavoyan Bible
+tbo,CC-BY-NC-ND-4.0,Tawala,Tawala NT
+tblNT,CC-BY-NC-ND-3.0,Tboli,Tboli NT
+tyx,CC-BY-SA-4.0,Teke-Tyee,Teke-Tyee NT
+ttcNT,CC-BY-NC-ND-3.0,Tektiteko,Tektiteko NT
+tlf,CC-BY-NC-ND-4.0,Telefol,Telefol NT
+tel2017,CC-BY-SA-4.0,Telugu,Telugu Indian Revised Version Bible
+telotsa,CC-BY-SA-4.0,Telugu,Telugu OTSA
+pahNT,CC-BY-NC-ND-3.0,Tenharim,Tenharim NT
+teeNT,CC-BY-NC-ND-3.0,"Tepehua, Huehuetla",Huehuetla Tepehua NT
+tptNT,CC-BY-NC-ND-3.0,"Tepehua, Tlachichilco",Tlachichilco Tepehua NT
+ntpNT,CC-BY-NC-ND-3.0,"Tepehuan, Northern",Northern Tepehuan NT
+stpNT,CC-BY-NC-ND-3.0,"Tepehuan, Southeastern",Southeastern Tepehuan NT
+terNT,CC-BY-NC-ND-3.0,Terêna,Terêna NT
+tfrNTpo,CC-BY-NC-ND-3.0,Teribe,Teribe Bible
+tet,CC-BY-ND-4.0,Tetun,Tetun Bible
+tdt,CC-BY-ND-4.0,Tetun Dili,Tetun Dili NT
+tew,CC-BY-NC-ND-3.0,Tewa,Tewa NT
+thaKJV,CC-BY-NC-ND-4.0,Thai,Thai KJV Bible
+thr,CC-BY-SA-4.0,"Tharu, Rana",Rana Tharu NT
+thd,CC-BY-4.0,Thayore,Thayorre Bible Portions
+lth,CC-BY-SA-4.0,Thur,Thur NT+
+bodn,CC-BY-NC-ND-4.0,Tibetan,New Tibetan Bible
+tcn,CC-BY-SA-4.0,Tichurong,Tichurong: तिचुरोङ क्येला सारबा करारयि किताबतेबा (Bible with Deuterocanon)
+tcaNT,CC-BY-NC-ND-3.0,Ticuna,Ticuna NT
+vieovcb,CC-BY-SA-4.0,Tiếng Việt,Vietnamese Contemporary Bible
+tif,CC-BY-ND-4.0,Tifal,Tifal NT
+txq,CC-BY-ND-4.0,Tii,Rote Tii Bible
+tim,CC-BY-NC-ND-4.0,Timbe,Timbe NT
+tpz,CC-BY-NC-ND-4.0,Tinputz,Tinputz Vasui NT
+tiy,CC-BY-NC-ND-3.0,Tiruray,Tiruray NT
+tiwm,CC-BY-NC-ND-4.0,Tiwi,New Tiwi Scripture
+tiw,CC-BY-NC-ND-4.0,Tiwi,Old Tiwi Scripture
+oodNT,CC-BY-NC-ND-3.0,Tohono O'odham,Tohono O'odham NT
+tojNT,CC-BY-NC-ND-3.0,Tojolabal,Tojolabal NT
+jicNT,CC-BY-NC-ND-3.0,Tol,Tol NT
+tod,CC-BY-NC-ND-4.0,Toma,Toma Bible Portions
+tcs,CC-BY-NC-ND-4.0,Torres Strait Creole,Yumplatok Bible
+tocNT,CC-BY-NC-ND-3.0,"Totonac, Coyutla",Coyutla Totonac NT
+tosNT,CC-BY-NC-ND-3.0,"Totonac, Highland",Highland Totonac NT
+topNT,CC-BY-NC-ND-3.0,"Totonac, Papantla",Papantla Totonac NT
+tkuNT,CC-BY-NC-ND-3.0,"Totonac, Upper Necaxa",Upper Necaxa Totonac
+tooNT,CC-BY-NC-ND-3.0,"Totonac, Xicotepec De Juárez",Xicotepec De Juárez Totonac NT
+trcNT,CC-BY-NC-ND-3.0,"Triqui, Copala",Copala Triqui NT
+tkr,CC-BY-ND-4.0,Tsakhur,Tsakhur Bible
+kdlNT,CC-BY-NC-ND-3.0,Tsikimba,Tsikimba NT
+kdl,CC-BY-SA-4.0,Tsikimba,Tsikimba OT
+tswNT,CC-BY-NC-ND-3.0,Tsishingini,Tsishingini NT
+tsw,CC-BY-SA-4.0,Tsishingini,Tsishingini OT
+tuoNT,CC-BY-NC-ND-3.0,Tucano,Tucano NT
+iou,CC-BY-ND-4.0,Tuma-Irumu,Tuma-Irumu Bible
+tuf,CC-BY-NC-ND-3.0,"Tunebo, Central",Central Tunebo NT
+lcm,CC-BY-NC-ND-4.0,Tungag,Tungag Bible
+turobt,CC-BY-SA-4.0,Turkish,Open Basic Turkish New Testament
+turytc,CC-BY-ND-4.0,Turkish,Turkish WEB
+tue,CC-BY-NC-ND-3.0,Tuyuca,Tuyuca NT
+twi,CC-BY-SA-4.0,Twi,Akuapem Twi Bible
+twiasante,CC-BY-SA-4.0,Twi,Asante Twi Bible
+tzjE,CC-BY-NC-ND-3.0,Tz'utujil,Eastern Tz'utujil NT
+tzjNT,CC-BY-NC-ND-3.0,Tz'utujil,Western Tz'utujil NT
+tzoSA,CC-BY-NC-ND-3.0,Tzotzil,San Andres Tzotzil NT
+tzotzc,CC-BY-NC-ND-4.0,Tzotzil,Tzotzil de Chamula NT
+tzotze,CC-BY-NC-ND-4.0,Tzotzil,Tzotzil de Chenalhó NT
+tzoNT,CC-BY-NC-ND-3.0,Tzotzil,Tzotzil Huixtan NT
+tzoZNT,CC-BY-NC-ND-3.0,Tzotzil,Tzotzil Zinacantan NT
+ksj,CC-BY-NC-ND-4.0,Uare,Uare NT
+ubr,CC-BY-NC-ND-4.0,Ubir,Ubir Bible
+udu,CC-BY-NC-ND-3.0,Uduk,Uduk Bible
+ukronpu,CC-BY-SA-4.0,Ukranian,New Ukranian Translation NT+Psalms
+uli,CC-BY-NC-ND-4.0,Ulithian,Ulithian NT
+gdn,CC-BY-NC-ND-4.0,Umanakaina,Umanakaina NT
+ubu-andelale,CC-BY-NC-ND-4.0,Umbu-Ungu,Umbu-Ungu Andelale NT
+ubu-kala,CC-BY-NC-ND-4.0,Umbu-Ungu,Umbu-Ungu Kala NT
+ubu-nopenge,CC-BY-NC-ND-4.0,Umbu-Ungu,Umbu-Ungu No Penge NT
+uro,CC-BY-NC-ND-4.0,Ura,Ura NT
+uraNT,CC-BY-NC-ND-3.0,Urarina,Urarina NT
+urt,CC-BY-ND-4.0,Urat,Urat New Testament
+urdgvr,CC-BY-NC-ND-4.0,Urdu,"The Holy Bible in Urdu, Urdu Geo Version, Roman Script"
+urdgvu,CC-BY-NC-ND-4.0,Urdu,Urdu Geo Bible (Urdu Script)
+urdgvh,CC-BY-NC-ND-4.0,Urdu,"Urdu Geo Bible, Hindi Script"
+urd,CC-BY-SA-4.0,Urdu,Urdu IRV Bible
+uvh,CC-BY-NC-ND-4.0,Uri,Urii NT
+urim,CC-BY-NC-ND-4.0,Urim,Urim NT
+uri,CC-BY-NC-ND-4.0,Urim,Urim: Wurkapm a Maur Wailen Portions
+upv,CC-BY-NC-ND-4.0,Uripiv-Wala-Rano-Atchin,Uripiv New Testament
+wnu,CC-BY-NC-ND-4.0,Usan,Usan NT
+usa,CC-BY-NC-ND-4.0,Usarufa,Usarufa Bible
+uspNT,CC-BY-NC-ND-3.0,Uspanteko,Uspanteko NT
+gel,CC-BY-SA-4.0,ut-Ma'in,ut-Ma’in: ut-Mai'n Scripture portions (Bible)
+uigara,CC-BY-SA-4.0,Uyghur,Uyghur Bible (arabic script)
+uigcyr,CC-BY-SA-4.0,Uyghur,Uyghur Bible (cyrillic script)
+uigpin,CC-BY-SA-4.0,Uyghur,Uyghur Bible (former latin script)
+uiglat,CC-BY-SA-4.0,Uyghur,Uyghur Bible (modern latin script)
+vaa,CC-BY-SA-4.0,Vaagri Booli,Vaagri Booli NT
+vgr,CC-BY-SA-4.0,Vaghri,Vaghri NT
+vid,CC-BY-SA-4.0,Vidunda,Vidunda NT+
+wiv,CC-BY-NC-ND-4.0,Vitu,Vitu NT
+wbi,CC-BY-SA-4.0,Vwanji,Vwanji NT
+wbq,CC-BY-SA-4.0,Waddar,Waddar Bible
+waj,CC-BY-NC-ND-4.0,Waffa,Waffa NT
+rro,CC-BY-ND-4.0,Waima,Waima NT
+baoNT,CC-BY-NC-ND-3.0,Waimaha,Waimaha NT
+wja,CC-BY-SA-4.0,Waja,Waja Bible
+lgl,CC-BY-ND-4.0,Wala,Wala New Testament
+wmt,CC-BY-NC-ND-4.0,Walmajarri,Walmajarri Bible
+wnc,CC-BY-NC-ND-4.0,Wantoat,Wantoat NT
+aucNT,CC-BY-NC-ND-3.0,Waorani,Waorani NT
+wapNT,CC-BY-NC-ND-3.0,Wapishana,Wapishana NT
+wrs,CC-BY-NC-ND-4.0,Waris,Waris Bible
+wbp,CC-BY-NC-ND-4.0,Warlpiri,Warlpiri Bible
+hrw,CC-BY-NC-ND-4.0,Warwar Feni,Feni NT
+wsk,CC-BY-ND-4.0,Waskia,Waskia Bible
+wed,CC-BY-NC-ND-4.0,Wedau,Wedau Mark
+wed-topura,CC-BY-NC-ND-4.0,Wedau,Wedau Topura Mark
+wer,CC-BY-NC-ND-4.0,Weri,Weri NT
+kew,CC-BY-NC-ND-4.0,West Kewa,West Kewa Bible
+tnp,CC-BY-NC-ND-4.0,Whitesands,Whitesands NT
+wim,CC-BY-NC-ND-4.0,Wik-Mungkan,Wik-Mungkan Bible
+gdr,CC-BY-NC-ND-4.0,Wipi,Wipi NT
+wiu,CC-BY-NC-ND-4.0,Wiru,Witu NT
+wal,CC-BY-NC-ND-3.0,Wolaytta,Wolaytta Bible
+wlo,CC-BY-SA-4.0,Wolio,Wolio: Kitabi Momangkilona Wolio (New Testament+)
+wol2010,CC-BY-NC-ND-4.0,Wolof,Wolof NT 2010
+abt-wosera,CC-BY-NC-ND-4.0,Wosera-Kamu dialect of Ambulas,Ambulas Wosera NT
+noaE,CC-BY-NC-ND-3.0,Woun Meu,Woun Meu NT
+noaH,CC-BY-NC-ND-3.0,Woun Meu,Woun Meu NT
+wuv,CC-BY-NC-ND-4.0,Wuvalu-Aua,Wuvalu-Aua NT
+xavNT,CC-BY-NC-ND-3.0,Xavánte,Xavánte NT
+jae,CC-BY-NC-ND-4.0,Yabem,Yabem Bible
+yadNT,CC-BY-NC-ND-3.0,Yagua,Yagua NT
+iyx,CC-BY-SA-4.0,Yaka,Yaka Bible
+yaf,CC-BY-SA-4.0,Yaka,Yaka NT
+yka,CC-BY-NC-ND-4.0,Yakan,Yakan Bible
+nce,CC-BY-SA-4.0,Yale,Portions of the Holy Bible in the Yalë language of Papua New Guinea
+kkl,CC-BY-NC-ND-4.0,"Yale, Kosarek",Mek Kosarek Bible
+yal,CC-BY-NC-ND-3.0,Yalunka,Yalunka Bible
+ymp,CC-BY-SA-4.0,Yamap,Yamap NT+
+yaaNT,CC-BY-NC-ND-3.0,Yaminahua,Yaminahua NT
+jay,CC-BY-NC-ND-4.0,Yan-nhangu,Yan-nhangu Selections
+ameNT,CC-BY-NC-ND-3.0,Yanesha',Yanesha' NT
+yns,CC-BY-SA-4.0,Yansi,Yansi NT
+jao,CC-BY-NC-ND-4.0,Yanyuwa,Yanyuwa Bible portions
+yreNT,CC-BY-NC-ND-3.0,Yaouré,Yaouré NT
+yap,CC-BY-ND-4.0,Yapese,Yapese Bible
+yaqNT,CC-BY-NC-ND-3.0,Yaqui,Yaqui NT
+yrb,CC-BY-NC-ND-4.0,Yareba,Yareba NT
+yuw,CC-BY-ND-4.0,Yau,Yau NT
+yvaNT,CC-BY-NC-ND-3.0,Yawa,Yawa NT+
+yby,CC-BY-NC-ND-4.0,Yaweyuha,Yaweyuha NT
+yle,CC-BY-NC-ND-4.0,Yele,Rossel NT
+jnje,CC-BY-SA-4.0,Yemsa,Yemsa NT Ethiopic
+jnjl,CC-BY-SA-4.0,Yemsa,Yemsa NT Latin
+yss-yamano,CC-BY-NC-ND-4.0,Yessan-Mayo,Yessan-Mayo Yamano NT
+yss-yawu,CC-BY-NC-ND-4.0,Yessan-Mayo,Yessan-Mayo Yawu NT
+ydd,CC-BY-4.0,"Yiddish, Eastern",Eastern Yiddish NT
+yij,CC-BY-4.0,Yindjibarndi,Yindjibarndi Luke
+pibNT,CC-BY-NC-ND-3.0,Yine,Yine NT
+byr-w,CC-BY-NC-ND-4.0,Yipma,Yipma Wagamwa NT
+puu,CC-BY-SA-4.0,Yipunu,Punu NT+
+yon,CC-BY-NC-ND-4.0,Yongkom,Yongkom NT + partial OT
+yut,CC-BY-NC-ND-4.0,Yopno,Yopno NT & Psalms
+yor,CC-BY-SA-4.0,Yorùbá,Yoruba Bible
+ycn,CC-BY-NC-ND-3.0,Yucuna,Yucuna NT
+atbNT,CC-BY-NC-ND-3.0,Zaiwa,Zaiwa NT
+zak,CC-BY-SA-4.0,Zanaki,Zanaki NT
+zpoNT,CC-BY-NC-ND-3.0,"Zapotec, Amatlán",Amatlán Zapotec NT
+zadNT,CC-BY-NC-ND-3.0,"Zapotec, Cajonos",Cajonos Zapotec NT
+zpvNT,CC-BY-NC-ND-3.0,"Zapotec, Chichicapan",Chichicapan Zapotec NT
+zpcNT,CC-BY-NC-ND-3.0,"Zapotec, Choapan",Choapan Zapotec NT
+zcaNT,CC-BY-NC-ND-3.0,"Zapotec, Coatecas Altas",Coatecas Altas Zapotec
+zaiNT,CC-BY-NC-ND-3.0,"Zapotec, Isthmus",Isthmus Zapotec NT
+zplNT,CC-BY-NC-ND-3.0,"Zapotec, Lachixío",Lachixío Zapotec NT
+ztp,CC-BY-SA-4.0,"Zapotec, Loxicha",Loxicha Zapotec NT
+zamNT,CC-BY-NC-ND-3.0,"Zapotec, Miahuatlán",Miahuatlán Zapotec NT
+zawNT,CC-BY-NC-ND-3.0,"Zapotec, Mitla",Mitla Zapotec NT
+zpmNT,CC-BY-NC-ND-3.0,"Zapotec, Mixtepec",Mixtepec Zapotec NT
+zacNT,CC-BY-NC-ND-3.0,"Zapotec, Ocotlán",Ocotlán Zapotec
+zaoNT,CC-BY-NC-ND-3.0,"Zapotec, Ozolotepec",Ozolotepec Zapotec NT
+ztqNT,CC-BY-NC-ND-3.0,"Zapotec, Quioquitani-Quierí",Quioquitani-Quierí Zapotec NT
+zarNT,CC-BY-NC-ND-3.0,"Zapotec, Rincón",Rincón Zapotec NT
+zabNT,CC-BY-NC-ND-3.0,"Zapotec, San Juan Guelavía",San Juan Guelavía Zapotec
+zapNT,CC-BY-NC-ND-3.0,"Zapotec, Santa María Quiegolani",Santa María Quiegolani Zapotec NT
+zasNT,CC-BY-NC-ND-3.0,"Zapotec, Santo Domingo Albarradas",Santo Domingo Albarradas Zapotec NT
+zaaNT,CC-BY-NC-ND-3.0,"Zapotec, Sierra de Juárez",Sierra de Juárez Zapotec NT
+zsrNT,CC-BY-NC-ND-3.0,"Zapotec, Southern Rincon",Southern Rincon Zapotec NT
+zatNTps,CC-BY-NC-ND-3.0,"Zapotec, Tabaa",Tabaa Zapotec NT & Psalms
+zpzNTpp,CC-BY-NC-ND-3.0,"Zapotec, Texmelucan",Texmelucan Zapotec Bible
+zpuNT,CC-BY-NC-ND-3.0,"Zapotec, Yalálag",Yalálag Zapotec NT
+ztyNTps,CC-BY-NC-ND-3.0,"Zapotec, Yatee",Yatee Zapotec NT & Psalms
+zavNT,CC-BY-NC-ND-3.0,"Zapotec, Yatzachi",Yatzachi Zapotec NT
+zpqNT,CC-BY-NC-ND-3.0,"Zapotec, Zoogocho",Zoogocho Zapotec NT
+zaj,CC-BY-SA-4.0,Zaramo,Zaramo Bible
+zia,CC-BY-ND-4.0,Zia,Zia NT
+ziw,CC-BY-ND-4.0,Zigua,Zigua New Testament
+zin,CC-BY-SA-4.0,Zinza,Zinza NT+
+zosNT,CC-BY-NC-ND-3.0,"Zoque, Francisco León",Francisco León Zoque NT
+urdoucv,CC-BY-SA-4.0,اردو,Urdu: Biblica® آزادانہ اردو ہم عصر ترجمہ (Bible)
+aeb,CC-BY-NC-ND-4.0,العهد الجديد بالدارجة التونسية 2022,"Arabic, Tunisian Spoken: العهد الجديد بالعربية التونسية (New Testament)"
+npioncb,CC-BY-SA-4.0,नेपाली,Nepali Contemporary Bible
+marc,CC-BY-SA-4.0,मराठी,Marathi: Biblica®
+kans,CC-BY-SA-4.0,ಕನ್ನಡ,Siddi NT
+malc,CC-BY-SA-4.0,മലയാളം,Malayalam Contemporary Bible
