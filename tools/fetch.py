@@ -13,7 +13,7 @@ confirmed is skipped and listed under "skipped" with the reason.
 Output is routed by tier:
     <out>/<source-id>/...                 open (any use, attribution as required)
     <out>/ebible-nd/...                   CC BY-ND: keep verbatim
-    <out>/<noncommercial id>/...          non-commercial only; never ship in paid products
+Non-commercial (NC) material is never fetched: the library also feeds paid products.
 """
 
 import argparse
@@ -39,10 +39,8 @@ USER_AGENT = "open-bible-library-fetch/1.0 (+https://github.com/drjeffdanz/open-
 
 EBIBLE_OPEN = {"public-domain", "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-SA-3.0"}
 EBIBLE_ND = {"CC-BY-ND-4.0"}
-EBIBLE_NC = {"CC-BY-NC-ND-3.0", "CC-BY-NC-ND-4.0"}
 
 SEFARIA_OPEN = "open"
-SEFARIA_NC = "noncommercial"
 
 
 def sefaria_class(value):
@@ -58,7 +56,7 @@ def sefaria_class(value):
         return "open"
     return "unknown"
 
-GUTENBERG_LOCC = ("BR", "BS", "BT", "BV", "BX")
+GUTENBERG_LOCC = ("BM", "BR", "BS", "BT", "BV", "BX")
 
 
 def load_catalog():
@@ -291,6 +289,90 @@ def fetch_gutenberg(src, out, limit):
     m.save()
 
 
+# ---------------------------------------------------------------- Internet Archive
+
+ARCHIVE_QUERY = (
+    'mediatype:texts AND possible-copyright-status:NOT_IN_COPYRIGHT AND year:[1450 TO 1930] '
+    'AND subject:(bible OR commentaries OR theology OR sermons OR "church history" '
+    'OR "fathers of the church" OR creeds OR "greek language, biblical" OR "hebrew language" '
+    'OR concordances OR "christian literature" OR patristic) '
+    'AND NOT collection:(inlibrary OR printdisabled OR lendinglibrary) AND NOT sponsor:(Google)'
+)
+RESTRICTIVE = re.compile(r"all rights reserved|non-?commercial|by-nc|permission|restricted", re.I)
+LAST_PD_YEAR = 1930  # US: works published before 1931 are public domain as of 2026
+
+
+def archive_ids():
+    ids, cursor = [], None
+    while True:
+        params = {"q": ARCHIVE_QUERY, "fields": "identifier", "count": "10000"}
+        if cursor:
+            params["cursor"] = cursor
+        page = json.loads(http_get("https://archive.org/services/search/v1/scrape?" + urllib.parse.urlencode(params)))
+        ids += [d["identifier"] for d in page.get("items", [])]
+        cursor = page.get("cursor")
+        if not cursor:
+            return sorted(ids)
+
+
+def archive_check(md):
+    """Return None if the item is clearly public domain in the US and unrestricted, else the reason."""
+    if md.get("possible-copyright-status") != "NOT_IN_COPYRIGHT":
+        return f"copyright status {md.get('possible-copyright-status')!r}"
+    year = re.match(r"\d{4}", str(md.get("year") or md.get("date") or ""))
+    if not year or int(year.group()) > LAST_PD_YEAR:
+        return f"publication year {md.get('year') or md.get('date')!r} not before 1931"
+    if "google" in str(md.get("sponsor", "")).lower():
+        return "Google-digitized (carries usage restrictions)"
+    if str(md.get("access-restricted-item", "")).lower() == "true":
+        return "access-restricted item"
+    for key in ("rights", "licenseurl", "possible-copyright-status-note"):
+        if md.get(key) and RESTRICTIVE.search(str(md.get(key))):
+            return f"{key}: {md.get(key)}"
+    return None
+
+
+def fetch_archive(src, out, limit):
+    m = Manifest(out / src["id"], src["id"], "Public domain in the USA (per item)")
+    ids = [x for i, x in enumerate(archive_ids()) if in_shard(i)]
+    for i, ident in enumerate(ids):
+        if limit and i >= limit:
+            break
+        try:
+            meta = json.loads(http_get(f"https://archive.org/metadata/{ident}", delay=0.5))
+        except Exception as e:  # noqa: BLE001
+            m.skip(ident, f"metadata failed: {e}")
+            continue
+        md = meta.get("metadata", {})
+        reason = archive_check(md)
+        if reason:
+            m.skip(ident, reason)
+            continue
+        txt = [f["name"] for f in meta.get("files", []) if f["name"].endswith("_djvu.txt")]
+        if not txt:
+            m.skip(ident, "no OCR text file")
+            continue
+        url = f"https://archive.org/download/{ident}/{urllib.parse.quote(txt[0])}"
+        try:
+            body = http_get(url, delay=0.5).decode("utf-8", "replace")
+        except Exception as e:  # noqa: BLE001
+            m.skip(ident, f"text failed: {e}")
+            continue
+        dest = out / src["id"] / f"{ident}.txt"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        first = lambda v: (v[0] if isinstance(v, list) else v) or ""  # noqa: E731
+        dest.write_text(
+            f"Title: {first(md.get('title'))}\nAuthor: {first(md.get('creator'))}\n"
+            f"Published: {first(md.get('publisher'))} {first(md.get('year') or md.get('date'))}\n"
+            f"Scan: https://archive.org/details/{ident}\n"
+            f"Rights: Public domain in the USA (published before 1931). OCR text; may contain recognition errors.\n\n"
+            + body, encoding="utf-8")
+        m.add(dest, url, "Public domain in the USA")
+        if i % 100 == 0:
+            print(f"  [{i}/{len(ids)}] {ident}")
+    m.save()
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -298,7 +380,7 @@ def main():
     ap.add_argument("source")
     ap.add_argument("--out", default=str(ROOT / "dist"))
     ap.add_argument("--limit", type=int, default=0, help="stop after N items (for testing)")
-    ap.add_argument("--shard", default="0/1", help="process only shard I of N, e.g. 2/4 (eBible, Sefaria, Gutenberg)")
+    ap.add_argument("--shard", default="0/1", help="process only shard I of N, e.g. 2/4 (eBible, Sefaria, Gutenberg, archive.org)")
     a = ap.parse_args()
     global SHARD
     i, n = (int(x) for x in a.shard.split("/"))
@@ -325,18 +407,16 @@ def main():
         fetch_ebible(src, out, EBIBLE_OPEN, a.limit)
     elif src["id"] == "ebible-nd":
         fetch_ebible(src, out, EBIBLE_ND, a.limit)
-    elif src["id"] == "ebible-nc":
-        fetch_ebible(src, out, EBIBLE_NC, a.limit)
     elif src["id"] == "bsb":
         fetch_files(src, out, BSB_FILES)
     elif src["id"] == "openbible-cross-references":
         fetch_files(src, out, [src["upstream"]])
     elif src["id"] == "sefaria-open":
         fetch_sefaria(src, out, SEFARIA_OPEN, a.limit)
-    elif src["id"] == "sefaria-nc":
-        fetch_sefaria(src, out, SEFARIA_NC, a.limit)
     elif src["id"] == "gutenberg-christian":
         fetch_gutenberg(src, out, a.limit)
+    elif src["id"] == "archive-org-pd":
+        fetch_archive(src, out, a.limit)
     else:
         sys.exit(f"{a.source} is {src['method']}; nothing to fetch")
 

@@ -2,8 +2,8 @@ name: Build archive
 
 # Downloads every mirrored and fetched source (see catalog/sources.yaml),
 # packs each one, and publishes them as release assets:
-#   archive-YYYY-MM                 open material (any use, follow each license's attribution terms)
-#   noncommercial-archive-YYYY-MM   non-commercial material only, kept apart on purpose
+#   archive-YYYY-MM   public-domain and openly licensed material (any use, including commercial;
+#                     follow each license's attribution and share-alike terms)
 # Run it from the Actions tab, or let it run on the 1st of each month.
 
 on:
@@ -40,13 +40,15 @@ jobs:
           - { source: sefaria-open, shard: "1/4", tier: open }
           - { source: sefaria-open, shard: "2/4", tier: open }
           - { source: sefaria-open, shard: "3/4", tier: open }
-          - { source: ebible-nc, shard: "0/2", tier: noncommercial }
-          - { source: ebible-nc, shard: "1/2", tier: noncommercial }
-          - { source: sefaria-nc, shard: "0/2", tier: noncommercial }
-          - { source: sefaria-nc, shard: "1/2", tier: noncommercial }
-          - { source: etcbc-bhsa, shard: "0/1", tier: noncommercial }
-          - { source: etcbc-dss, shard: "0/1", tier: noncommercial }
-          - { source: etcbc-peshitta, shard: "0/1", tier: noncommercial }
+          - { source: archive-org-pd, shard: "0/8", tier: open }
+          - { source: archive-org-pd, shard: "1/8", tier: open }
+          - { source: archive-org-pd, shard: "2/8", tier: open }
+          - { source: archive-org-pd, shard: "3/8", tier: open }
+          - { source: archive-org-pd, shard: "4/8", tier: open }
+          - { source: archive-org-pd, shard: "5/8", tier: open }
+          - { source: archive-org-pd, shard: "6/8", tier: open }
+          - { source: archive-org-pd, shard: "7/8", tier: open }
+          - { source: perseus-latin, shard: "0/1", tier: open }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -66,12 +68,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           month=$(date -u +%Y-%m)
-          if [ "${{ matrix.tier }}" = "noncommercial" ]; then
-            tag="noncommercial-archive-${month}"
-            notes="NON-COMMERCIAL USE ONLY. CC BY-NC / CC BY-NC-ND material. Do not include in paid products. See catalog/sources.yaml."
-          else
-            tag="archive-${month}"
-            notes="Public-domain and openly licensed material. Follow each dataset's attribution terms (see MANIFEST*.json and SOURCE.json in each archive). CC BY-ND translations must stay unmodified."
-          fi
+          tag="archive-${month}"
+          notes="Public-domain and openly licensed material. Follow each dataset's attribution terms (see MANIFEST*.json and SOURCE.json in each archive). CC BY-ND translations must stay unmodified."
           gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --title "$tag" --notes "$notes" || true
           gh release upload "$tag" pkg/* --clobber

@@ -8,8 +8,7 @@ Thank you for helping build the library. The one rule that matters most: **if yo
 2. Classify it:
    - **open**: public domain, CC0, CC BY, CC BY-SA, ODbL, or a clear "may be freely copied" statement.
    - **open-nd**: CC BY-ND. Archive verbatim only.
-   - **noncommercial**: CC BY-NC or CC BY-NC-ND. Non-commercial archive only.
-   - **excluded**: anything else, "all rights reserved", "personal use only", "permission required", fair-use excerpts, or no license at all. Add it to `catalog/EXCLUDED.md` with the reason.
+   - **excluded**: CC BY-NC or CC BY-NC-ND (the library feeds paid products), and anything else: "all rights reserved", "personal use only", "permission required", fair-use excerpts, or no license at all. Add it to `catalog/EXCLUDED.md` with the reason.
 3. Add an entry to `catalog/sources.yaml` with `license`, an `evidence` URL that shows it, `attribution` if the license requires credit, and the upstream `commit` if you vendor it.
 4. Decide where it lives:
    - **vendored** into `library/<group>/<name>/` only if it is tier `open`, mostly text, and each file is under 50 MB.

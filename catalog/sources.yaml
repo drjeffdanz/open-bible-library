@@ -7,7 +7,7 @@
 # tier:
 #   open           -> redistributable for any purpose, including commercial use
 #   open-nd        -> redistributable unchanged, including commercially; do NOT edit or merge (CC BY-ND)
-#   noncommercial  -> redistributable for non-commercial use only; kept out of library/
+#   noncommercial  -> (not used) non-commercial material is excluded, because the library feeds paid products
 #   excluded       -> NOT redistributable or license unclear; never added (see EXCLUDED.md)
 # method:
 #   vendored  -> copied into library/ in this repo
@@ -149,8 +149,9 @@ sources:
     upstream: https://ebible.org/Scriptures/
     license: CC-BY-NC-ND-3.0 / CC-BY-NC-ND-4.0
     evidence: catalog/ebible-licenses.csv
-    tier: noncommercial
-    method: fetch
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   # ---------------- Lexicons and reference ----------------
   - id: openscriptures-hebrew-lexicon
@@ -260,8 +261,9 @@ sources:
     upstream: https://github.com/Sefaria/Sefaria-Export
     license: CC-BY-NC
     evidence: license field in each JSON version
-    tier: noncommercial
-    method: fetch
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   # ---------------- Geography ----------------
   - id: openbible-geocoding
@@ -282,24 +284,27 @@ sources:
     upstream: https://github.com/ETCBC/bhsa
     license: CC-BY-NC-4.0
     evidence: https://github.com/ETCBC/bhsa/blob/master/README.md
-    tier: noncommercial
-    method: mirror
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   - id: etcbc-dss
     name: ETCBC Dead Sea Scrolls (biblical and non-biblical)
     upstream: https://github.com/ETCBC/dss
     license: CC-BY-NC-4.0
     evidence: https://github.com/ETCBC/dss/blob/master/LICENSE
-    tier: noncommercial
-    method: mirror
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   - id: etcbc-peshitta
     name: ETCBC Syriac Peshitta Old Testament
     upstream: https://github.com/ETCBC/peshitta
     license: CC-BY-NC-4.0
     evidence: https://github.com/ETCBC/peshitta/blob/master/docs/about.md
-    tier: noncommercial
-    method: mirror
+    tier: excluded
+    method: none
+    notes: Non-commercial license. Excluded because the library also feeds paid study material (owner decision, 2026-11-25).
 
   - id: openbible-geocoding-full
     name: OpenBible.info Bible geocoding data, full repository including OpenStreetMap geometry
@@ -310,3 +315,45 @@ sources:
     tier: open
     method: mirror
     size: ~140 MB
+
+  # ---------------- Added in the second collection pass (2026-11-25) ----------------
+  - id: swete-lxx
+    name: Swete, The Old Testament in Greek according to the Septuagint (1909-1930)
+    upstream: https://github.com/nathans/lxx-swete
+    commit: 26bad3eb42bba98471d154c954e36a6f30a0279d
+    license: CC-BY-SA-4.0 (derived from First1KGreek); Swete's text public domain
+    evidence: https://github.com/nathans/lxx-swete/blob/master/README.md
+    attribution: Open Greek and Latin Project (First1KGreek); nathans/lxx-swete contributors
+    tier: open
+    method: vendored
+    path: library/septuagint/swete-lxx
+
+  - id: tsk-crossreferences-org
+    name: Treasury of Scripture Knowledge, phrase-level cross-references (KJV and BSB anchors)
+    upstream: https://github.com/CrossReferences-org/bible-cross-references
+    commit: ad41301f39f8118019080b53c212a3e9e064f5d7
+    license: CC-BY-4.0
+    evidence: https://github.com/CrossReferences-org/bible-cross-references/blob/main/LICENSE
+    attribution: CrossReferences.org
+    tier: open
+    method: vendored
+    path: library/cross-references/tsk-crossreferences-org
+    notes: Only the KJV and BSB files are copied. The Segond 21 file (used by permission, not openly licensed) and the shared JSON export are NOT copied.
+
+  - id: archive-org-pd
+    name: Internet Archive public-domain books on Bible, commentary, theology, sermons, church fathers and biblical languages (about 20,000 items, OCR text)
+    upstream: https://archive.org/advancedsearch.php
+    license: Public domain in the USA (published before 1931; checked per item)
+    evidence: each item's metadata (possible-copyright-status NOT_IN_COPYRIGHT, publication year) at https://archive.org/metadata/<identifier>
+    tier: open
+    method: fetch
+    notes: Collects only the OCR plain text, never PDFs or images, and links each file to its scan. Skips Google-digitized items, lending-library items, items dated after 1930, and any item with restrictive rights metadata. Covers works such as Matthew Henry, Keil-Delitzsch, the Pulpit Commentary, Hastings, McClintock-Strong, Migne and CSEL volumes where scanned.
+
+  - id: perseus-latin
+    name: Perseus canonical Latin literature (background and early Christian Latin texts)
+    upstream: https://github.com/PerseusDL/canonical-latinLit
+    license: CC-BY-SA-4.0 unless otherwise indicated
+    evidence: https://github.com/PerseusDL/canonical-latinLit/blob/master/license.md
+    attribution: Perseus Digital Library, Tufts University
+    tier: open
+    method: mirror

@@ -1,6 +1,6 @@
 # Excluded sources
 
-These sources were reviewed on 2026-11-25 and are **not** collected, because their terms do not allow redistribution or their license could not be confirmed. Do not add them without new, written evidence of an open license.
+These sources were reviewed on 2026-11-25 (two passes) and are **not** collected, because their terms do not allow redistribution or their license could not be confirmed. Do not add them without new, written evidence of an open license.
 
 | Source | Why it is excluded |
 | --- | --- |
@@ -24,3 +24,13 @@ These sources were reviewed on 2026-11-25 and are **not** collected, because the
 | Abbott-Smith source PDF (archive.org scan) | The PDF carries its own use restrictions. Only the public-domain TEI text is collected. |
 | OpenBible.info place thumbnail images | Mixed image licenses. |
 | Bible Gateway, Bible Hub, Blue Letter Bible, StudyLight, New Advent site content | Terms of use do not permit bulk redistribution, even where the underlying text is public domain. |
+| OpenGreekAndLatin/csel-dev, patrologia_latina-dev, septuagint-dev | No license is stated. The underlying volumes are public domain, so they are collected from archive.org scans instead, and Swete's Septuagint from First1KGreek (CC BY-SA). |
+| lyteword/mhenry-complete | CC0, but the repo does not say where its text came from (likely CCEL). Matthew Henry is collected from archive.org scans instead. |
+| GZancewicz/ante-nicene-fathers | Converted from CCEL's ThML files. |
+| SOTW-Historical-Commentaries/historical-commentary-resources | Repackages HelloAO commentary JSON whose own license is not stated. |
+| eliranwong/unabridged-BDB-Hebrew-lexicon and unfoldingWord/Brown-Driver-Briggs-Enhanced | BDB itself is public domain, but the base formatting came from a third party (Bible Analyzer) without a stated license. The Open Scriptures BDB is used instead. |
+| CrossReferences.org Segond 21 file and JSON export | Segond 21 is "used with permission", not openly licensed. Only the KJV and BSB files are collected. |
+| Google-digitized archive.org scans | Google's scans carry usage restrictions. The archive.org fetcher skips them. |
+| ETCBC BHSA, Dead Sea Scrolls and Peshitta databases | CC BY-NC 4.0. Non-commercial material is excluded because the library also feeds paid study material. |
+| 748 eBible.org translations licensed CC BY-NC-ND | Non-commercial; excluded for the same reason. Listed in `catalog/ebible-licenses.csv`. |
+| Sefaria text versions licensed CC BY-NC | Non-commercial; the Sefaria fetcher skips them. |

@@ -6,6 +6,7 @@ Fails if:
   * anything vendored into library/ is not tier "open" (no NC, ND or excluded material in git)
   * a folder under library/<group>/ is not listed in the catalog
   * a file in library/ is 50 MB or larger (GitHub warns at 50 MB, rejects at 100 MB)
+  * any source uses a non-commercial license without being excluded
   * known non-redistributable material shows up (CCEL raw folders, merged Sefaria files, source PDFs)
 It also regenerates library/NOTICE.md and fails if the committed copy is out of date.
 """
@@ -17,7 +18,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 LIB = ROOT / "library"
-TIERS = {"open", "open-nd", "noncommercial", "excluded"}
+TIERS = {"open", "open-nd", "excluded"}  # no "noncommercial": the library feeds paid products
 METHODS = {"vendored", "mirror", "fetch", "none"}
 MAX_BYTES = 50 * 1024 * 1024
 FORBIDDEN_NAMES = {"raw-ccel-lake", "merged.json"}
@@ -73,6 +74,8 @@ def main():
                 vendored_paths.add((ROOT / p).resolve())
             if not s.get("commit"):
                 errors.append(f"{sid}: vendored source must pin the upstream commit")
+        if "NC" in str(s.get("license", "")).upper().replace("-", " ").split() and s.get("tier") != "excluded":
+            errors.append(f"{sid}: non-commercial license must be excluded (library feeds paid products)")
         if s.get("tier") == "excluded" and s.get("method") != "none":
             errors.append(f"{sid}: excluded sources must use method 'none'")
 
