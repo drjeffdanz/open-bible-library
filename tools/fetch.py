@@ -82,6 +82,11 @@ def http_get(url, retries=4, delay=1.0):
 
 
 SHARD = (0, 1)  # (index, count); set from --shard
+DEADLINE = None  # time.monotonic() value after which long fetchers stop; set from --max-minutes
+
+
+def out_of_time():
+    return DEADLINE is not None and time.monotonic() > DEADLINE
 
 
 def in_shard(i):
@@ -274,6 +279,11 @@ def fetch_gutenberg(src, out, limit):
     for i, r in enumerate(rows):
         if limit and i >= limit:
             break
+        if out_of_time():
+            for rest in rows[i:]:
+                m.skip(rest["Text#"], "time budget reached; not fetched in this run")
+            print(f"  time budget reached after {i} of {len(rows)} books")
+            break
         n = r["Text#"]
         try:
             rdf = pg_get(f"/cache/epub/{n}/pg{n}.rdf", delay=2)[0].decode("utf-8", "replace")
@@ -357,6 +367,11 @@ def fetch_archive(src, out, limit):
     for i, ident in enumerate(ids):
         if limit and i >= limit:
             break
+        if out_of_time():
+            for rest in ids[i:]:
+                m.skip(rest, "time budget reached; not fetched in this run")
+            print(f"  time budget reached after {i} of {len(ids)} items")
+            break
         try:
             meta = json.loads(http_get(f"https://archive.org/metadata/{ident}", delay=0.5))
         except Exception as e:  # noqa: BLE001
@@ -400,10 +415,15 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "dist"))
     ap.add_argument("--limit", type=int, default=0, help="stop after N items (for testing)")
     ap.add_argument("--shard", default="0/1", help="process only shard I of N, e.g. 2/4 (eBible, Sefaria, Gutenberg, archive.org)")
+    ap.add_argument("--max-minutes", type=float, default=0,
+                    help="stop the Gutenberg and archive.org fetchers after this many minutes and keep what was "
+                         "fetched (the rest is listed as skipped in the manifest); 0 = no limit")
     a = ap.parse_args()
-    global SHARD
+    global SHARD, DEADLINE
     i, n = (int(x) for x in a.shard.split("/"))
     SHARD = (i, n)
+    if a.max_minutes:
+        DEADLINE = time.monotonic() + a.max_minutes * 60
     cat = load_catalog()
     out = Path(a.out)
 
