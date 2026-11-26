@@ -46,14 +46,38 @@ jobs:
           - { source: sefaria-open, shard: "1/4", tier: open }
           - { source: sefaria-open, shard: "2/4", tier: open }
           - { source: sefaria-open, shard: "3/4", tier: open }
-          - { source: archive-org-pd, shard: "0/8", tier: open }
-          - { source: archive-org-pd, shard: "1/8", tier: open }
-          - { source: archive-org-pd, shard: "2/8", tier: open }
-          - { source: archive-org-pd, shard: "3/8", tier: open }
-          - { source: archive-org-pd, shard: "4/8", tier: open }
-          - { source: archive-org-pd, shard: "5/8", tier: open }
-          - { source: archive-org-pd, shard: "6/8", tier: open }
-          - { source: archive-org-pd, shard: "7/8", tier: open }
+          - { source: archive-org-pd, shard: "0/32", tier: open }
+          - { source: archive-org-pd, shard: "1/32", tier: open }
+          - { source: archive-org-pd, shard: "2/32", tier: open }
+          - { source: archive-org-pd, shard: "3/32", tier: open }
+          - { source: archive-org-pd, shard: "4/32", tier: open }
+          - { source: archive-org-pd, shard: "5/32", tier: open }
+          - { source: archive-org-pd, shard: "6/32", tier: open }
+          - { source: archive-org-pd, shard: "7/32", tier: open }
+          - { source: archive-org-pd, shard: "8/32", tier: open }
+          - { source: archive-org-pd, shard: "9/32", tier: open }
+          - { source: archive-org-pd, shard: "10/32", tier: open }
+          - { source: archive-org-pd, shard: "11/32", tier: open }
+          - { source: archive-org-pd, shard: "12/32", tier: open }
+          - { source: archive-org-pd, shard: "13/32", tier: open }
+          - { source: archive-org-pd, shard: "14/32", tier: open }
+          - { source: archive-org-pd, shard: "15/32", tier: open }
+          - { source: archive-org-pd, shard: "16/32", tier: open }
+          - { source: archive-org-pd, shard: "17/32", tier: open }
+          - { source: archive-org-pd, shard: "18/32", tier: open }
+          - { source: archive-org-pd, shard: "19/32", tier: open }
+          - { source: archive-org-pd, shard: "20/32", tier: open }
+          - { source: archive-org-pd, shard: "21/32", tier: open }
+          - { source: archive-org-pd, shard: "22/32", tier: open }
+          - { source: archive-org-pd, shard: "23/32", tier: open }
+          - { source: archive-org-pd, shard: "24/32", tier: open }
+          - { source: archive-org-pd, shard: "25/32", tier: open }
+          - { source: archive-org-pd, shard: "26/32", tier: open }
+          - { source: archive-org-pd, shard: "27/32", tier: open }
+          - { source: archive-org-pd, shard: "28/32", tier: open }
+          - { source: archive-org-pd, shard: "29/32", tier: open }
+          - { source: archive-org-pd, shard: "30/32", tier: open }
+          - { source: archive-org-pd, shard: "31/32", tier: open }
           - { source: perseus-latin, shard: "0/1", tier: open }
     # Skips every step when "only" names a different source (matrix values can't be used in a job-level if).
     env:
@@ -69,7 +93,9 @@ jobs:
         if: env.SELECTED == 'true'
       - name: Fetch
         if: env.SELECTED == 'true'
-        run: python tools/fetch.py "${{ matrix.source }}" --shard "${{ matrix.shard }}" --out dist
+        # -u: unbuffered, so progress shows in the log. --max-minutes leaves time to pack and upload
+        # before the job timeout; anything not reached is listed as skipped in the manifest.
+        run: python -u tools/fetch.py "${{ matrix.source }}" --shard "${{ matrix.shard }}" --out dist --max-minutes 300
       - name: Pack (split under GitHub's 2 GB asset limit)
         if: env.SELECTED == 'true'
         run: |

@@ -24,7 +24,9 @@ import json
 import re
 import subprocess
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib.parse
 import urllib.request
 import zipfile
@@ -81,7 +83,47 @@ def http_get(url, retries=4, delay=1.0):
     return None
 
 
+def http_get_resumable(url, attempts=6, chunk=1 << 20):
+    """Download a large file, resuming with an HTTP Range request when the connection drops.
+
+    archive.org often cuts long transfers part-way (SSL "unexpected EOF"); restarting from
+    zero each time wasted most of a job's run time. Keeps the bytes already received instead.
+    """
+    buf = bytearray()
+    total = None
+    for attempt in range(attempts):
+        headers = {"User-Agent": USER_AGENT}
+        if buf:
+            headers["Range"] = f"bytes={len(buf)}-"
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=60) as r:
+                if buf and r.status != 206:  # server ignored the range: start over
+                    buf.clear()
+                if total is None and r.status == 200 and r.headers.get("Content-Length"):
+                    total = int(r.headers["Content-Length"])
+                while True:
+                    block = r.read(chunk)
+                    if not block:
+                        break
+                    buf.extend(block)
+            if total is None or len(buf) >= total:
+                return bytes(buf)
+            raise IOError(f"short read: {len(buf)} of {total} bytes")
+        except Exception as e:  # noqa: BLE001
+            if attempt == attempts - 1:
+                raise
+            print(f"  resume {attempt + 1} for {url} at {len(buf)} bytes: {e}", file=sys.stderr)
+            time.sleep(2 + attempt * 2)
+    return None
+
+
 SHARD = (0, 1)  # (index, count); set from --shard
+DEADLINE = None  # time.monotonic() value after which long fetchers stop; set from --max-minutes
+
+
+def out_of_time():
+    return DEADLINE is not None and time.monotonic() > DEADLINE
 
 
 def in_shard(i):
@@ -94,16 +136,21 @@ class Manifest:
         self.path = out_dir / f"MANIFEST{suffix}.json"
         self.data = {"source": source_id, "license": license_note,
                      "fetched": time.strftime("%Y-%m-%d"), "files": [], "skipped": []}
+        self.lock = threading.Lock()
 
     def add(self, file_path, url, license_):
         h = hashlib.sha256(Path(file_path).read_bytes()).hexdigest()
-        self.data["files"].append({"path": str(file_path), "url": url,
-                                   "license": license_, "sha256": h})
+        with self.lock:
+            self.data["files"].append({"path": str(file_path), "url": url,
+                                       "license": license_, "sha256": h})
 
     def skip(self, item, reason):
-        self.data["skipped"].append({"item": item, "reason": reason})
+        with self.lock:
+            self.data["skipped"].append({"item": item, "reason": reason})
 
     def save(self):
+        self.data["files"].sort(key=lambda f: f["path"])
+        self.data["skipped"].sort(key=lambda f: str(f["item"]))
         self.path.parent.mkdir(parents=True, exist_ok=True)
         self.path.write_text(json.dumps(self.data, indent=2, ensure_ascii=False), encoding="utf-8")
         print(f"  {len(self.data['files'])} files kept, {len(self.data['skipped'])} skipped -> {self.path}")
@@ -274,6 +321,11 @@ def fetch_gutenberg(src, out, limit):
     for i, r in enumerate(rows):
         if limit and i >= limit:
             break
+        if out_of_time():
+            for rest in rows[i:]:
+                m.skip(rest["Text#"], "time budget reached; not fetched in this run")
+            print(f"  time budget reached after {i} of {len(rows)} books")
+            break
         n = r["Text#"]
         try:
             rdf = pg_get(f"/cache/epub/{n}/pg{n}.rdf", delay=2)[0].decode("utf-8", "replace")
@@ -351,44 +403,65 @@ def archive_check(md):
     return None
 
 
+ARCHIVE_WORKERS = 4  # parallel downloads per job; archive.org transfers are slow, not CPU-bound
+
+
+def fetch_archive_item(ident, out, src_id, m):
+    try:
+        meta = json.loads(http_get(f"https://archive.org/metadata/{ident}", delay=0.5))
+    except Exception as e:  # noqa: BLE001
+        m.skip(ident, f"metadata failed: {e}")
+        return
+    md = meta.get("metadata", {})
+    reason = archive_check(md)
+    if reason:
+        m.skip(ident, reason)
+        return
+    txt = [f["name"] for f in meta.get("files", []) if f["name"].endswith("_djvu.txt")]
+    if not txt:
+        m.skip(ident, "no OCR text file")
+        return
+    url = f"https://archive.org/download/{ident}/{urllib.parse.quote(txt[0])}"
+    try:
+        body = http_get_resumable(url).decode("utf-8", "replace")
+    except Exception as e:  # noqa: BLE001
+        m.skip(ident, f"text failed: {e}")
+        return
+    dest = out / src_id / f"{ident}.txt"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    first = lambda v: (v[0] if isinstance(v, list) else v) or ""  # noqa: E731
+    dest.write_text(
+        f"Title: {first(md.get('title'))}\nAuthor: {first(md.get('creator'))}\n"
+        f"Published: {first(md.get('publisher'))} {first(md.get('year') or md.get('date'))}\n"
+        f"Scan: https://archive.org/details/{ident}\n"
+        f"Rights: Public domain in the USA (published before 1931). OCR text; may contain recognition errors.\n\n"
+        + body, encoding="utf-8")
+    m.add(dest, url, "Public domain in the USA")
+
+
 def fetch_archive(src, out, limit):
     m = Manifest(out / src["id"], src["id"], "Public domain in the USA (per item)")
     ids = [x for i, x in enumerate(archive_ids()) if in_shard(i)]
-    for i, ident in enumerate(ids):
-        if limit and i >= limit:
-            break
-        try:
-            meta = json.loads(http_get(f"https://archive.org/metadata/{ident}", delay=0.5))
-        except Exception as e:  # noqa: BLE001
-            m.skip(ident, f"metadata failed: {e}")
-            continue
-        md = meta.get("metadata", {})
-        reason = archive_check(md)
-        if reason:
-            m.skip(ident, reason)
-            continue
-        txt = [f["name"] for f in meta.get("files", []) if f["name"].endswith("_djvu.txt")]
-        if not txt:
-            m.skip(ident, "no OCR text file")
-            continue
-        url = f"https://archive.org/download/{ident}/{urllib.parse.quote(txt[0])}"
-        try:
-            body = http_get(url, delay=0.5).decode("utf-8", "replace")
-        except Exception as e:  # noqa: BLE001
-            m.skip(ident, f"text failed: {e}")
-            continue
-        dest = out / src["id"] / f"{ident}.txt"
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        first = lambda v: (v[0] if isinstance(v, list) else v) or ""  # noqa: E731
-        dest.write_text(
-            f"Title: {first(md.get('title'))}\nAuthor: {first(md.get('creator'))}\n"
-            f"Published: {first(md.get('publisher'))} {first(md.get('year') or md.get('date'))}\n"
-            f"Scan: https://archive.org/details/{ident}\n"
-            f"Rights: Public domain in the USA (published before 1931). OCR text; may contain recognition errors.\n\n"
-            + body, encoding="utf-8")
-        m.add(dest, url, "Public domain in the USA")
-        if i % 100 == 0:
-            print(f"  [{i}/{len(ids)}] {ident}")
+    if limit:
+        ids = ids[:limit]
+    done = 0
+    lock = threading.Lock()
+
+    def work(ident):
+        nonlocal done
+        if out_of_time():
+            m.skip(ident, "time budget reached; not fetched in this run")
+            return
+        fetch_archive_item(ident, out, src["id"], m)
+        with lock:
+            done += 1
+            if done % 100 == 0:
+                print(f"  [{done}/{len(ids)}] {ident}")
+
+    with ThreadPoolExecutor(max_workers=ARCHIVE_WORKERS) as pool:
+        list(pool.map(work, ids))
+    if out_of_time():
+        print(f"  time budget reached after {done} of {len(ids)} items")
     m.save()
 
 
@@ -400,10 +473,15 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "dist"))
     ap.add_argument("--limit", type=int, default=0, help="stop after N items (for testing)")
     ap.add_argument("--shard", default="0/1", help="process only shard I of N, e.g. 2/4 (eBible, Sefaria, Gutenberg, archive.org)")
+    ap.add_argument("--max-minutes", type=float, default=0,
+                    help="stop the Gutenberg and archive.org fetchers after this many minutes and keep what was "
+                         "fetched (the rest is listed as skipped in the manifest); 0 = no limit")
     a = ap.parse_args()
-    global SHARD
+    global SHARD, DEADLINE
     i, n = (int(x) for x in a.shard.split("/"))
     SHARD = (i, n)
+    if a.max_minutes:
+        DEADLINE = time.monotonic() + a.max_minutes * 60
     cat = load_catalog()
     out = Path(a.out)
 
