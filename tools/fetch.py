@@ -245,9 +245,28 @@ PG_START = re.compile(r"\*\*\* ?START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*",
 PG_END = re.compile(r"\*\*\* ?END OF (THE|THIS) PROJECT GUTENBERG", re.I)
 
 
+# Project Gutenberg asks bulk downloaders to use a mirror rather than www.gutenberg.org.
+# gutenberg.pglaf.org is run by PGLAF (Project Gutenberg's parent) and has the same
+# /cache/epub layout. www.gutenberg.org is only a fallback.
+PG_BASES = ("https://gutenberg.pglaf.org", "https://www.gutenberg.org")
+
+
+def pg_get(path, delay=1.0):
+    """Fetch a Project Gutenberg path, trying each base in PG_BASES. Returns (bytes, url)."""
+    err = None
+    for base in PG_BASES:
+        url = base + path
+        try:
+            return http_get(url, retries=3, delay=delay), url
+        except Exception as e:  # noqa: BLE001
+            err = e
+            print(f"  {url} failed: {e}", file=sys.stderr)
+    raise err
+
+
 def fetch_gutenberg(src, out, limit):
     m = Manifest(out / src["id"], src["id"], "Public domain in the USA (per book)")
-    cat = http_get("https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv").decode("utf-8")
+    cat = pg_get("/cache/epub/feeds/pg_catalog.csv")[0].decode("utf-8")
     rows = [r for r in csv.DictReader(io.StringIO(cat))
             if r.get("Type") == "Text" and any(
                 c.strip().startswith(GUTENBERG_LOCC) for c in (r.get("LoCC") or "").split(";"))]
@@ -257,7 +276,7 @@ def fetch_gutenberg(src, out, limit):
             break
         n = r["Text#"]
         try:
-            rdf = http_get(f"https://www.gutenberg.org/cache/epub/{n}/pg{n}.rdf", delay=2).decode("utf-8", "replace")
+            rdf = pg_get(f"/cache/epub/{n}/pg{n}.rdf", delay=2)[0].decode("utf-8", "replace")
         except Exception as e:  # noqa: BLE001
             m.skip(n, f"rdf failed: {e}")
             continue
@@ -266,9 +285,9 @@ def fetch_gutenberg(src, out, limit):
         if rights != "Public domain in the USA.":
             m.skip(n, f"rights: {rights or 'missing'}")
             continue
-        url = f"https://www.gutenberg.org/cache/epub/{n}/pg{n}.txt"
         try:
-            text = http_get(url, delay=2).decode("utf-8", "replace")
+            raw, url = pg_get(f"/cache/epub/{n}/pg{n}.txt", delay=2)
+            text = raw.decode("utf-8", "replace")
         except Exception as e:  # noqa: BLE001
             m.skip(n, f"text failed: {e}")
             continue
