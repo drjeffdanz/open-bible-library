@@ -349,6 +349,25 @@ sources:
     method: fetch
     notes: Collects only the OCR plain text, never PDFs or images, and links each file to its scan. Skips Google-digitized items, lending-library items, items dated after 1930, and any item with restrictive rights metadata. Covers works such as Matthew Henry, Keil-Delitzsch, the Pulpit Commentary, Hastings, McClintock-Strong, Migne and CSEL volumes where scanned.
 
+  - id: archive-org-pd-extended
+    name: More Internet Archive public-domain texts tagged bible, theology, sermons, christianity or church history (books and religious periodical issues published before 1931, OCR text)
+    upstream: https://archive.org/advancedsearch.php
+    license: Public domain in the USA (published before 1931; checked per item)
+    evidence: each item's metadata (publication year, rights, licenseurl, possible-copyright-status) at https://archive.org/metadata/<identifier>, plus the opening pages of its OCR text
+    tier: open
+    method: fetch
+    notes: >-
+      Items that the archive-org-pd query does not cover, mostly Internet Archive scans of donated
+      library books and microfilmed religious periodicals that lack the NOT_IN_COPYRIGHT flag. Because the
+      flag is missing, each item must also pass stricter checks: any copyright-status statement other
+      than "public domain" or "unaware of any copyright restrictions" is refused; a licenseurl other than
+      the CC public domain mark or CC0 is refused (so NC items never get in); a year after 1930 in the
+      title, publisher or edition, or a reprint/facsimile note with a later year, is refused; personal
+      uploads with no scanning centre, contributing library or public-domain mark are refused; and the
+      first pages of the OCR text must contain no modern copyright notice, ISBN or "all rights reserved".
+      Skips Google-digitized items, lending-library and access-restricted items, and medical and science
+      serials that the Internet Archive mis-tags with a religion subject.
+
   - id: perseus-latin
     name: Perseus canonical Latin literature (background and early Christian Latin texts)
     upstream: https://github.com/PerseusDL/canonical-latinLit

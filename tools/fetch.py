@@ -373,16 +373,18 @@ RESTRICTIVE = re.compile(r"all rights reserved|non-?commercial|by-nc|permission|
 LAST_PD_YEAR = 1930  # US: works published before 1931 are public domain as of 2026
 
 
-def archive_ids():
-    ids, cursor = [], None
+def archive_ids(query=ARCHIVE_QUERY):
+    ids, cursor = set(), None
     while True:
-        params = {"q": ARCHIVE_QUERY, "fields": "identifier", "count": "10000"}
+        params = {"q": query, "fields": "identifier", "count": "10000"}
         if cursor:
             params["cursor"] = cursor
         page = json.loads(http_get("https://archive.org/services/search/v1/scrape?" + urllib.parse.urlencode(params)))
-        ids += [d["identifier"] for d in page.get("items", [])]
+        before = len(ids)
+        ids.update(d["identifier"] for d in page.get("items", []))
         cursor = page.get("cursor")
-        if not cursor:
+        # The scrape API can hand back a cursor that repeats earlier pages; stop when a page adds nothing.
+        if not cursor or len(ids) == before:
             return sorted(ids)
 
 
@@ -403,17 +405,121 @@ def archive_check(md):
     return None
 
 
+# Wider Internet Archive set: every pre-1931 text tagged bible, theology, sermons, christianity or
+# church history, including items that lack the "NOT_IN_COPYRIGHT" flag (mostly Internet Archive's
+# own scans of donated library books and of 19th- and early 20th-century religious periodicals).
+# Anything already in archive-org-pd is left out. Because the flag is missing, these items get
+# stricter checks (archive_check_extended) and their OCR text is read for modern copyright notices.
+ARCHIVE_EXT_QUERY = (
+    'mediatype:texts AND year:[1450 TO 1930] '
+    'AND subject:(bible OR theology OR sermons OR christianity OR "church history") '
+    'AND NOT collection:(inlibrary OR printdisabled OR lendinglibrary) AND NOT sponsor:(Google)'
+)
+# Statements in possible-copyright-status that are acceptable when an item has no NOT_IN_COPYRIGHT flag.
+EXT_STATUS_OK = re.compile(r"^(public domain\.?|[\w .,'&()-]+ is unaware of any copyright restrictions (for|on) this item\.?)$", re.I)
+# The only licenseurl values allowed: public domain mark, CC0, the old CC public-domain dedication.
+EXT_LICENSE_OK = re.compile(r"^https?://creativecommons\.org/(publicdomain/(mark|zero)/1\.0|licenses/publicdomain)/?$", re.I)
+MODERN_YEAR = re.compile(r"\b(19[3-9]\d|20\d\d)\b")
+# Notices that show the scanned copy is a later, possibly copyrighted edition (checked in the first pages).
+MODERN_NOTICE = re.compile(
+    r"(copyright(ed)?|\(c\)|©)\s*(,?\s*(by|in)?\s*[^\n]{0,60}?)?\b(19[3-9]\d|20\d\d)\b|\bISBN\b|"
+    r"reprinted\s+(in\s+)?(19[3-9]\d|20\d\d)", re.I)
+RIGHTS_RESERVED = re.compile(r"all rights reserved", re.I)
+# A copyright notice dated before 1931 has expired in the US ("Copyright, 1928 ... All rights reserved").
+OLD_COPYRIGHT = re.compile(r"(copyright(ed)?|\(c\)|©)[^\n]{0,80}?\b(1[5-8]\d\d|19[0-2]\d|1930)\b", re.I)
+# Medical, scientific and other serials that the Internet Archive mis-tags with a religion subject.
+EXT_OFF_TOPIC = re.compile(r"medic|surg|pharmac|dental|veterin|nurs|engineer|chemi|physic|zoolog|phytolog|"
+                           r"botan|scien|health|royal society", re.I)
+# Many microfilmed serials share one boilerplate subject list that says nothing about their content
+# ("Religions And Theology--Other Denominations And Sects", "General Interest Periodicals--United States",
+# "Books"). Those are kept only when the title or publisher is plainly religious.
+EXT_RELIGIOUS = re.compile(r"church|christ|mission|bapti|method|presbyt|luther|catholic|episcop|congregation|"
+                           r"shaker|quaker|friends|relig|bibl|gospel|theolog|evangel|sabbath|synod|sermon|"
+                           r"pulpit|divin|holiness|pietis|mennon|moravian|reformed|unitarian|universalist|"
+                           r"adventist|mormon|latter-day|saints|kirche|eglise|église|chiesa|iglesia", re.I)
+
+
+def archive_check_extended(md):
+    """Checks for an item without the NOT_IN_COPYRIGHT flag. Returns None if it is clearly public domain
+    in the US (published before 1931, nothing later in its metadata, no restrictive rights), else the reason."""
+    status = md.get("possible-copyright-status")
+    if status == "NOT_IN_COPYRIGHT":
+        return archive_check(md)
+    if status and not EXT_STATUS_OK.match(str(status).strip()):
+        return f"copyright status {status!r}"
+    # Every four-digit year in the year and date fields (e.g. "Spring 1928", "1869-1882") must be before 1931.
+    years = [int(y) for k in ("year", "date") for y in re.findall(r"(?<!\d)(1[4-9]\d\d|20\d\d)(?!\d)", str(md.get(k) or ""))]
+    if not years or max(years) > LAST_PD_YEAR:
+        return f"publication year {md.get('year') or md.get('date')!r} not before 1931"
+    if "google" in str(md.get("sponsor", "")).lower() or \
+            re.search(r"digiti[sz]ed by google", " ".join(str(md.get(k) or "") for k in ("description", "notes")), re.I):
+        return "Google-digitized (carries usage restrictions)"
+    contributors = md.get("contributor") or []
+    contributors = " ".join(contributors if isinstance(contributors, list) else [contributors])
+    if "early-european-books" in (md.get("collection") or []):
+        return "ProQuest Early European Books scan (images carry a ProQuest copyright claim)"
+    if "universallibrary" in (md.get("collection") or []) or "digital library of india" in contributors.lower():
+        return "Digital Library of India item (its dates are unreliable)"
+    if str(md.get("access-restricted-item", "")).lower() == "true":
+        return "access-restricted item"
+    lic = md.get("licenseurl")
+    if lic and not EXT_LICENSE_OK.match(str(lic).strip()):
+        return f"licenseurl {lic}"
+    for key in ("rights", "possible-copyright-status-note"):
+        if md.get(key) and RESTRICTIVE.search(str(md.get(key))):
+            return f"{key}: {md.get(key)}"
+    # A later year in the title, publisher, edition or description suggests a modern reprint or edition.
+    for key in ("title", "publisher", "edition", "description", "volume", "notes"):
+        vals = md.get(key)
+        for v in (vals if isinstance(vals, list) else [vals]):
+            if v and re.search(r"reprint|facsimile|new edition|edited by|introduction by", str(v), re.I) \
+                    and MODERN_YEAR.search(str(v)):
+                return f"{key} suggests a modern edition: {str(v)[:120]!r}"
+            if key in ("title", "publisher", "edition") and v and MODERN_YEAR.search(str(v)):
+                return f"{key} names a year after 1930: {str(v)[:120]!r}"
+    # Items with no scanning centre, contributing library or public-domain licence are personal uploads
+    # with nothing but the uploader's date to go on; leave them out.
+    if not (md.get("scanningcenter") or md.get("contributor") or lic):
+        return "personal upload with no scanning centre, contributing library or public-domain mark"
+    collections = md.get("collection") or []
+    if "periodicals" in (collections if isinstance(collections, list) else [collections]):
+        name = " ".join(str(md.get(k) or "") for k in ("title", "publisher"))
+        if EXT_OFF_TOPIC.search(name) and not EXT_RELIGIOUS.search(name):
+            return f"off-topic serial mis-tagged as religion: {name[:100]!r}"
+        subjects = md.get("subject") or []
+        subjects = " | ".join(subjects if isinstance(subjects, list) else [subjects])
+        if "General Interest Periodicals--United States" in subjects and "Books" in subjects \
+                and not EXT_RELIGIOUS.search(name):
+            return f"serial with only boilerplate religion subjects and no religious title: {name[:100]!r}"
+    return None
+
+
+def modern_notice(body):
+    """Return the first modern copyright notice in the opening pages of an OCR text, if any."""
+    head = body[:30000]
+    m = MODERN_NOTICE.search(head)
+    if m:
+        return m.group(0)[:100]
+    for r in RIGHTS_RESERVED.finditer(head):
+        if not OLD_COPYRIGHT.search(head[max(0, r.start() - 300):r.start()]):
+            return r.group(0)
+    return None
+
+
 ARCHIVE_WORKERS = 4  # parallel downloads per job; archive.org transfers are slow, not CPU-bound
 
 
-def fetch_archive_item(ident, out, src_id, m):
+def fetch_archive_item(ident, out, src_id, m, extended=False):
     try:
         meta = json.loads(http_get(f"https://archive.org/metadata/{ident}", delay=0.5))
     except Exception as e:  # noqa: BLE001
         m.skip(ident, f"metadata failed: {e}")
         return
     md = meta.get("metadata", {})
-    reason = archive_check(md)
+    if meta.get("is_dark") or not md:
+        m.skip(ident, "item is dark or has no metadata")
+        return
+    reason = archive_check_extended(md) if extended else archive_check(md)
     if reason:
         m.skip(ident, reason)
         return
@@ -427,6 +533,11 @@ def fetch_archive_item(ident, out, src_id, m):
     except Exception as e:  # noqa: BLE001
         m.skip(ident, f"text failed: {e}")
         return
+    if extended:
+        notice = modern_notice(body)
+        if notice:
+            m.skip(ident, f"OCR text has a modern notice: {notice!r}")
+            return
     dest = out / src_id / f"{ident}.txt"
     dest.parent.mkdir(parents=True, exist_ok=True)
     first = lambda v: (v[0] if isinstance(v, list) else v) or ""  # noqa: E731
@@ -439,9 +550,16 @@ def fetch_archive_item(ident, out, src_id, m):
     m.add(dest, url, "Public domain in the USA")
 
 
-def fetch_archive(src, out, limit):
+def fetch_archive(src, out, limit, extended=False):
     m = Manifest(out / src["id"], src["id"], "Public domain in the USA (per item)")
-    ids = [x for i, x in enumerate(archive_ids()) if in_shard(i)]
+    if extended:
+        # Dedupe: items the main archive-org-pd query covers are fetched (and checked) there.
+        already = set(archive_ids(ARCHIVE_QUERY))
+        all_ids = [x for x in archive_ids(ARCHIVE_EXT_QUERY) if x not in already]
+        print(f"  {len(all_ids)} candidates after removing {len(already)} items covered by archive-org-pd")
+    else:
+        all_ids = archive_ids()
+    ids = [x for i, x in enumerate(all_ids) if in_shard(i)]
     if limit:
         ids = ids[:limit]
     done = 0
@@ -452,7 +570,7 @@ def fetch_archive(src, out, limit):
         if out_of_time():
             m.skip(ident, "time budget reached; not fetched in this run")
             return
-        fetch_archive_item(ident, out, src["id"], m)
+        fetch_archive_item(ident, out, src["id"], m, extended)
         with lock:
             done += 1
             if done % 100 == 0:
@@ -514,6 +632,8 @@ def main():
         fetch_gutenberg(src, out, a.limit)
     elif src["id"] == "archive-org-pd":
         fetch_archive(src, out, a.limit)
+    elif src["id"] == "archive-org-pd-extended":
+        fetch_archive(src, out, a.limit, extended=True)
     else:
         sys.exit(f"{a.source} is {src['method']}; nothing to fetch")
 

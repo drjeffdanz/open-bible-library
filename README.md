@@ -9,7 +9,7 @@ A free, open archive of historical Bible study resources: original-language text
 The library has two layers.
 
 1. **In this repository (`library/`, about 530 MB):** 14 core datasets that anyone may use for any purpose, including commercial use.
-2. **In the monthly archive (GitHub Releases):** everything too large for git or hosted outside GitHub, fetched by `tools/fetch.py` and filtered by license. That includes up to about 20,000 public-domain books from the Internet Archive (commentaries, lexicons, theology, sermons, church fathers, published before 1931), about 440 open Bible translations from eBible.org, the Berean Bibles, Sefaria's openly licensed texts, Project Gutenberg's public-domain religious books, the MACULA syntax datasets and the Perseus and First1KGreek corpora.
+2. **In the monthly archive (GitHub Releases):** everything too large for git or hosted outside GitHub, fetched by `tools/fetch.py` and filtered by license. That includes up to about 20,000 public-domain books from the Internet Archive (commentaries, lexicons, theology, sermons, church fathers, published before 1931), tens of thousands more pre-1931 Internet Archive books and religious periodical issues that pass stricter per-item checks (`archive-org-pd-extended`), about 440 open Bible translations from eBible.org, the Berean Bibles, Sefaria's openly licensed texts, Project Gutenberg's public-domain religious books, the MACULA syntax datasets and the Perseus and First1KGreek corpora.
 
 Non-commercial (NC) material is not collected at all, because the library also feeds paid study material. Everything here can be used commercially under its license.
 
@@ -52,7 +52,7 @@ python tools/fetch.py list                     # what can be fetched
 python tools/fetch.py ebible-open --out dist   # one source
 ```
 
-The **Build archive** workflow does this for every source on the 1st of each month, or on demand from the Actions tab.
+The **Build archive** workflow does this for every source on the 1st of each month, or on demand from the Actions tab. A full run has 200 jobs and takes a day or more, mostly the Internet Archive downloads. To add one source to an existing release, run it with `only` set to the source id and `tag` set to that release (for example `archive-2026-11`).
 
 ## License rules
 
