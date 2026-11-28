@@ -4,7 +4,8 @@ name: Build archive
 # packs each one, and publishes them as release assets:
 #   archive-YYYY-MM   public-domain and openly licensed material (any use, including commercial;
 #                     follow each license's attribution and share-alike terms)
-# Run it from the Actions tab, or let it run on the 1st of each month.
+# Run it from the Actions tab, or let it run on the 1st of each month (skipped if that month's
+# release was already built early).
 # To redo one source after a failure, run it with "only" set to that source id.
 
 on:
@@ -27,21 +28,34 @@ permissions:
 jobs:
   # Fix the release tag once, when the run starts, so jobs that finish after the 1st of the next
   # month still upload to the same release.
+  # A scheduled run is skipped when this month's release already exists, because someone built
+  # the month early from the Actions tab (e.g. archive-2026-12 was built on 2026-11-28).
+  # Manual runs always go ahead.
   tag:
     runs-on: ubuntu-latest
     outputs:
       tag: ${{ steps.t.outputs.tag }}
+      skip: ${{ steps.t.outputs.skip }}
     steps:
       - id: t
         env:
           INPUT_TAG: ${{ github.event.inputs.tag }}
+          EVENT: ${{ github.event_name }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           tag="${INPUT_TAG:-archive-$(date -u +%Y-%m)}"
           case "$tag" in archive-[0-9][0-9][0-9][0-9]-[0-9][0-9]) ;; *) echo "bad tag: $tag"; exit 1 ;; esac
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          skip=false
+          if [ "$EVENT" = "schedule" ] && gh release view "$tag" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release $tag already exists (built early), so this scheduled run is skipped."
+            skip=true
+          fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
 
   fetch:
     needs: tag
+    if: needs.tag.outputs.skip != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:
