@@ -14,6 +14,10 @@ on:
         description: "Build just this source id (e.g. gutenberg-christian). Leave empty for everything."
         required: false
         default: ""
+      tag:
+        description: "Release tag to upload to (e.g. archive-2026-11). Leave empty for archive-YYYY-MM of the day the run starts."
+        required: false
+        default: ""
   schedule:
     - cron: "17 6 1 * *"
 
@@ -21,12 +25,29 @@ permissions:
   contents: write
 
 jobs:
+  # Fix the release tag once, when the run starts, so jobs that finish after the 1st of the next
+  # month still upload to the same release.
+  tag:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.t.outputs.tag }}
+    steps:
+      - id: t
+        env:
+          INPUT_TAG: ${{ github.event.inputs.tag }}
+        run: |
+          tag="${INPUT_TAG:-archive-$(date -u +%Y-%m)}"
+          case "$tag" in archive-[0-9][0-9][0-9][0-9]-[0-9][0-9]) ;; *) echo "bad tag: $tag"; exit 1 ;; esac
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
   fetch:
+    needs: tag
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:
       fail-fast: false
-      max-parallel: 6
+      # 200 jobs; 10 at a time keeps the load on archive.org moderate (each job fetches 4 items at once).
+      max-parallel: 10
       matrix:
         include:
           - { source: macula-hebrew, shard: "0/1", tier: open }
@@ -79,6 +100,156 @@ jobs:
           - { source: archive-org-pd, shard: "30/32", tier: open }
           - { source: archive-org-pd, shard: "31/32", tier: open }
           - { source: perseus-latin, shard: "0/1", tier: open }
+          - { source: archive-org-pd-extended, shard: "0/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "1/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "2/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "3/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "4/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "5/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "6/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "7/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "8/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "9/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "10/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "11/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "12/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "13/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "14/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "15/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "16/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "17/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "18/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "19/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "20/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "21/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "22/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "23/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "24/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "25/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "26/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "27/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "28/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "29/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "30/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "31/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "32/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "33/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "34/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "35/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "36/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "37/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "38/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "39/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "40/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "41/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "42/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "43/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "44/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "45/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "46/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "47/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "48/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "49/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "50/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "51/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "52/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "53/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "54/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "55/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "56/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "57/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "58/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "59/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "60/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "61/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "62/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "63/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "64/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "65/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "66/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "67/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "68/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "69/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "70/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "71/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "72/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "73/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "74/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "75/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "76/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "77/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "78/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "79/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "80/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "81/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "82/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "83/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "84/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "85/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "86/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "87/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "88/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "89/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "90/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "91/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "92/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "93/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "94/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "95/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "96/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "97/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "98/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "99/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "100/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "101/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "102/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "103/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "104/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "105/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "106/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "107/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "108/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "109/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "110/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "111/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "112/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "113/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "114/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "115/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "116/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "117/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "118/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "119/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "120/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "121/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "122/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "123/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "124/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "125/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "126/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "127/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "128/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "129/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "130/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "131/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "132/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "133/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "134/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "135/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "136/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "137/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "138/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "139/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "140/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "141/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "142/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "143/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "144/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "145/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "146/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "147/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "148/150", tier: open }
+          - { source: archive-org-pd-extended, shard: "149/150", tier: open }
     # Skips every step when "only" names a different source (matrix values can't be used in a job-level if).
     env:
       SELECTED: ${{ github.event.inputs.only == '' || github.event.inputs.only == null || github.event.inputs.only == matrix.source }}
@@ -108,8 +279,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          month=$(date -u +%Y-%m)
-          tag="archive-${month}"
+          tag="${{ needs.tag.outputs.tag }}"
           notes="Public-domain and openly licensed material. Follow each dataset's attribution terms (see MANIFEST*.json and SOURCE.json in each archive). CC BY-ND translations must stay unmodified."
           gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --title "$tag" --notes "$notes" || true
           gh release upload "$tag" pkg/* --clobber
